@@ -2,45 +2,55 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <nav style={{
       background: "#fff",
       borderBottom: "1.5px solid #e8ecf0",
-      padding: "0 2rem",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      height: "66px",
       position: "sticky",
       top: 0,
       zIndex: 200,
     }}>
-      {/* Logo */}
-      <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-        <Image
-          src="/logo.jpg"
-          alt="APlus Academy"
-          width={130}
-          height={44}
-          style={{ objectFit: "contain" }}
-          priority
-        />
-      </Link>
+      {/* Top row — Logo centered */}
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        padding: "12px 2rem 8px",
+        borderBottom: "1px solid #f0f4f8",
+      }}>
+        <Link href="/">
+          <Image
+            src="/logo.jpg"
+            alt="APlus Academy"
+            width={160}
+            height={54}
+            style={{ objectFit: "contain" }}
+            priority
+          />
+        </Link>
+      </div>
 
-      {/* Desktop Nav Links */}
-      <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-        <Link href="/exams" style={navLinkStyle}>Sınavlar</Link>
-        <Link href="/question-bank" style={navLinkStyle}>Soru Bankası</Link>
-        <Link href="/contact" style={navLinkStyle}>İletişim</Link>
-        <Link href="/work-with-us" style={navLinkStyle}>Eğitmen Ol</Link>
-        <button style={langBtnStyle}>🌐 TR</button>
-        <Link href="/contact" style={ctaBtnStyle}>Ücretsiz Başla</Link>
+      {/* Bottom row — Links left, Buttons right */}
+      <div style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "8px 2rem",
+      }}>
+        {/* Left — Nav Links */}
+        <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+          <Link href="/exams" style={navLinkStyle}>Sınavlar</Link>
+          <Link href="/question-bank" style={navLinkStyle}>Soru Bankası</Link>
+          <Link href="/contact" style={navLinkStyle}>İletişim</Link>
+          <Link href="/work-with-us" style={navLinkStyle}>Eğitmen Ol</Link>
+        </div>
+
+        {/* Right — Lang + CTA */}
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <button style={langBtnStyle}>🌐 TR</button>
+          <Link href="/contact" style={ctaBtnStyle}>Ücretsiz Başla</Link>
+        </div>
       </div>
     </nav>
   );
@@ -77,5 +87,4 @@ const ctaBtnStyle: React.CSSProperties = {
   fontWeight: 700,
   textDecoration: "none",
   fontFamily: "var(--font-nunito)",
-  marginLeft: "6px",
 };

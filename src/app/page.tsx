@@ -10,102 +10,139 @@ export default function Home() {
       <section style={{
         background: "linear-gradient(135deg, #EBF4FF 0%, #FEE8F0 50%, #E0F7F6 100%)",
         padding: "4rem 2rem 3.5rem",
-        textAlign: "center",
       }}>
         <div style={{
-          display: "inline-flex", alignItems: "center", gap: "6px",
-          background: "#fff", border: "1.5px solid #e8ecf0",
-          borderRadius: "100px", padding: "5px 14px",
-          fontSize: "12.5px", fontWeight: 700, color: "#4a5568",
-          marginBottom: "1.5rem",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "3rem",
+          maxWidth: "1100px",
+          margin: "0 auto",
+          alignItems: "center",
         }}>
-          <span style={{
-            background: "#3DBFB8", color: "#fff",
-            padding: "2px 8px", borderRadius: "20px", fontSize: "11px"
-          }}>YENİ</span>
-          2008&apos;den Beri 10.000+ Başarılı Öğrenci
-        </div>
-
-        <h1 style={{
-          fontFamily: "var(--font-nunito)",
-          fontSize: "2.8rem", fontWeight: 900,
-          color: "#1a1a2e", lineHeight: 1.15,
-          maxWidth: "660px", margin: "0 auto 1rem",
-        }}>
-          Hedef <span style={{ color: "#4A90D9" }}>Puana</span> Ulaşmanın{" "}
-          En <span style={{ color: "#E8467C" }}>Akıllı</span> Yolu
-        </h1>
-
-        <p style={{
-          color: "#4a5568", fontSize: "15.5px",
-          maxWidth: "500px", margin: "0 auto 2rem",
-          lineHeight: 1.7, fontWeight: 500,
-        }}>
-          SAT, IB, IELTS, YÖS ve 13+ sınav için kişiselleştirilmiş
-          birebir dersler, küçük grup kursları ve dijital araçlar.
-        </p>
-
-        {/* Search Bar */}
-        <div style={{
-          display: "flex", background: "#fff",
-          borderRadius: "100px", border: "2px solid #e8ecf0",
-          overflow: "hidden", maxWidth: "520px",
-          margin: "0 auto 1.5rem",
-          boxShadow: "0 4px 20px rgba(74,144,217,0.1)",
-        }}>
-          <input
-            placeholder="Hangi sınava hazırlanmak istiyorsunuz?"
-            style={{
-              flex: 1, border: "none", padding: "14px 20px",
-              fontSize: "14px", outline: "none",
-              fontFamily: "var(--font-nunito-sans)",
-            }}
-          />
-          <Link href="/exams" style={{
-            background: "#4A90D9", color: "#fff",
-            border: "none", padding: "0 24px",
-            fontSize: "13.5px", fontWeight: 700,
-            textDecoration: "none", display: "flex",
-            alignItems: "center",
-            fontFamily: "var(--font-nunito)",
-          }}>Ara →</Link>
-        </div>
-
-        {/* Quick Tags */}
-        <div style={{
-          display: "flex", justifyContent: "center",
-          gap: "8px", flexWrap: "wrap", marginBottom: "2rem",
-        }}>
-          {["📐 SAT", "🎓 IB", "🗣 IELTS", "📝 TOEFL", "🇹🇷 YÖS", "📊 GMAT", "🏫 A-Level"].map((tag) => (
-            <Link key={tag} href="/exams" style={{
+          {/* LEFT — Heading + Description */}
+          <div>
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: "6px",
               background: "#fff", border: "1.5px solid #e8ecf0",
-              color: "#4a5568", fontSize: "12.5px", fontWeight: 700,
-              padding: "6px 14px", borderRadius: "100px",
-              textDecoration: "none",
-              fontFamily: "var(--font-nunito)",
-            }}>{tag}</Link>
-          ))}
-        </div>
-
-        {/* Stats */}
-        <div style={{
-          display: "flex", justifyContent: "center",
-          gap: "2rem", flexWrap: "wrap",
-        }}>
-          {[
-            { n: "10.000+", l: "Başarılı Öğrenci" },
-            { n: "%94", l: "Hedef Tutturma" },
-            { n: "50+", l: "Ülkeden Öğrenci" },
-            { n: "4.9 ⭐", l: "Google Puanı" },
-          ].map((s) => (
-            <div key={s.l} style={{ textAlign: "center" }}>
-              <div style={{
-                fontFamily: "var(--font-nunito)",
-                fontSize: "1.5rem", fontWeight: 900, color: "#1a1a2e",
-              }}>{s.n}</div>
-              <div style={{ fontSize: "12px", color: "#8898aa", fontWeight: 600 }}>{s.l}</div>
+              borderRadius: "100px", padding: "5px 14px",
+              fontSize: "12.5px", fontWeight: 700, color: "#4a5568",
+              marginBottom: "1.5rem",
+            }}>
+              <span style={{
+                background: "#3DBFB8", color: "#fff",
+                padding: "2px 8px", borderRadius: "20px", fontSize: "11px"
+              }}>YENİ</span>
+              2008&apos;den Beri 10.000+ Başarılı Öğrenci
             </div>
-          ))}
+
+            <h1 style={{
+              fontFamily: "var(--font-nunito)",
+              fontSize: "2.8rem", fontWeight: 900,
+              color: "#1a1a2e", lineHeight: 1.15,
+              marginBottom: "1.2rem",
+            }}>
+              Hedef <span style={{ color: "#4A90D9" }}>Puana</span> Ulaşmanın{" "}
+              En <span style={{ color: "#E8467C" }}>Akıllı</span> Yolu
+            </h1>
+
+            <p style={{
+              color: "#4a5568", fontSize: "15.5px",
+              lineHeight: 1.7, fontWeight: 500,
+              marginBottom: "2rem", maxWidth: "440px",
+            }}>
+              SAT, IB, IELTS, YÖS ve 13+ sınav için kişiselleştirilmiş
+              birebir dersler, küçük grup kursları ve dijital araçlar.
+            </p>
+
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+              <Link href="/contact" style={{
+                background: "#4A90D9", color: "#fff",
+                padding: "12px 26px", borderRadius: "100px",
+                fontWeight: 800, fontSize: "14px", textDecoration: "none",
+                fontFamily: "var(--font-nunito)",
+              }}>Ücretsiz Görüşme Ayarla</Link>
+              <Link href="/question-bank" style={{
+                background: "transparent", color: "#1a1a2e",
+                padding: "12px 24px", borderRadius: "100px",
+                fontWeight: 700, fontSize: "14px", textDecoration: "none",
+                border: "2px solid #e8ecf0",
+                fontFamily: "var(--font-nunito)",
+              }}>Ücretsiz Deneme →</Link>
+            </div>
+          </div>
+
+          {/* RIGHT — Search + Tags + Stats */}
+          <div>
+            {/* Search Bar */}
+            <div style={{
+              display: "flex", background: "#fff",
+              borderRadius: "100px", border: "2px solid #e8ecf0",
+              overflow: "hidden", marginBottom: "1rem",
+              boxShadow: "0 4px 20px rgba(74,144,217,0.1)",
+            }}>
+              <input
+                placeholder="Hangi sınava hazırlanmak istiyorsunuz?"
+                style={{
+                  flex: 1, border: "none", padding: "14px 20px",
+                  fontSize: "14px", outline: "none",
+                  fontFamily: "var(--font-nunito-sans)",
+                }}
+              />
+              <Link href="/exams" style={{
+                background: "#4A90D9", color: "#fff",
+                border: "none", padding: "0 24px",
+                fontSize: "13.5px", fontWeight: 700,
+                textDecoration: "none", display: "flex",
+                alignItems: "center",
+                fontFamily: "var(--font-nunito)",
+              }}>Ara →</Link>
+            </div>
+
+            {/* Quick Tags */}
+            <div style={{
+              display: "flex", gap: "8px",
+              flexWrap: "wrap", marginBottom: "2rem",
+            }}>
+              {["📐 SAT", "🎓 IB", "🗣 IELTS", "📝 TOEFL", "🇹🇷 YÖS", "📊 GMAT", "🏫 A-Level"].map((tag) => (
+                <Link key={tag} href="/exams" style={{
+                  background: "#fff", border: "1.5px solid #e8ecf0",
+                  color: "#4a5568", fontSize: "12.5px", fontWeight: 700,
+                  padding: "6px 14px", borderRadius: "100px",
+                  textDecoration: "none",
+                  fontFamily: "var(--font-nunito)",
+                }}>{tag}</Link>
+              ))}
+            </div>
+
+            {/* Stats */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "1rem",
+              background: "#fff",
+              borderRadius: "16px",
+              padding: "1.2rem",
+              border: "1.5px solid #e8ecf0",
+            }}>
+              {[
+                { n: "10.000+", l: "Başarılı Öğrenci" },
+                { n: "%94", l: "Hedef Tutturma" },
+                { n: "50+", l: "Ülkeden Öğrenci" },
+                { n: "4.9 ⭐", l: "Google Puanı" },
+              ].map((s) => (
+                <div key={s.l} style={{ textAlign: "center" }}>
+                  <div style={{
+                    fontFamily: "var(--font-nunito)",
+                    fontSize: "1.3rem", fontWeight: 900, color: "#1a1a2e",
+                  }}>{s.n}</div>
+                  <div style={{
+                    fontSize: "11px", color: "#8898aa",
+                    fontWeight: 600, marginTop: "2px",
+                  }}>{s.l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
