@@ -9,12 +9,13 @@ const programs = [
   href: "/sinavlar/digital-sat",
 },
   {
-    title: "AP Programları",
-    category: "Advanced Placement",
-    description:
-      "AP Calculus, Physics, Economics, Chemistry, Biology, Statistics ve diğer AP dersleri için uzman destek.",
-    tags: ["4-5 hedef", "FRQ", "MCQ"],
-  },
+  title: "AP Programları",
+  category: "Advanced Placement",
+  description:
+    "AP Calculus, Physics, Economics, Chemistry, Biology, Statistics ve diğer AP dersleri için uzman destek.",
+  tags: ["4-5 hedef", "FRQ", "MCQ"],
+  href: "/sinavlar/ap",
+},
   {
     title: "IB Diploma",
     category: "IB & Okul Destek",
