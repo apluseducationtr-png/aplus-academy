@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import ExamPrograms from "@/components/ExamPrograms";
+import Testimonials from "@/components/Testimonials";
+import WhyAPlus from "@/components/WhyAPlus";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -239,6 +242,9 @@ export default function Home() {
         </div>
       </section>
       <ExamPrograms />
+      <Testimonials />
+      <WhyAPlus />
+      <Footer />
     </main>
   );
 }
