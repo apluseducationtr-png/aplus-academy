@@ -1,11 +1,13 @@
+import Link from "next/link";
 const programs = [
   {
-    title: "Digital SAT",
-    category: "ABD Üniversite Başvuruları",
-    description:
-      "Bluebook formatına uygun denemeler, konu analizi ve hedef skora yönelik kişisel çalışma planı.",
-    tags: ["1400+ hedef", "Math", "Reading & Writing"],
-  },
+  title: "Digital SAT",
+  category: "ABD Üniversite Başvuruları",
+  description:
+    "Bluebook formatına uygun denemeler, konu analizi ve hedef skora yönelik kişisel çalışma planı.",
+  tags: ["1400+ hedef", "Math", "Reading & Writing"],
+  href: "/sinavlar/digital-sat",
+},
   {
     title: "AP Programları",
     category: "Advanced Placement",
@@ -266,21 +268,37 @@ export default function ExamPrograms() {
                 ))}
               </div>
 
-              <button
-                style={{
-                  marginTop: "22px",
-                  background: "transparent",
-                  border: "none",
-                  padding: 0,
-                  color: "#2f80ed",
-                  fontSize: "14px",
-                  fontWeight: 900,
-                  textAlign: "left",
-                  cursor: "pointer",
-                }}
-              >
-                Detayları İncele →
-              </button>
+              {program.href ? (
+  <Link
+    href={program.href}
+    style={{
+      marginTop: "22px",
+      color: "#2f80ed",
+      fontSize: "14px",
+      fontWeight: 900,
+      textAlign: "left",
+      textDecoration: "none",
+    }}
+  >
+    Detayları İncele →
+  </Link>
+) : (
+  <button
+    style={{
+      marginTop: "22px",
+      background: "transparent",
+      border: "none",
+      padding: 0,
+      color: "#2f80ed",
+      fontSize: "14px",
+      fontWeight: 900,
+      textAlign: "left",
+      cursor: "pointer",
+    }}
+  >
+    Detayları İncele →
+  </button>
+)}
             </article>
           ))}
         </div>
