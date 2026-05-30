@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ExamPrograms from "@/components/ExamPrograms";
 import Link from "next/link";
 
 export default function Home() {
@@ -237,6 +238,7 @@ export default function Home() {
           }}>Ücretsiz Deneme Sınavı</Link>
         </div>
       </section>
+      <ExamPrograms />
     </main>
   );
 }
