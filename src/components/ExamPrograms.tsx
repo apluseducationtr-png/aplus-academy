@@ -17,12 +17,13 @@ const programs = [
   href: "/sinavlar/ap",
 },
   {
-    title: "IB Diploma",
-    category: "IB & Okul Destek",
-    description:
-      "IB Math AA/AI, Physics, Chemistry, Biology, Economics, Business ve IA / EE / TOK desteği.",
-    tags: ["HL / SL", "IA / EE", "Okul destek"],
-  },
+  title: "IB Diploma",
+  category: "IB & Okul Destek",
+  description:
+    "IB Math AA/AI, Physics, Chemistry, Biology, Economics, Business ve IA / EE / TOK desteği.",
+  tags: ["HL / SL", "IA / EE", "Okul destek"],
+  href: "/sinavlar/ib",
+},
   {
     title: "IELTS & TOEFL",
     category: "İngilizce Yeterlilik",
