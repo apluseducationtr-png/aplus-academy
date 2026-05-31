@@ -144,7 +144,7 @@ export default function IBPage() {
                 marginTop: "34px",
               }}
             >
-              <Link href="/iletisim" style={primaryButton}>
+              <Link href="/contact" style={primaryButton}>
                 Ücretsiz Görüşme Planla
               </Link>
 
@@ -824,7 +824,7 @@ export default function IBPage() {
             </h2>
           </div>
 
-          <Link href="/iletisim" style={whiteButton}>
+          <Link href="/contact" style={whiteButton}>
             Görüşme Planla
           </Link>
         </div>

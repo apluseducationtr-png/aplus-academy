@@ -182,7 +182,7 @@ export default function DigitalSATPage() {
                 marginTop: "34px",
               }}
             >
-              <Link href="/iletisim" style={primaryButton}>
+              <Link href="/contact" style={primaryButton}>
                 Ücretsiz Seviye Analizi Al
               </Link>
 
@@ -750,7 +750,7 @@ export default function DigitalSATPage() {
             </h2>
           </div>
 
-          <Link href="/iletisim" style={whiteButton}>
+          <Link href="/contact" style={whiteButton}>
             Görüşme Planla
           </Link>
         </div>

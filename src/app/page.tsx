@@ -25,7 +25,7 @@ export default function Home() {
         }}>
           {/* LEFT — Heading + Description */}
           <div>
-            <div className="home-search" style={{
+            <div style={{
               display: "inline-flex", alignItems: "center", gap: "6px",
               background: "#fff", border: "1.5px solid #DDEAF4",
               borderRadius: "100px", padding: "5px 14px",
@@ -78,7 +78,7 @@ export default function Home() {
           {/* RIGHT — Search + Tags + Stats */}
           <div>
             {/* Search Bar */}
-            <div className="home-stat-grid" style={{
+            <div className="home-search" style={{
               display: "flex", background: "#fff",
               borderRadius: "100px", border: "2px solid #DDEAF4",
               overflow: "hidden", marginBottom: "1rem",
@@ -103,7 +103,7 @@ export default function Home() {
             </div>
 
             {/* Quick Tags */}
-            <div style={{
+            <div className="home-stat-grid" style={{
               display: "flex", gap: "8px",
               flexWrap: "wrap", marginBottom: "2rem",
             }}>
