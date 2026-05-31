@@ -15,9 +15,9 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "APlus Academy | SAT, IB, IELTS, YÖS Hazırlık",
+  title: "APlus Academy | SAT, IB, IELTS Hazırlık",
   description:
-    "SAT, IB, A-Level, IELTS, TOEFL, YÖS ve 16+ uluslararası sınav için uzman birebir özel ders ve grup kursları. İstanbul merkezli, dünya genelinde online hizmet.",
+    "SAT, IB, A-Level, IELTS, TOEFL ve uluslararası sınavlar için uzman birebir özel ders ve grup kursları. İstanbul merkezli, dünya genelinde online hizmet.",
 };
 
 export default function RootLayout({

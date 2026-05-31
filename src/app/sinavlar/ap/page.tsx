@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -86,13 +86,13 @@ const faqs = [
 
 export default function APPage() {
   return (
-    <main style={{ background: "#ffffff", color: "#06122b" }}>
+    <main style={{ background: "#ffffff", color: "#0B1238" }}>
       <Navbar />
 
       <section
         style={{
-          background: "#06122b",
-          color: "#ffffff",
+          background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+          color: "#0B1238",
           padding: "92px 24px",
           position: "relative",
           overflow: "hidden",
@@ -104,7 +104,7 @@ export default function APPage() {
             width: "520px",
             height: "520px",
             borderRadius: "999px",
-            background: "rgba(47,128,237,0.22)",
+            background: "rgba(68, 199, 190, 0.16)",
             right: "-180px",
             top: "-210px",
           }}
@@ -116,7 +116,7 @@ export default function APPage() {
             maxWidth: "1180px",
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "minmax(0, 0.95fr) minmax(360px, 1.05fr)",
+            gridTemplateColumns: "minmax(0, 0.95fr) minmax(0, 1.05fr)",
             gap: "48px",
             alignItems: "center",
             position: "relative",
@@ -155,7 +155,7 @@ export default function APPage() {
 
             <p
               style={{
-                color: "#cbd5e1",
+                color: "#45546D",
                 fontSize: "18px",
                 lineHeight: "1.85",
                 margin: "26px 0 0",
@@ -188,10 +188,10 @@ export default function APPage() {
           <div
             style={{
               background: "#ffffff",
-              color: "#06122b",
+              color: "#0B1238",
               borderRadius: "40px",
               padding: "30px",
-              boxShadow: "0 34px 95px rgba(0,0,0,0.32)",
+              boxShadow: "0 30px 90px rgba(73,151,230,0.18)",
             }}
           >
             <div
@@ -206,7 +206,7 @@ export default function APPage() {
               <div>
                 <p
                   style={{
-                    color: "#2f80ed",
+                    color: "#4997E6",
                     fontSize: "13px",
                     fontWeight: 950,
                     letterSpacing: "0.15em",
@@ -235,8 +235,8 @@ export default function APPage() {
                   width: "58px",
                   height: "58px",
                   borderRadius: "20px",
-                  background: "#06122b",
-                  color: "#ffffff",
+                  background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+                  color: "#0B1238",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -279,7 +279,7 @@ export default function APPage() {
 
       <section
         style={{
-          background: "linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%)",
+          background: "linear-gradient(180deg, #F7FBFF 0%, #ffffff 100%)",
           padding: "90px 24px",
         }}
       >
@@ -295,7 +295,7 @@ export default function APPage() {
 
             <h2
               style={{
-                color: "#06122b",
+                color: "#0B1238",
                 fontSize: "clamp(36px, 4vw, 58px)",
                 lineHeight: "1.05",
                 letterSpacing: "-0.045em",
@@ -308,7 +308,7 @@ export default function APPage() {
 
             <p
               style={{
-                color: "#475569",
+                color: "#45546D",
                 fontSize: "17px",
                 lineHeight: "1.8",
                 margin: "20px auto 0",
@@ -351,8 +351,8 @@ export default function APPage() {
         >
           <div
             style={{
-              background: "#06122b",
-              color: "#ffffff",
+              background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+              color: "#0B1238",
               borderRadius: "38px",
               padding: "36px",
               minHeight: "520px",
@@ -369,7 +369,7 @@ export default function APPage() {
                 width: "300px",
                 height: "300px",
                 borderRadius: "999px",
-                background: "rgba(47,128,237,0.2)",
+                background: "rgba(68, 199, 190, 0.16)",
                 right: "-140px",
                 bottom: "-140px",
               }}
@@ -378,7 +378,7 @@ export default function APPage() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#93c5fd",
+                  color: "#4997E6",
                   fontSize: "13px",
                   fontWeight: 950,
                   letterSpacing: "0.16em",
@@ -403,7 +403,7 @@ export default function APPage() {
 
               <p
                 style={{
-                  color: "#cbd5e1",
+                  color: "#45546D",
                   fontSize: "16px",
                   lineHeight: "1.85",
                   margin: "24px 0 0",
@@ -419,8 +419,8 @@ export default function APPage() {
               style={{
                 position: "relative",
                 zIndex: 1,
-                background: "rgba(255,255,255,0.08)",
-                border: "1px solid rgba(255,255,255,0.14)",
+                background: "#ffffff",
+                border: "1px solid #DDEAF4",
                 borderRadius: "28px",
                 padding: "24px",
                 marginTop: "30px",
@@ -428,7 +428,7 @@ export default function APPage() {
             >
               <p
                 style={{
-                  color: "#93c5fd",
+                  color: "#4997E6",
                   fontSize: "13px",
                   fontWeight: 900,
                   margin: "0 0 8px",
@@ -439,7 +439,7 @@ export default function APPage() {
 
               <p
                 style={{
-                  color: "#ffffff",
+                  color: "#0B1238",
                   fontSize: "22px",
                   lineHeight: "1.35",
                   fontWeight: 950,
@@ -464,7 +464,7 @@ export default function APPage() {
                 key={item.title}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid #dbeafe",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "30px",
                   padding: "28px",
                   boxShadow: "0 16px 42px rgba(15, 23, 42, 0.06)",
@@ -479,8 +479,8 @@ export default function APPage() {
                     width: "50px",
                     height: "50px",
                     borderRadius: "18px",
-                    background: index % 2 === 0 ? "#2f80ed" : "#06122b",
-                    color: "#ffffff",
+                    background: index % 2 === 0 ? "#4997E6" : "#EF4A85",
+                    color: "#0B1238",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -495,7 +495,7 @@ export default function APPage() {
                 <div>
                   <h3
                     style={{
-                      color: "#06122b",
+                      color: "#0B1238",
                       fontSize: "24px",
                       lineHeight: "1.15",
                       letterSpacing: "-0.035em",
@@ -508,7 +508,7 @@ export default function APPage() {
 
                   <p
                     style={{
-                      color: "#475569",
+                      color: "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -525,7 +525,7 @@ export default function APPage() {
 
       <section
         style={{
-          background: "#f8fbff",
+          background: "#FAFCFF",
           padding: "90px 24px",
         }}
       >
@@ -545,7 +545,7 @@ export default function APPage() {
 
               <h2
                 style={{
-                  color: "#06122b",
+                  color: "#0B1238",
                   fontSize: "clamp(34px, 4vw, 54px)",
                   lineHeight: "1.05",
                   letterSpacing: "-0.045em",
@@ -559,7 +559,7 @@ export default function APPage() {
 
             <p
               style={{
-                color: "#475569",
+                color: "#45546D",
                 fontSize: "16px",
                 lineHeight: "1.8",
                 margin: 0,
@@ -583,9 +583,9 @@ export default function APPage() {
               <article
                 key={item.title}
                 style={{
-                  background: index === 0 ? "#06122b" : "#ffffff",
-                  color: index === 0 ? "#ffffff" : "#06122b",
-                  border: index === 0 ? "none" : "1px solid #dbeafe",
+                  background: index === 0 ? "#EAF4FF" : "#ffffff",
+                  color: "#0B1238",
+                  border: index === 0 ? "none" : "1px solid #D7ECFF",
                   borderRadius: "28px",
                   padding: "24px",
                   minHeight: "250px",
@@ -594,7 +594,7 @@ export default function APPage() {
               >
                 <p
                   style={{
-                    color: index === 0 ? "#93c5fd" : "#2f80ed",
+                    color: index === 0 ? "#A9D3FF" : "#4997E6",
                     fontSize: "13px",
                     fontWeight: 950,
                     margin: "0 0 18px",
@@ -617,7 +617,7 @@ export default function APPage() {
 
                 <p
                   style={{
-                    color: index === 0 ? "#cbd5e1" : "#475569",
+                    color: index === 0 ? "#DCE7F2" : "#45546D",
                     fontSize: "14px",
                     lineHeight: "1.7",
                     margin: 0,
@@ -645,15 +645,15 @@ export default function APPage() {
         >
           <div
             style={{
-              background: "#06122b",
-              color: "#ffffff",
+              background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+              color: "#0B1238",
               borderRadius: "36px",
               padding: "34px",
             }}
           >
             <p
               style={{
-                color: "#93c5fd",
+                color: "#4997E6",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.16em",
@@ -683,7 +683,7 @@ export default function APPage() {
                 key={item}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid #dbeafe",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "24px",
                   padding: "22px",
                   display: "grid",
@@ -698,8 +698,8 @@ export default function APPage() {
                     width: "46px",
                     height: "46px",
                     borderRadius: "16px",
-                    background: index === 0 ? "#2f80ed" : "#eff6ff",
-                    color: index === 0 ? "#ffffff" : "#2f80ed",
+                    background: index === 0 ? "#4997E6" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#4997E6",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -711,7 +711,7 @@ export default function APPage() {
 
                 <p
                   style={{
-                    color: "#06122b",
+                    color: "#0B1238",
                     fontSize: "16px",
                     lineHeight: "1.55",
                     fontWeight: 850,
@@ -728,7 +728,7 @@ export default function APPage() {
 
       <section
         style={{
-          background: "#f4f9ff",
+          background: "#F7FBFF",
           padding: "86px 24px",
         }}
       >
@@ -745,7 +745,7 @@ export default function APPage() {
           <div>
             <p
               style={{
-                color: "#2f80ed",
+                color: "#4997E6",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.14em",
@@ -775,14 +775,14 @@ export default function APPage() {
                 key={faq.q}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid #dbeafe",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "24px",
                   padding: "24px",
                 }}
               >
                 <h3
                   style={{
-                    color: "#06122b",
+                    color: "#0B1238",
                     fontSize: "18px",
                     fontWeight: 950,
                     margin: "0 0 10px",
@@ -793,7 +793,7 @@ export default function APPage() {
 
                 <p
                   style={{
-                    color: "#475569",
+                    color: "#45546D",
                     fontSize: "15px",
                     lineHeight: "1.75",
                     margin: 0,
@@ -813,21 +813,21 @@ export default function APPage() {
           style={{
             maxWidth: "1180px",
             margin: "0 auto",
-            background: "#06122b",
-            color: "#ffffff",
+            background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+            color: "#0B1238",
             borderRadius: "38px",
             padding: "46px",
             display: "grid",
             gridTemplateColumns: "minmax(0, 1fr) auto",
             gap: "28px",
             alignItems: "center",
-            boxShadow: "0 28px 80px rgba(15, 23, 42, 0.18)",
+            boxShadow: "0 24px 70px rgba(73,151,230,0.14)",
           }}
         >
           <div>
             <p
               style={{
-                color: "#93c5fd",
+                color: "#4997E6",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.16em",
@@ -887,15 +887,15 @@ function MetricBox({ label, value }: { label: string; value: string }) {
   return (
     <div
       style={{
-        background: "#f8fbff",
-        border: "1px solid #dbeafe",
+        background: "#FAFCFF",
+        border: "1px solid #D7ECFF",
         borderRadius: "22px",
         padding: "18px",
       }}
     >
       <p
         style={{
-          color: "#64748b",
+          color: "#6E7F97",
           fontSize: "13px",
           margin: "0 0 8px",
         }}
@@ -905,7 +905,7 @@ function MetricBox({ label, value }: { label: string; value: string }) {
 
       <strong
         style={{
-          color: "#06122b",
+          color: "#0B1238",
           fontSize: "18px",
           fontWeight: 950,
         }}
@@ -929,7 +929,7 @@ function ProgressRow({ label, value }: { label: string; value: string }) {
       >
         <span
           style={{
-            color: "#334155",
+            color: "#1F2A44",
             fontSize: "13px",
             fontWeight: 850,
           }}
@@ -939,7 +939,7 @@ function ProgressRow({ label, value }: { label: string; value: string }) {
 
         <span
           style={{
-            color: "#2f80ed",
+            color: "#4997E6",
             fontSize: "13px",
             fontWeight: 950,
           }}
@@ -951,7 +951,7 @@ function ProgressRow({ label, value }: { label: string; value: string }) {
       <div
         style={{
           height: "8px",
-          background: "#eff6ff",
+          background: "#EEF7FF",
           borderRadius: "999px",
           overflow: "hidden",
         }}
@@ -960,7 +960,7 @@ function ProgressRow({ label, value }: { label: string; value: string }) {
           style={{
             width: value,
             height: "100%",
-            background: "#2f80ed",
+            background: "#4997E6",
             borderRadius: "999px",
           }}
         />
@@ -981,9 +981,9 @@ function SubjectPanel({
   return (
     <div
       style={{
-        background: dark ? "#06122b" : "#ffffff",
-        color: dark ? "#ffffff" : "#06122b",
-        border: dark ? "none" : "1px solid #dbeafe",
+        background: dark ? "#EAF4FF" : "#ffffff",
+        color: "#0B1238",
+        border: dark ? "none" : "1px solid #D7ECFF",
         borderRadius: "34px",
         padding: "32px",
         boxShadow: "0 18px 48px rgba(15, 23, 42, 0.06)",
@@ -1006,11 +1006,11 @@ function SubjectPanel({
           <div
             key={subject}
             style={{
-              background: dark ? "rgba(255,255,255,0.08)" : "#f8fbff",
-              border: dark ? "1px solid rgba(255,255,255,0.14)" : "1px solid #dbeafe",
+              background: dark ? "rgba(255,255,255,0.08)" : "#FAFCFF",
+              border: dark ? "1px solid rgba(255,255,255,0.14)" : "1px solid #D7ECFF",
               borderRadius: "18px",
               padding: "16px 18px",
-              color: dark ? "#ffffff" : "#06122b",
+              color: "#0B1238",
               fontSize: "15px",
               fontWeight: 900,
             }}
@@ -1027,9 +1027,9 @@ const backButtonDark = {
   display: "inline-flex",
   alignItems: "center",
   gap: "8px",
-  color: "#ffffff",
-  background: "rgba(255,255,255,0.08)",
-  border: "1px solid rgba(255,255,255,0.16)",
+  color: "#0B1238",
+  background: "#ffffff",
+  border: "1px solid #DDEAF4",
   borderRadius: "999px",
   padding: "9px 14px",
   fontSize: "14px",
@@ -1040,9 +1040,9 @@ const backButtonDark = {
 
 const blueBadgeDark = {
   display: "inline-flex",
-  background: "rgba(147,197,253,0.14)",
-  color: "#93c5fd",
-  border: "1px solid rgba(147,197,253,0.28)",
+  background: "#EAF4FF",
+  color: "#4997E6",
+  border: "1px solid #CFE7FF",
   borderRadius: "999px",
   padding: "9px 16px",
   fontSize: "13px",
@@ -1053,9 +1053,9 @@ const blueBadgeDark = {
 
 const blueBadgeLight = {
   display: "inline-flex",
-  background: "#eaf3ff",
-  color: "#2f80ed",
-  border: "1px solid #d7e9ff",
+  background: "#EAF4FF",
+  color: "#4997E6",
+  border: "1px solid #CFE7FF",
   borderRadius: "999px",
   padding: "9px 16px",
   fontSize: "13px",
@@ -1065,7 +1065,7 @@ const blueBadgeLight = {
 };
 
 const primaryButton = {
-  background: "#2f80ed",
+  background: "#4997E6",
   color: "#ffffff",
   borderRadius: "999px",
   padding: "14px 22px",
@@ -1075,9 +1075,9 @@ const primaryButton = {
 };
 
 const darkSecondaryButton = {
-  background: "rgba(255,255,255,0.08)",
-  color: "#ffffff",
-  border: "1px solid rgba(255,255,255,0.18)",
+  background: "#ffffff",
+  color: "#0B1238",
+  border: "1px solid #DDEAF4",
   borderRadius: "999px",
   padding: "14px 22px",
   fontSize: "14px",
@@ -1087,7 +1087,7 @@ const darkSecondaryButton = {
 
 const whiteButton = {
   background: "#ffffff",
-  color: "#06122b",
+  color: "#0B1238",
   borderRadius: "999px",
   padding: "15px 24px",
   fontSize: "14px",

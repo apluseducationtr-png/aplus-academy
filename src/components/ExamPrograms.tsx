@@ -32,13 +32,6 @@ const programs = [
     tags: ["IELTS 7.5+", "TOEFL 100+", "Speaking"],
   },
   {
-    title: "YÖS",
-    category: "Türkiye Üniversiteleri",
-    description:
-      "Uluslararası öğrenciler için matematik, geometri ve IQ ağırlıklı YÖS hazırlık programı.",
-    tags: ["Matematik", "IQ", "Türkiye"],
-  },
-  {
     title: "IMAT, UCAT, LNAT",
     category: "Tıp & Hukuk Başvuruları",
     description:
@@ -66,7 +59,7 @@ export default function ExamPrograms() {
     <section
       id="programlar"
       style={{
-        background: "linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%)",
+        background: "linear-gradient(180deg, #F7FBFF 0%, #ffffff 100%)",
         padding: "90px 24px",
       }}
     >
@@ -79,7 +72,7 @@ export default function ExamPrograms() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))",
             gap: "32px",
             alignItems: "end",
             marginBottom: "42px",
@@ -91,9 +84,9 @@ export default function ExamPrograms() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "8px",
-                background: "#eaf3ff",
-                color: "#2f80ed",
-                border: "1px solid #d7e9ff",
+                background: "#EAF4FF",
+                color: "#4997E6",
+                border: "1px solid #CFE7FF",
                 borderRadius: "999px",
                 padding: "8px 14px",
                 fontSize: "13px",
@@ -112,7 +105,7 @@ export default function ExamPrograms() {
                 lineHeight: "1.05",
                 letterSpacing: "-0.04em",
                 fontWeight: 900,
-                color: "#06122b",
+                color: "#0B1238",
                 maxWidth: "620px",
                 margin: 0,
               }}
@@ -124,7 +117,7 @@ export default function ExamPrograms() {
           <div
             style={{
               background: "#ffffff",
-              border: "1px solid #dbeafe",
+              border: "1px solid #D7ECFF",
               borderRadius: "28px",
               padding: "26px",
               boxShadow: "0 18px 45px rgba(15, 23, 42, 0.06)",
@@ -132,7 +125,7 @@ export default function ExamPrograms() {
           >
             <p
               style={{
-                color: "#475569",
+                color: "#45546D",
                 fontSize: "16px",
                 lineHeight: "1.8",
                 margin: 0,
@@ -155,9 +148,9 @@ export default function ExamPrograms() {
                 <span
                   key={item}
                   style={{
-                    background: item === "Birebir Ders" ? "#2f80ed" : "#f8fafc",
-                    color: item === "Birebir Ders" ? "#ffffff" : "#334155",
-                    border: item === "Birebir Ders" ? "none" : "1px solid #e2e8f0",
+                    background: item === "Birebir Ders" ? "#4997E6" : "#F7FBFF",
+                    color: item === "Birebir Ders" ? "#ffffff" : "#1F2A44",
+                    border: item === "Birebir Ders" ? "none" : "1px solid #DDEAF4",
                     borderRadius: "999px",
                     padding: "9px 14px",
                     fontSize: "13px",
@@ -174,7 +167,7 @@ export default function ExamPrograms() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))",
             gap: "22px",
           }}
         >
@@ -183,7 +176,7 @@ export default function ExamPrograms() {
               key={program.title}
               style={{
                 background: "#ffffff",
-                border: "1px solid #e2e8f0",
+                border: "1px solid #DDEAF4",
                 borderRadius: "28px",
                 padding: "26px",
                 minHeight: "270px",
@@ -197,8 +190,8 @@ export default function ExamPrograms() {
                   width: "48px",
                   height: "48px",
                   borderRadius: "16px",
-                  background: "#06122b",
-                  color: "#ffffff",
+                  background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+                  color: "#0B1238",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -212,7 +205,7 @@ export default function ExamPrograms() {
 
               <p
                 style={{
-                  color: "#2f80ed",
+                  color: "#4997E6",
                   fontSize: "12px",
                   fontWeight: 800,
                   margin: "0 0 8px",
@@ -223,7 +216,7 @@ export default function ExamPrograms() {
 
               <h3
                 style={{
-                  color: "#06122b",
+                  color: "#0B1238",
                   fontSize: "24px",
                   lineHeight: "1.15",
                   fontWeight: 900,
@@ -235,7 +228,7 @@ export default function ExamPrograms() {
 
               <p
                 style={{
-                  color: "#475569",
+                  color: "#45546D",
                   fontSize: "15px",
                   lineHeight: "1.7",
                   margin: 0,
@@ -258,7 +251,7 @@ export default function ExamPrograms() {
                     key={tag}
                     style={{
                       background: "#f1f5f9",
-                      color: "#334155",
+                      color: "#1F2A44",
                       borderRadius: "999px",
                       padding: "6px 10px",
                       fontSize: "12px",
@@ -275,7 +268,7 @@ export default function ExamPrograms() {
     href={program.href}
     style={{
       marginTop: "22px",
-      color: "#2f80ed",
+      color: "#4997E6",
       fontSize: "14px",
       fontWeight: 900,
       textAlign: "left",
@@ -291,7 +284,7 @@ export default function ExamPrograms() {
       background: "transparent",
       border: "none",
       padding: 0,
-      color: "#2f80ed",
+      color: "#4997E6",
       fontSize: "14px",
       fontWeight: 900,
       textAlign: "left",
@@ -308,11 +301,11 @@ export default function ExamPrograms() {
         <div
           style={{
             marginTop: "34px",
-            background: "#06122b",
+            background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
             borderRadius: "32px",
             padding: "34px",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))",
             gap: "24px",
             alignItems: "center",
           }}
@@ -320,7 +313,7 @@ export default function ExamPrograms() {
           <div>
             <p
               style={{
-                color: "#93c5fd",
+                color: "#4997E6",
                 fontSize: "13px",
                 fontWeight: 900,
                 letterSpacing: "0.16em",
@@ -333,7 +326,7 @@ export default function ExamPrograms() {
 
             <h3
               style={{
-                color: "#ffffff",
+                color: "#0B1238",
                 fontSize: "30px",
                 lineHeight: "1.15",
                 fontWeight: 900,
@@ -350,7 +343,7 @@ export default function ExamPrograms() {
             <button
               style={{
                 background: "#ffffff",
-                color: "#06122b",
+                color: "#0B1238",
                 border: "none",
                 borderRadius: "999px",
                 padding: "15px 24px",

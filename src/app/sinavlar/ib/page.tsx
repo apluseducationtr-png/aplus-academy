@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -71,13 +71,13 @@ const faqs = [
 
 export default function IBPage() {
   return (
-    <main style={{ background: "#ffffff", color: "#06122b" }}>
+    <main style={{ background: "#ffffff", color: "#0B1238" }}>
       <Navbar />
 
       <section
         style={{
           background:
-            "radial-gradient(circle at 78% 18%, rgba(47,128,237,0.16), transparent 32%), linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%)",
+            "radial-gradient(circle at 78% 18%, rgba(47,128,237,0.16), transparent 32%), linear-gradient(180deg, #F7FBFF 0%, #ffffff 100%)",
           padding: "92px 24px 86px",
         }}
       >
@@ -87,7 +87,7 @@ export default function IBPage() {
             maxWidth: "1180px",
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "minmax(0, 1fr) minmax(360px, 0.95fr)",
+            gridTemplateColumns: "minmax(0, 1fr) minmax(0, 0.95fr)",
             gap: "48px",
             alignItems: "center",
           }}
@@ -124,7 +124,7 @@ export default function IBPage() {
 
             <p
               style={{
-                color: "#475569",
+                color: "#45546D",
                 fontSize: "18px",
                 lineHeight: "1.85",
                 margin: "26px 0 0",
@@ -156,8 +156,8 @@ export default function IBPage() {
 
           <div
             style={{
-              background: "#06122b",
-              color: "#ffffff",
+              background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+              color: "#0B1238",
               borderRadius: "42px",
               padding: "34px",
               boxShadow: "0 30px 90px rgba(15, 23, 42, 0.22)",
@@ -171,7 +171,7 @@ export default function IBPage() {
                 width: "300px",
                 height: "300px",
                 borderRadius: "999px",
-                background: "rgba(47,128,237,0.24)",
+                background: "rgba(239, 74, 133, 0.14)",
                 top: "-140px",
                 right: "-140px",
               }}
@@ -180,7 +180,7 @@ export default function IBPage() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#93c5fd",
+                  color: "#4997E6",
                   fontSize: "13px",
                   fontWeight: 950,
                   letterSpacing: "0.16em",
@@ -219,15 +219,15 @@ export default function IBPage() {
               <div
                 style={{
                   marginTop: "22px",
-                  background: "rgba(255,255,255,0.08)",
-                  border: "1px solid rgba(255,255,255,0.14)",
+                  background: "#ffffff",
+                  border: "1px solid #DDEAF4",
                   borderRadius: "28px",
                   padding: "24px",
                 }}
               >
                 <p
                   style={{
-                    color: "#cbd5e1",
+                    color: "#45546D",
                     fontSize: "15px",
                     lineHeight: "1.75",
                     margin: 0,
@@ -257,8 +257,8 @@ export default function IBPage() {
         >
           <div
             style={{
-              background: "#06122b",
-              color: "#ffffff",
+              background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+              color: "#0B1238",
               borderRadius: "38px",
               padding: "38px",
               minHeight: "520px",
@@ -275,7 +275,7 @@ export default function IBPage() {
                 width: "320px",
                 height: "320px",
                 borderRadius: "999px",
-                background: "rgba(47,128,237,0.22)",
+                background: "rgba(68, 199, 190, 0.16)",
                 right: "-150px",
                 bottom: "-150px",
               }}
@@ -284,7 +284,7 @@ export default function IBPage() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#93c5fd",
+                  color: "#4997E6",
                   fontSize: "13px",
                   fontWeight: 950,
                   letterSpacing: "0.16em",
@@ -309,7 +309,7 @@ export default function IBPage() {
 
               <p
                 style={{
-                  color: "#cbd5e1",
+                  color: "#45546D",
                   fontSize: "16px",
                   lineHeight: "1.85",
                   margin: "24px 0 0",
@@ -349,7 +349,7 @@ export default function IBPage() {
                 key={item.title}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid #dbeafe",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "30px",
                   padding: "28px",
                   boxShadow: "0 16px 42px rgba(15, 23, 42, 0.06)",
@@ -364,8 +364,8 @@ export default function IBPage() {
                     width: "54px",
                     height: "54px",
                     borderRadius: "18px",
-                    background: index === 0 ? "#2f80ed" : "#eff6ff",
-                    color: index === 0 ? "#ffffff" : "#2f80ed",
+                    background: index === 0 ? "#4997E6" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#4997E6",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -378,7 +378,7 @@ export default function IBPage() {
                 <div>
                   <h3
                     style={{
-                      color: "#06122b",
+                      color: "#0B1238",
                       fontSize: "25px",
                       lineHeight: "1.15",
                       letterSpacing: "-0.035em",
@@ -391,7 +391,7 @@ export default function IBPage() {
 
                   <p
                     style={{
-                      color: "#475569",
+                      color: "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -408,7 +408,7 @@ export default function IBPage() {
 
       <section
         style={{
-          background: "#f4f9ff",
+          background: "#F7FBFF",
           padding: "90px 24px",
         }}
       >
@@ -436,7 +436,7 @@ export default function IBPage() {
 
             <p
               style={{
-                color: "#475569",
+                color: "#45546D",
                 fontSize: "17px",
                 lineHeight: "1.8",
                 margin: "20px auto 0",
@@ -459,9 +459,9 @@ export default function IBPage() {
               <div
                 key={subject}
                 style={{
-                  background: index % 4 === 0 ? "#06122b" : "#ffffff",
-                  color: index % 4 === 0 ? "#ffffff" : "#06122b",
-                  border: index % 4 === 0 ? "none" : "1px solid #dbeafe",
+                  background: index % 4 === 0 ? "#EAF4FF" : "#ffffff",
+                  color: "#0B1238",
+                  border: index % 4 === 0 ? "none" : "1px solid #D7ECFF",
                   borderRadius: "24px",
                   padding: "22px",
                   minHeight: "110px",
@@ -509,7 +509,7 @@ export default function IBPage() {
 
             <p
               style={{
-                color: "#475569",
+                color: "#45546D",
                 fontSize: "16px",
                 lineHeight: "1.8",
                 margin: 0,
@@ -532,9 +532,9 @@ export default function IBPage() {
               <article
                 key={item.title}
                 style={{
-                  background: index === 0 ? "#06122b" : "#ffffff",
-                  color: index === 0 ? "#ffffff" : "#06122b",
-                  border: index === 0 ? "none" : "1px solid #dbeafe",
+                  background: index === 0 ? "#EAF4FF" : "#ffffff",
+                  color: "#0B1238",
+                  border: index === 0 ? "none" : "1px solid #D7ECFF",
                   borderRadius: "30px",
                   padding: "28px",
                   minHeight: index === 0 || index === 3 ? "285px" : "245px",
@@ -549,8 +549,8 @@ export default function IBPage() {
                     width: "52px",
                     height: "52px",
                     borderRadius: "18px",
-                    background: index === 0 ? "#2f80ed" : "#eff6ff",
-                    color: index === 0 ? "#ffffff" : "#2f80ed",
+                    background: index === 0 ? "#4997E6" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#4997E6",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -576,7 +576,7 @@ export default function IBPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#cbd5e1" : "#475569",
+                      color: index === 0 ? "#DCE7F2" : "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -593,7 +593,7 @@ export default function IBPage() {
 
       <section
         style={{
-          background: "#f8fbff",
+          background: "#FAFCFF",
           padding: "90px 24px",
         }}
       >
@@ -626,7 +626,7 @@ export default function IBPage() {
 
             <p
               style={{
-                color: "#475569",
+                color: "#45546D",
                 fontSize: "16px",
                 lineHeight: "1.8",
                 margin: 0,
@@ -649,9 +649,9 @@ export default function IBPage() {
               <article
                 key={title}
                 style={{
-                  background: index === 0 ? "#06122b" : "#ffffff",
-                  color: index === 0 ? "#ffffff" : "#06122b",
-                  border: index === 0 ? "none" : "1px solid #dbeafe",
+                  background: index === 0 ? "#EAF4FF" : "#ffffff",
+                  color: "#0B1238",
+                  border: index === 0 ? "none" : "1px solid #D7ECFF",
                   borderRadius: "28px",
                   padding: "24px",
                   minHeight: "260px",
@@ -666,8 +666,8 @@ export default function IBPage() {
                     width: "48px",
                     height: "48px",
                     borderRadius: "16px",
-                    background: index === 0 ? "#2f80ed" : "#eff6ff",
-                    color: index === 0 ? "#ffffff" : "#2f80ed",
+                    background: index === 0 ? "#4997E6" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#4997E6",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -693,7 +693,7 @@ export default function IBPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#cbd5e1" : "#475569",
+                      color: index === 0 ? "#DCE7F2" : "#45546D",
                       fontSize: "14px",
                       lineHeight: "1.7",
                       margin: 0,
@@ -745,15 +745,15 @@ export default function IBPage() {
               <article
                 key={faq.q}
                 style={{
-                  background: "#f8fbff",
-                  border: "1px solid #dbeafe",
+                  background: "#FAFCFF",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "26px",
                   padding: "24px",
                 }}
               >
                 <h3
                   style={{
-                    color: "#06122b",
+                    color: "#0B1238",
                     fontSize: "18px",
                     fontWeight: 950,
                     margin: "0 0 10px",
@@ -764,7 +764,7 @@ export default function IBPage() {
 
                 <p
                   style={{
-                    color: "#475569",
+                    color: "#45546D",
                     fontSize: "15px",
                     lineHeight: "1.75",
                     margin: 0,
@@ -784,21 +784,21 @@ export default function IBPage() {
           style={{
             maxWidth: "1180px",
             margin: "0 auto",
-            background: "#06122b",
-            color: "#ffffff",
+            background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+            color: "#0B1238",
             borderRadius: "40px",
             padding: "48px",
             display: "grid",
             gridTemplateColumns: "minmax(0, 1fr) auto",
             gap: "28px",
             alignItems: "center",
-            boxShadow: "0 28px 80px rgba(15, 23, 42, 0.18)",
+            boxShadow: "0 24px 70px rgba(73,151,230,0.14)",
           }}
         >
           <div>
             <p
               style={{
-                color: "#93c5fd",
+                color: "#4997E6",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.16em",
@@ -858,16 +858,16 @@ function HeroMetric({ label, value }: { label: string; value: string }) {
   return (
     <div
       style={{
-        background: "rgba(255,255,255,0.08)",
-        border: "1px solid rgba(255,255,255,0.14)",
+        background: "#ffffff",
+        border: "1px solid #DDEAF4",
         borderRadius: "22px",
         padding: "18px",
       }}
     >
-      <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0 0 8px" }}>
+      <p style={{ color: "#45546D", fontSize: "13px", margin: "0 0 8px" }}>
         {label}
       </p>
-      <strong style={{ color: "#ffffff", fontSize: "18px", fontWeight: 950 }}>
+      <strong style={{ color: "#0B1238", fontSize: "18px", fontWeight: 950 }}>
         {value}
       </strong>
     </div>
@@ -878,15 +878,15 @@ function CoreBox({ title, text }: { title: string; text: string }) {
   return (
     <div
       style={{
-        background: "rgba(255,255,255,0.08)",
-        border: "1px solid rgba(255,255,255,0.14)",
+        background: "#ffffff",
+        border: "1px solid #DDEAF4",
         borderRadius: "22px",
         padding: "18px",
       }}
     >
       <h3
         style={{
-          color: "#ffffff",
+          color: "#0B1238",
           fontSize: "28px",
           fontWeight: 950,
           margin: "0 0 8px",
@@ -897,7 +897,7 @@ function CoreBox({ title, text }: { title: string; text: string }) {
 
       <p
         style={{
-          color: "#cbd5e1",
+          color: "#45546D",
           fontSize: "13px",
           lineHeight: "1.55",
           margin: 0,
@@ -913,9 +913,9 @@ const backButton = {
   display: "inline-flex",
   alignItems: "center",
   gap: "8px",
-  color: "#2f80ed",
+  color: "#4997E6",
   background: "#ffffff",
-  border: "1px solid #dbeafe",
+  border: "1px solid #D7ECFF",
   borderRadius: "999px",
   padding: "9px 14px",
   fontSize: "14px",
@@ -926,9 +926,9 @@ const backButton = {
 
 const blueBadge = {
   display: "inline-flex",
-  background: "#eaf3ff",
-  color: "#2f80ed",
-  border: "1px solid #d7e9ff",
+  background: "#EAF4FF",
+  color: "#4997E6",
+  border: "1px solid #CFE7FF",
   borderRadius: "999px",
   padding: "9px 16px",
   fontSize: "13px",
@@ -938,7 +938,7 @@ const blueBadge = {
 };
 
 const primaryButton = {
-  background: "#2f80ed",
+  background: "#4997E6",
   color: "#ffffff",
   borderRadius: "999px",
   padding: "14px 22px",
@@ -949,8 +949,8 @@ const primaryButton = {
 
 const secondaryButton = {
   background: "#ffffff",
-  color: "#06122b",
-  border: "1px solid #dbeafe",
+  color: "#0B1238",
+  border: "1px solid #D7ECFF",
   borderRadius: "999px",
   padding: "14px 22px",
   fontSize: "14px",
@@ -960,7 +960,7 @@ const secondaryButton = {
 
 const whiteButton = {
   background: "#ffffff",
-  color: "#06122b",
+  color: "#0B1238",
   borderRadius: "999px",
   padding: "15px 24px",
   fontSize: "14px",

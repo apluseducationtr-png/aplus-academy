@@ -1,4 +1,4 @@
-const features = [
+﻿const features = [
   {
     title: "Kişisel yol haritası",
     text: "Öğrencinin hedefi, başlangıç seviyesi ve sınav tarihine göre haftalık bir çalışma planı oluşturulur.",
@@ -30,7 +30,7 @@ export default function WhyAPlus() {
     <section
       id="neden-aplus"
       style={{
-        background: "linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%)",
+        background: "linear-gradient(180deg, #ffffff 0%, #F7FBFF 100%)",
         padding: "96px 24px",
       }}
     >
@@ -51,8 +51,8 @@ export default function WhyAPlus() {
             style={{
               display: "inline-flex",
               background: "#eef6ff",
-              color: "#2f80ed",
-              border: "1px solid #d7e9ff",
+              color: "#4997E6",
+              border: "1px solid #CFE7FF",
               borderRadius: "999px",
               padding: "8px 14px",
               fontSize: "13px",
@@ -67,7 +67,7 @@ export default function WhyAPlus() {
 
           <h2
             style={{
-              color: "#06122b",
+              color: "#0B1238",
               fontSize: "clamp(36px, 4vw, 58px)",
               lineHeight: "1.05",
               letterSpacing: "-0.045em",
@@ -80,7 +80,7 @@ export default function WhyAPlus() {
 
           <p
             style={{
-              color: "#475569",
+              color: "#45546D",
               fontSize: "17px",
               lineHeight: "1.85",
               margin: "22px auto 0",
@@ -104,10 +104,10 @@ export default function WhyAPlus() {
         >
           <div
             style={{
-              background: "#06122b",
+              background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
               borderRadius: "36px",
               padding: "34px",
-              color: "#ffffff",
+              color: "#0B1238",
               position: "relative",
               overflow: "hidden",
               minHeight: "560px",
@@ -119,7 +119,7 @@ export default function WhyAPlus() {
                 width: "320px",
                 height: "320px",
                 borderRadius: "999px",
-                background: "rgba(47, 128, 237, 0.24)",
+                background: "rgba(239, 74, 133, 0.14)",
                 right: "-140px",
                 top: "-120px",
               }}
@@ -128,7 +128,7 @@ export default function WhyAPlus() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#93c5fd",
+                  color: "#4997E6",
                   fontSize: "13px",
                   fontWeight: 900,
                   letterSpacing: "0.16em",
@@ -176,7 +176,7 @@ export default function WhyAPlus() {
                         borderRadius: "16px",
                         background:
                           index === steps.length - 1
-                            ? "#2f80ed"
+                            ? "#4997E6"
                             : "rgba(255,255,255,0.1)",
                         border:
                           index === steps.length - 1
@@ -206,7 +206,7 @@ export default function WhyAPlus() {
                       <p
                         style={{
                           margin: 0,
-                          color: "#ffffff",
+                          color: "#0B1238",
                           fontSize: "16px",
                           fontWeight: 900,
                         }}
@@ -222,14 +222,14 @@ export default function WhyAPlus() {
                 style={{
                   marginTop: "34px",
                   padding: "22px",
-                  background: "rgba(255,255,255,0.08)",
-                  border: "1px solid rgba(255,255,255,0.14)",
+                  background: "#ffffff",
+                  border: "1px solid #DDEAF4",
                   borderRadius: "24px",
                 }}
               >
                 <p
                   style={{
-                    color: "#cbd5e1",
+                    color: "#45546D",
                     fontSize: "15px",
                     lineHeight: "1.75",
                     margin: 0,
@@ -256,7 +256,7 @@ export default function WhyAPlus() {
                 key={feature.title}
                 style={{
                   background: "#ffffff",
-                  border: "1px solid #dbeafe",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "30px",
                   padding: "28px",
                   boxShadow: "0 16px 42px rgba(15, 23, 42, 0.06)",
@@ -272,8 +272,8 @@ export default function WhyAPlus() {
                       width: "52px",
                       height: "52px",
                       borderRadius: "18px",
-                      background: index % 2 === 0 ? "#2f80ed" : "#06122b",
-                      color: "#ffffff",
+                      background: index % 2 === 0 ? "#4997E6" : "#EF4A85",
+                      color: "#0B1238",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -287,7 +287,7 @@ export default function WhyAPlus() {
 
                   <h3
                     style={{
-                      color: "#06122b",
+                      color: "#0B1238",
                       fontSize: "24px",
                       lineHeight: "1.15",
                       fontWeight: 950,
@@ -300,7 +300,7 @@ export default function WhyAPlus() {
 
                   <p
                     style={{
-                      color: "#475569",
+                      color: "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -324,7 +324,7 @@ export default function WhyAPlus() {
                     style={{
                       width: `${55 + index * 12}%`,
                       height: "100%",
-                      background: index % 2 === 0 ? "#2f80ed" : "#06122b",
+                      background: index % 2 === 0 ? "#4997E6" : "#EF4A85",
                       borderRadius: "999px",
                     }}
                   />

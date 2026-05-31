@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,17 +7,17 @@ export default function Navbar() {
   return (
     <nav style={{
       background: "#fff",
-      borderBottom: "1.5px solid #e8ecf0",
+      borderBottom: "1.5px solid #DDEAF4",
       position: "sticky",
       top: 0,
       zIndex: 200,
     }}>
       {/* Top row — Logo centered */}
-      <div style={{
+      <div className="nav-bottom" style={{
         display: "flex",
         justifyContent: "center",
         padding: "12px 2rem 8px",
-        borderBottom: "1px solid #f0f4f8",
+        borderBottom: "1px solid #EEF5FA",
       }}>
         <Link href="/">
           <Image
@@ -39,7 +39,7 @@ export default function Navbar() {
         padding: "8px 2rem",
       }}>
         {/* Left — Nav Links */}
-        <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+        <div className="nav-links" style={{ display: "flex", alignItems: "center", gap: "4px" }}>
           <Link href="/exams" style={navLinkStyle}>Sınavlar</Link>
           <Link href="/question-bank" style={navLinkStyle}>Soru Bankası</Link>
           <Link href="/contact" style={navLinkStyle}>İletişim</Link>
@@ -47,11 +47,31 @@ export default function Navbar() {
         </div>
 
         {/* Right — Lang + CTA */}
-        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <div className="nav-actions" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <button style={langBtnStyle}>🌐 TR</button>
           <Link href="/contact" style={ctaBtnStyle}>Ücretsiz Başla</Link>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 720px) {
+          .nav-bottom {
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            padding: 10px 1rem !important;
+          }
+
+          .nav-links {
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+          }
+
+          .nav-actions {
+            justify-content: center !important;
+          }
+        }
+      `}</style>
     </nav>
   );
 }
@@ -67,8 +87,8 @@ const navLinkStyle: React.CSSProperties = {
 };
 
 const langBtnStyle: React.CSSProperties = {
-  background: "#f8fafc",
-  border: "1.5px solid #e8ecf0",
+  background: "#F7FBFF",
+  border: "1.5px solid #DDEAF4",
   color: "#4a5568",
   fontSize: "12px",
   padding: "5px 11px",
@@ -79,7 +99,7 @@ const langBtnStyle: React.CSSProperties = {
 };
 
 const ctaBtnStyle: React.CSSProperties = {
-  background: "#4A90D9",
+  background: "#4997E6",
   color: "#fff",
   padding: "8px 18px",
   borderRadius: "100px",

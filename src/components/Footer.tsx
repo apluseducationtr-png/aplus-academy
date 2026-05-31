@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#06122b",
-        color: "#ffffff",
+        background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
+        color: "#0B1238",
         padding: "70px 24px 30px",
       }}
     >
@@ -35,14 +35,14 @@ export default function Footer() {
 
             <p
               style={{
-                color: "#cbd5e1",
+                color: "#45546D",
                 fontSize: "15px",
                 lineHeight: "1.75",
                 margin: 0,
                 maxWidth: "320px",
               }}
             >
-              SAT, AP, IB, IELTS, TOEFL, YÖS ve uluslararası okul destek
+              SAT, AP, IB, IELTS, TOEFL ve uluslararası okul destek
               programlarında öğrenciler için kişisel akademik hazırlık sistemi.
             </p>
           </div>
@@ -54,7 +54,6 @@ export default function Footer() {
               <a style={footerLink}>AP Programları</a>
               <a style={footerLink}>IB Diploma</a>
               <a style={footerLink}>IELTS & TOEFL</a>
-              <a style={footerLink}>YÖS</a>
             </div>
           </div>
 
@@ -87,7 +86,7 @@ export default function Footer() {
             justifyContent: "space-between",
             gap: "18px",
             flexWrap: "wrap",
-            color: "#94a3b8",
+            color: "#7E91A9",
             fontSize: "13px",
           }}
         >
@@ -105,7 +104,7 @@ export default function Footer() {
 }
 
 const footerTitle = {
-  color: "#93c5fd",
+  color: "#4997E6",
   fontSize: "13px",
   fontWeight: 900,
   letterSpacing: "0.16em",
@@ -119,7 +118,7 @@ const footerLinks = {
 };
 
 const footerLink = {
-  color: "#cbd5e1",
+  color: "#45546D",
   fontSize: "14px",
   textDecoration: "none",
   cursor: "pointer",

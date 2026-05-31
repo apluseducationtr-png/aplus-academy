@@ -1,4 +1,4 @@
-const featuredResult = {
+﻿const featuredResult = {
   exam: "Digital SAT",
   before: "1150",
   after: "1420",
@@ -56,7 +56,7 @@ export default function Testimonials() {
     <section
       id="basarilar"
       style={{
-        background: "#06122b",
+        background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
         padding: "96px 24px",
         position: "relative",
         overflow: "hidden",
@@ -68,7 +68,7 @@ export default function Testimonials() {
           width: "520px",
           height: "520px",
           borderRadius: "999px",
-          background: "rgba(47, 128, 237, 0.18)",
+          background: "rgba(68, 199, 190, 0.16)",
           top: "-220px",
           right: "-180px",
         }}
@@ -85,7 +85,7 @@ export default function Testimonials() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))",
             gap: "42px",
             alignItems: "center",
             marginBottom: "48px",
@@ -95,9 +95,9 @@ export default function Testimonials() {
             <div
               style={{
                 display: "inline-flex",
-                background: "rgba(147, 197, 253, 0.14)",
-                color: "#93c5fd",
-                border: "1px solid rgba(147, 197, 253, 0.28)",
+                background: "#EAF4FF",
+                color: "#4997E6",
+                border: "1px solid #CFE7FF",
                 borderRadius: "999px",
                 padding: "8px 14px",
                 fontSize: "13px",
@@ -112,7 +112,7 @@ export default function Testimonials() {
 
             <h2
               style={{
-                color: "#ffffff",
+                color: "#0B1238",
                 fontSize: "clamp(36px, 4vw, 58px)",
                 lineHeight: "1.05",
                 letterSpacing: "-0.045em",
@@ -127,7 +127,7 @@ export default function Testimonials() {
 
           <p
             style={{
-              color: "#cbd5e1",
+              color: "#45546D",
               fontSize: "17px",
               lineHeight: "1.85",
               margin: 0,
@@ -144,7 +144,7 @@ export default function Testimonials() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "minmax(0, 1.25fr) minmax(320px, 0.75fr)",
+            gridTemplateColumns: "minmax(0, 1.25fr) minmax(0, 0.75fr)",
             gap: "24px",
           }}
           className="testimonial-layout"
@@ -154,7 +154,7 @@ export default function Testimonials() {
               background: "#ffffff",
               borderRadius: "36px",
               padding: "34px",
-              boxShadow: "0 28px 80px rgba(0, 0, 0, 0.28)",
+              boxShadow: "0 24px 70px rgba(73, 151, 230, 0.14)",
             }}
           >
             <div
@@ -170,7 +170,7 @@ export default function Testimonials() {
               <div>
                 <p
                   style={{
-                    color: "#2f80ed",
+                    color: "#4997E6",
                     fontSize: "13px",
                     fontWeight: 900,
                     letterSpacing: "0.12em",
@@ -183,7 +183,7 @@ export default function Testimonials() {
 
                 <h3
                   style={{
-                    color: "#06122b",
+                    color: "#0B1238",
                     fontSize: "32px",
                     lineHeight: "1.1",
                     fontWeight: 950,
@@ -196,9 +196,9 @@ export default function Testimonials() {
 
               <div
                 style={{
-                  background: "#eff6ff",
-                  color: "#2f80ed",
-                  border: "1px solid #dbeafe",
+                  background: "#EEF7FF",
+                  color: "#4997E6",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "999px",
                   padding: "10px 16px",
                   fontSize: "13px",
@@ -222,15 +222,15 @@ export default function Testimonials() {
             >
               <div
                 style={{
-                  background: "#f8fafc",
-                  border: "1px solid #e2e8f0",
+                  background: "#F7FBFF",
+                  border: "1px solid #DDEAF4",
                   borderRadius: "26px",
                   padding: "24px",
                 }}
               >
                 <p
                   style={{
-                    color: "#64748b",
+                    color: "#6E7F97",
                     fontSize: "13px",
                     fontWeight: 800,
                     margin: "0 0 8px",
@@ -241,7 +241,7 @@ export default function Testimonials() {
 
                 <div
                   style={{
-                    color: "#94a3b8",
+                    color: "#7E91A9",
                     fontSize: "54px",
                     lineHeight: 1,
                     fontWeight: 950,
@@ -257,8 +257,8 @@ export default function Testimonials() {
                   width: "56px",
                   height: "56px",
                   borderRadius: "999px",
-                  background: "#2f80ed",
-                  color: "#ffffff",
+                  background: "#4997E6",
+                  color: "#0B1238",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -271,14 +271,14 @@ export default function Testimonials() {
 
               <div
                 style={{
-                  background: "#06122b",
+                  background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
                   borderRadius: "26px",
                   padding: "24px",
                 }}
               >
                 <p
                   style={{
-                    color: "#93c5fd",
+                    color: "#4997E6",
                     fontSize: "13px",
                     fontWeight: 800,
                     margin: "0 0 8px",
@@ -289,7 +289,7 @@ export default function Testimonials() {
 
                 <div
                   style={{
-                    color: "#ffffff",
+                    color: "#0B1238",
                     fontSize: "64px",
                     lineHeight: 1,
                     fontWeight: 950,
@@ -312,8 +312,8 @@ export default function Testimonials() {
             >
               <div
                 style={{
-                  background: "#2f80ed",
-                  color: "#ffffff",
+                  background: "#4997E6",
+                  color: "#0B1238",
                   borderRadius: "26px",
                   padding: "24px",
                   display: "flex",
@@ -347,7 +347,7 @@ export default function Testimonials() {
               <div>
                 <p
                   style={{
-                    color: "#334155",
+                    color: "#1F2A44",
                     fontSize: "17px",
                     lineHeight: "1.8",
                     margin: "0 0 20px",
@@ -368,7 +368,7 @@ export default function Testimonials() {
                       key={item}
                       style={{
                         background: "#f1f5f9",
-                        color: "#334155",
+                        color: "#1F2A44",
                         borderRadius: "999px",
                         padding: "8px 12px",
                         fontSize: "13px",
@@ -393,8 +393,8 @@ export default function Testimonials() {
               <article
                 key={item.exam}
                 style={{
-                  background: "rgba(255, 255, 255, 0.08)",
-                  border: "1px solid rgba(255, 255, 255, 0.14)",
+                  background: "#ffffff",
+                  border: "1px solid #DDEAF4",
                   borderRadius: "28px",
                   padding: "24px",
                   backdropFilter: "blur(10px)",
@@ -411,7 +411,7 @@ export default function Testimonials() {
                   <div>
                     <h3
                       style={{
-                        color: "#ffffff",
+                        color: "#0B1238",
                         fontSize: "22px",
                         fontWeight: 950,
                         margin: "0 0 4px",
@@ -422,7 +422,7 @@ export default function Testimonials() {
 
                     <p
                       style={{
-                        color: "#93c5fd",
+                        color: "#4997E6",
                         fontSize: "13px",
                         fontWeight: 800,
                         margin: 0,
@@ -434,7 +434,7 @@ export default function Testimonials() {
 
                   <span
                     style={{
-                      color: "#cbd5e1",
+                      color: "#45546D",
                       fontSize: "13px",
                       fontWeight: 800,
                     }}
@@ -452,7 +452,7 @@ export default function Testimonials() {
                 >
                   <span
                     style={{
-                      color: "#94a3b8",
+                      color: "#7E91A9",
                       fontSize: "28px",
                       fontWeight: 950,
                       letterSpacing: "-0.04em",
@@ -463,7 +463,7 @@ export default function Testimonials() {
 
                   <span
                     style={{
-                      color: "#60a5fa",
+                      color: "#78B7F4",
                       fontSize: "20px",
                       fontWeight: 950,
                     }}
@@ -473,7 +473,7 @@ export default function Testimonials() {
 
                   <span
                     style={{
-                      color: "#ffffff",
+                      color: "#0B1238",
                       fontSize: "42px",
                       lineHeight: 1,
                       fontWeight: 950,
@@ -492,7 +492,7 @@ export default function Testimonials() {
           style={{
             marginTop: "28px",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))",
             gap: "16px",
           }}
         >
@@ -500,15 +500,15 @@ export default function Testimonials() {
             <div
               key={item.title}
               style={{
-                background: "rgba(255, 255, 255, 0.08)",
-                border: "1px solid rgba(255, 255, 255, 0.14)",
+                background: "#ffffff",
+                border: "1px solid #DDEAF4",
                 borderRadius: "24px",
                 padding: "22px",
               }}
             >
               <p
                 style={{
-                  color: "#60a5fa",
+                  color: "#78B7F4",
                   fontSize: "13px",
                   fontWeight: 950,
                   margin: "0 0 12px",
@@ -519,7 +519,7 @@ export default function Testimonials() {
 
               <h3
                 style={{
-                  color: "#ffffff",
+                  color: "#0B1238",
                   fontSize: "18px",
                   fontWeight: 950,
                   margin: "0 0 8px",
@@ -530,7 +530,7 @@ export default function Testimonials() {
 
               <p
                 style={{
-                  color: "#cbd5e1",
+                  color: "#45546D",
                   fontSize: "14px",
                   lineHeight: "1.7",
                   margin: 0,
