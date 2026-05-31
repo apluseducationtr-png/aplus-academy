@@ -30,6 +30,7 @@ const programs = [
     description:
       "Listening, Reading, Writing ve Speaking becerileri için hedef skor odaklı hazırlık.",
     tags: ["IELTS 7.5+", "TOEFL 100+", "Speaking"],
+    href: "/sinavlar/ielts-toefl",
   },
   {
     title: "IMAT, UCAT, LNAT",
@@ -37,6 +38,7 @@ const programs = [
     description:
       "Tıp ve hukuk hedefleyen öğrenciler için reasoning, reading, essay ve science odaklı hazırlık.",
     tags: ["Medicine", "Law", "UK / Italy"],
+    href: "/sinavlar/imat-ucat-lnat",
   },
   {
     title: "A-Level & IGCSE",
@@ -44,6 +46,7 @@ const programs = [
     description:
       "Cambridge, Edexcel ve AQA müfredatlarına yönelik okul destek ve sınav hazırlık dersleri.",
     tags: ["A-Level", "IGCSE", "School"],
+    href: "/sinavlar/a-level-igcse",
   },
   {
     title: "Okul Destek",
@@ -51,6 +54,7 @@ const programs = [
     description:
       "UAA, SAC, TAC, ACI ve uluslararası okul öğrencileri için ders, sınav ve GPA desteği.",
     tags: ["IB", "AP", "GPA"],
+    href: "/sinavlar/okul-destek",
   },
 ];
 

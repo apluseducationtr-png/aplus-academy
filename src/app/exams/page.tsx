@@ -32,6 +32,7 @@ const examGroups = [
     color: "#DDF6F3",
     border: "#9BE4DE",
     items: ["IELTS", "TOEFL", "PTE"],
+    href: "/sinavlar/ielts-toefl",
   },
   {
     title: "Tıp & Hukuk",
@@ -39,6 +40,7 @@ const examGroups = [
     color: "#EEE7FF",
     border: "#CBBBF0",
     items: ["IMAT", "UCAT", "LNAT"],
+    href: "/sinavlar/imat-ucat-lnat",
   },
   {
     title: "Okul Destek",
@@ -46,6 +48,7 @@ const examGroups = [
     color: "#FFF8DC",
     border: "#F6D36E",
     items: ["Math", "Physics", "Chemistry", "Economics"],
+    href: "/sinavlar/okul-destek",
   },
 ];
 
