@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito, Nunito_Sans } from "next/font/google";
+import GoogleSiteKit from "@/components/GoogleSiteKit";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -18,6 +19,11 @@ export const metadata: Metadata = {
   title: "APlus Academy | SAT, IB, IELTS Hazırlık",
   description:
     "SAT, IB, A-Level, IELTS, TOEFL ve uluslararası sınavlar için uzman birebir özel ders ve grup kursları. İstanbul merkezli, dünya genelinde online hizmet.",
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? {
+        google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -28,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${nunito.variable} ${nunitoSans.variable} antialiased`}>
+        <GoogleSiteKit />
         {children}
       </body>
     </html>
