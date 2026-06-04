@@ -152,28 +152,44 @@ export default function Home() {
 
       {/* EXAM CATEGORIES */}
       <section style={{ padding: "3.5rem 2rem" }}>
-        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+        <div style={{
+          textAlign: "center",
+          margin: "0 auto 2.5rem",
+          maxWidth: "760px",
+        }}>
           <span style={sectionLabelStyle}>Kategoriler</span>
           <h2 style={sectionTitleStyle}>Hangi Sınav Grubuna Hazırlanıyorsunuz?</h2>
         </div>
         <div className="home-category-grid" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(145px, 1fr))",
-          gap: "12px", maxWidth: "960px", margin: "0 auto",
+          gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+          gap: "16px", maxWidth: "900px", margin: "0 auto",
+          justifyContent: "center",
         }}>
           {categories.map((cat) => (
-            <Link key={cat.name} href="/exams" style={{
-              borderRadius: "16px", padding: "1.3rem 1.1rem",
+            <Link key={cat.name} href={cat.href} style={{
+              borderRadius: "18px", padding: "1.35rem 1.1rem",
               textAlign: "center", textDecoration: "none",
-              background: cat.bg, border: `2px solid ${cat.border}`,
-              display: "block", transition: "transform 0.15s",
+              background: "#fff", border: `1.5px solid ${cat.border}`,
+              display: "flex", transition: "transform 0.15s, box-shadow 0.15s",
+              minHeight: "168px", flexDirection: "column",
+              alignItems: "center", justifyContent: "center",
+              boxShadow: "0 14px 34px rgba(73, 151, 230, 0.08)",
             }}>
-              <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{cat.icon}</div>
+              <div style={{
+                width: "54px", height: "54px", borderRadius: "18px",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                background: cat.bg, color: cat.accent,
+                fontSize: "1.65rem", marginBottom: "0.85rem",
+              }}>{cat.icon}</div>
               <div style={{
                 fontFamily: "var(--font-nunito)", fontWeight: 800,
-                fontSize: "13.5px", color: "#0B1238",
+                fontSize: "14.5px", color: "#0B1238", lineHeight: 1.25,
               }}>{cat.name}</div>
-              <div style={{ fontSize: "11.5px", color: "#7B8EA7", marginTop: "2px" }}>{cat.count}</div>
+              <div style={{
+                fontSize: "12px", color: "#7B8EA7",
+                marginTop: "0.35rem", lineHeight: 1.45,
+              }}>{cat.count}</div>
             </Link>
           ))}
         </div>
@@ -272,6 +288,11 @@ export default function Home() {
           .home-stat-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
           }
+
+          .home-category-grid {
+            grid-template-columns: repeat(2, minmax(0, 220px)) !important;
+            justify-content: center !important;
+          }
         }
 
         @media (max-width: 640px) {
@@ -305,11 +326,10 @@ export default function Home() {
 
 // ── Data ──────────────────────────────────────────────
 const categories = [
-  { name: "ABD Sınavları", count: "SAT, ACT, AP, GMAT, GRE", icon: "🎯", bg: "#EAF4FF", border: "#CFE7FF" },
-  { name: "IB & A-Level", count: "IB, A-Level, IGCSE", icon: "🎓", bg: "#FDE8F1", border: "#F8BFD4" },
-  { name: "İngilizce Sınavları", count: "IELTS, TOEFL, PTE", icon: "🗣", bg: "#DDF6F3", border: "#9BE4DE" },
-  { name: "Tıp & Hukuk", count: "UCAT, LNAT, IMAT", icon: "🏥", bg: "#EEE7FF", border: "#CBBBF0" },
-  { name: "Soru Bankası", count: "5.000+ soru & denemeler", icon: "📚", bg: "#FFF8DC", border: "#F6D36E" },
+  { name: "AP Sınavları", count: "AP Calculus, Physics, Biology ve daha fazlası", icon: "📘", bg: "#EAF4FF", border: "#CFE7FF", accent: "#4997E6", href: "/sinavlar/ap" },
+  { name: "IB & A-Level", count: "IB, A-Level, IGCSE", icon: "🎓", bg: "#FDE8F1", border: "#F8BFD4", accent: "#EF4A85", href: "/sinavlar/ib" },
+  { name: "Dil Sınavları", count: "IELTS, TOEFL, PTE", icon: "🗣", bg: "#DDF6F3", border: "#9BE4DE", accent: "#44C7BE", href: "/sinavlar/ielts-toefl" },
+  { name: "Standardize Testler", count: "TMUA, LNAT, ESAT ve benzeri sınavlar", icon: "🧭", bg: "#EEE7FF", border: "#CBBBF0", accent: "#8F72D8", href: "/exams" },
 ];
 
 const steps = [
