@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer
@@ -60,10 +62,11 @@ export default function Footer() {
           <div>
             <h4 style={footerTitle}>Sayfalar</h4>
             <div style={footerLinks}>
-              <a style={footerLink}>Sınavlar</a>
-              <a style={footerLink}>Soru Bankası</a>
-              <a style={footerLink}>İletişim</a>
-              <a style={footerLink}>Eğitmen Ol</a>
+              <Link href="/exams" style={footerLink}>Sınavlar</Link>
+              <Link href="/question-bank" style={footerLink}>Soru Bankası</Link>
+              <Link href="/danismanlik-rehberlik" style={footerLink}>Danışmanlık/Rehberlik</Link>
+              <Link href="/contact" style={footerLink}>İletişim</Link>
+              <Link href="/work-with-us" style={footerLink}>Eğitmen Ol</Link>
             </div>
           </div>
 

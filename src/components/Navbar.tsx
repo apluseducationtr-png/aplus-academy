@@ -42,6 +42,7 @@ export default function Navbar() {
         <div className="nav-links" style={{ display: "flex", alignItems: "center", gap: "4px" }}>
           <Link href="/exams" style={navLinkStyle}>Sınavlar</Link>
           <Link href="/question-bank" style={navLinkStyle}>Soru Bankası</Link>
+          <Link href="/danismanlik-rehberlik" style={navLinkStyle}>Danışmanlık/Rehberlik</Link>
           <Link href="/contact" style={navLinkStyle}>İletişim</Link>
           <Link href="/work-with-us" style={navLinkStyle}>Eğitmen Ol</Link>
         </div>
