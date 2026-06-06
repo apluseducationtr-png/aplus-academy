@@ -1,157 +1,78 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { PageHero, SectionHeading } from "@/components/MarketingSections";
 
 export const metadata: Metadata = {
-  title: "İletişim | APlus Academy",
-  description:
-    "APlus Academy ile ücretsiz görüşme planlayın. Online ve yüz yüze eğitim seçenekleri hakkında bilgi alın.",
+  title: "İletişim ve Ücretsiz Görüşme | A Plus Academy",
+  description: "A Plus Academy ile program ve akademik ihtiyaç görüşmesi planlayın.",
 };
-
-const contactItems = [
-  ["Telefon", "+90 552 519 55 50"],
-  ["E-posta", "info@aplusacademy.com"],
-  ["Konum", "İstanbul, Türkiye"],
-  ["Eğitim", "Online & yüz yüze"],
-];
 
 export default function ContactPage() {
   return (
     <main>
       <Navbar />
-      <section style={heroSection}>
-        <div style={layout}>
+      <PageHero
+        eyebrow="İletişim"
+        title="İlk görüşmede ihtiyacı netleştirip doğru başlangıç yolunu belirleyelim"
+        intro="Bu sayfa görüşme talebi, doğrudan iletişim seçenekleri, süreç açıklaması ve yasal onay alanlarını tek yerde toplayacak."
+        primary={{ label: "WhatsApp hattı", href: "https://wa.me/905525195550" }}
+        panelItems={[
+          "Hedef sınav veya akademik ihtiyaç",
+          "Mevcut seviye ve okul bilgisi",
+          "Sınav tarihi ve uygun çalışma takvimi",
+          "Birebir, grup veya danışmanlık yönlendirmesi",
+        ]}
+      />
+
+      <section className="section">
+        <div className="site-container contact-layout">
           <div>
-            <p style={eyebrow}>İletişim</p>
-            <h1 style={heroTitle}>Öğrenci için en doğru başlangıç planını birlikte belirleyelim</h1>
-            <p style={heroText}>
-              Hedef sınavı, mevcut seviye ve takvimi konuşarak ilk yol haritasını çıkarıyoruz.
-              Görüşme ücretsizdir ve herhangi bir taahhüt gerektirmez.
-            </p>
-            <div style={infoGrid}>
-              {contactItems.map(([label, value]) => (
-                <div key={label} style={infoCard}>
-                  <span style={infoLabel}>{label}</span>
-                  <strong style={infoValue}>{value}</strong>
-                </div>
-              ))}
+            <SectionHeading eyebrow="Görüşme talebi" title="Bize öğrencinin ihtiyacını kısaca anlatın" text="Form gönderim altyapısı bir sonraki teknik aşamada CRM veya e-posta sistemine bağlanacak." />
+            <div className="contact-cards">
+              <a href="tel:+905525195550"><span>Telefon</span><strong>+90 552 519 55 50</strong></a>
+              <a href="mailto:info@aplusacademy.com"><span>E-posta</span><strong>info@aplusacademy.com</strong></a>
+              <div><span>Konum</span><strong>İstanbul</strong></div>
+              <div><span>Eğitim</span><strong>Online ve yüz yüze</strong></div>
             </div>
           </div>
 
-          <form style={formCard}>
-            <label style={fieldLabel}>
-              Ad Soyad
-              <input style={inputStyle} placeholder="Öğrenci veya veli adı" />
-            </label>
-            <label style={fieldLabel}>
-              Telefon / WhatsApp
-              <input style={inputStyle} placeholder="+90 ..." />
-            </label>
-            <label style={fieldLabel}>
-              İlgilenilen program
-              <select style={inputStyle} defaultValue="">
+          <form className="contact-form">
+            <label>Ad Soyad<input name="name" placeholder="Öğrenci veya veli adı" /></label>
+            <label>Telefon / WhatsApp<input name="phone" placeholder="+90 ..." /></label>
+            <label>E-posta<input name="email" type="email" placeholder="ornek@email.com" /></label>
+            <label>İlgilenilen alan
+              <select name="program" defaultValue="">
                 <option value="" disabled>Program seçin</option>
-                <option>Digital SAT</option>
-                <option>AP</option>
-                <option>IB</option>
-                <option>IELTS / TOEFL</option>
-                <option>A-Level / IGCSE</option>
-                <option>Diğer</option>
+                <option>Digital SAT</option><option>AP</option><option>IB</option>
+                <option>A-Level / IGCSE</option><option>IELTS / TOEFL</option>
+                <option>Okul desteği</option><option>Danışmanlık</option><option>Diğer</option>
               </select>
             </label>
-            <label style={fieldLabel}>
-              Not
-              <textarea style={{ ...inputStyle, minHeight: "120px", resize: "vertical" }} placeholder="Hedefiniz ve sınav tarihiniz..." />
-            </label>
-            <button type="button" style={submitButton}>Görüşme talebi gönder</button>
+            <label>Hedef ve ihtiyaç<textarea name="message" placeholder="Sınav tarihi, mevcut seviye ve ihtiyaç..." /></label>
+            <label className="consent-row"><input type="checkbox" /> KVKK aydınlatma metnini okudum ve iletişim kurulmasını kabul ediyorum.</label>
+            <button className="button button-primary" type="button">Görüşme talebi gönder</button>
+            <small>Yapısal önizleme: form henüz gönderim sistemine bağlı değildir.</small>
           </form>
         </div>
       </section>
       <Footer />
+      <style>{`
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        .contact-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .contact-cards > * { padding: 20px; border: 1px solid var(--border); border-radius: 20px; background: var(--bg); color: var(--ink); text-decoration: none; }
+        .contact-cards span { display: block; color: var(--blue-dark); font-size: 12px; font-weight: 900; text-transform: uppercase; }
+        .contact-cards strong { display: block; margin-top: 8px; font-size: 16px; }
+        .contact-form { display: grid; gap: 16px; padding: 28px; border: 1px solid var(--border); border-radius: 28px; box-shadow: 0 20px 60px rgba(73,151,230,.1); }
+        .contact-form label { display: grid; gap: 7px; color: var(--ink); font-size: 13px; font-weight: 900; }
+        .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 13px 14px; border: 1px solid var(--border); border-radius: 13px; background: #fbfdff; color: var(--ink); }
+        .contact-form textarea { min-height: 120px; resize: vertical; }
+        .contact-form .consent-row { grid-template-columns: auto 1fr; align-items: start; font-weight: 600; line-height: 1.5; }
+        .contact-form .consent-row input { width: auto; margin-top: 4px; }
+        .contact-form small { color: var(--muted); }
+        @media (max-width: 800px) { .contact-layout { grid-template-columns: 1fr; } }
+        @media (max-width: 520px) { .contact-cards { grid-template-columns: 1fr; } }
+      `}</style>
     </main>
   );
 }
-
-const heroSection: React.CSSProperties = {
-  background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 52%, #DDF6F3 100%)",
-  padding: "84px 24px",
-};
-const layout: React.CSSProperties = {
-  maxWidth: "1080px",
-  margin: "0 auto",
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(min(360px, 100%), 1fr))",
-  gap: "28px",
-  alignItems: "start",
-};
-const eyebrow: React.CSSProperties = {
-  color: "#4997E6",
-  fontSize: "13px",
-  fontWeight: 950,
-  letterSpacing: "0.14em",
-  textTransform: "uppercase",
-  margin: "0 0 16px",
-};
-const heroTitle: React.CSSProperties = {
-  color: "#0B1238",
-  fontSize: "clamp(40px, 5vw, 66px)",
-  lineHeight: 1.05,
-  fontWeight: 950,
-  margin: 0,
-};
-const heroText: React.CSSProperties = {
-  color: "#45546D",
-  fontSize: "18px",
-  lineHeight: 1.8,
-  margin: "24px 0 0",
-};
-const infoGrid: React.CSSProperties = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(min(210px, 100%), 1fr))",
-  gap: "12px",
-  marginTop: "28px",
-};
-const infoCard: React.CSSProperties = {
-  background: "#ffffff",
-  border: "1px solid #DDEAF4",
-  borderRadius: "18px",
-  padding: "18px",
-};
-const infoLabel: React.CSSProperties = { color: "#4997E6", fontSize: "12px", fontWeight: 950 };
-const infoValue: React.CSSProperties = { display: "block", color: "#0B1238", fontSize: "16px", marginTop: "6px" };
-const formCard: React.CSSProperties = {
-  background: "#ffffff",
-  border: "1px solid #DDEAF4",
-  borderRadius: "28px",
-  padding: "26px",
-  display: "grid",
-  gap: "16px",
-  boxShadow: "0 24px 70px rgba(73,151,230,0.12)",
-};
-const fieldLabel: React.CSSProperties = {
-  display: "grid",
-  gap: "8px",
-  color: "#0B1238",
-  fontSize: "13px",
-  fontWeight: 900,
-};
-const inputStyle: React.CSSProperties = {
-  width: "100%",
-  border: "1px solid #DDEAF4",
-  borderRadius: "14px",
-  padding: "12px 14px",
-  color: "#0B1238",
-  font: "inherit",
-  outline: "none",
-  background: "#FAFCFF",
-};
-const submitButton: React.CSSProperties = {
-  background: "#4997E6",
-  color: "#ffffff",
-  border: "none",
-  borderRadius: "999px",
-  padding: "14px 20px",
-  fontSize: "14px",
-  fontWeight: 950,
-  cursor: "pointer",
-};

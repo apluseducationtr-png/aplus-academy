@@ -1,111 +1,116 @@
-﻿"use client";
+"use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+
+const links = [
+  ["Programlar", "/exams"],
+  ["Soru Bankası", "/question-bank"],
+  ["Danışmanlık", "/danismanlik-rehberlik"],
+  ["İletişim", "/contact"],
+  ["Eğitmen Ol", "/work-with-us"],
+];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav style={{
-      background: "#fff",
-      borderBottom: "1.5px solid #DDEAF4",
-      position: "sticky",
-      top: 0,
-      zIndex: 200,
-    }}>
-      {/* Top row — Logo centered */}
-      <div className="nav-bottom" style={{
-        display: "flex",
-        justifyContent: "center",
-        padding: "12px 2rem 8px",
-        borderBottom: "1px solid #EEF5FA",
-      }}>
-        <Link href="/">
-          <Image
-            src="/logo.jpg"
-            alt="APlus Academy"
-            width={160}
-            height={54}
-            style={{ objectFit: "contain" }}
-            priority
-          />
+    <header className="site-header">
+      <div className="site-container nav-shell">
+        <Link className="brand-link" href="/" aria-label="A Plus Academy ana sayfa">
+          <Image src="/logo.jpg" alt="A Plus Academy" width={170} height={58} priority />
         </Link>
-      </div>
 
-      {/* Bottom row — Links left, Buttons right */}
-      <div style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "8px 2rem",
-      }}>
-        {/* Left — Nav Links */}
-        <div className="nav-links" style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-          <Link href="/exams" style={navLinkStyle}>Sınavlar</Link>
-          <Link href="/question-bank" style={navLinkStyle}>Soru Bankası</Link>
-          <Link href="/danismanlik-rehberlik" style={navLinkStyle}>Danışmanlık/Rehberlik</Link>
-          <Link href="/contact" style={navLinkStyle}>İletişim</Link>
-          <Link href="/work-with-us" style={navLinkStyle}>Eğitmen Ol</Link>
-        </div>
+        <nav className={`main-nav ${open ? "main-nav-open" : ""}`} aria-label="Ana menü">
+          {links.map(([label, href]) => (
+            <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>
+          ))}
+          <Link className="button button-primary nav-mobile-cta" href="/contact" onClick={() => setOpen(false)}>
+            Ücretsiz görüşme
+          </Link>
+        </nav>
 
-        {/* Right — Lang + CTA */}
-        <div className="nav-actions" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <button style={langBtnStyle}>🌐 TR</button>
-          <Link href="/contact" style={ctaBtnStyle}>Ücretsiz Başla</Link>
+        <div className="nav-actions">
+          <Link className="button button-primary nav-desktop-cta" href="/contact">Ücretsiz görüşme</Link>
+          <button
+            className="menu-button"
+            type="button"
+            aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 720px) {
-          .nav-bottom {
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            gap: 8px !important;
-            padding: 10px 1rem !important;
+        .site-header {
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          border-bottom: 1px solid var(--border);
+          background: rgba(255,255,255,.96);
+          backdrop-filter: blur(16px);
+        }
+        .nav-shell {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          gap: 28px;
+          align-items: center;
+          min-height: 88px;
+        }
+        .brand-link { display: inline-flex; }
+        .brand-link img { width: 150px; height: auto; object-fit: contain; }
+        .main-nav {
+          display: flex;
+          justify-content: center;
+          gap: 4px;
+        }
+        .main-nav > a:not(.button) {
+          padding: 10px 12px;
+          border-radius: 10px;
+          color: var(--slate);
+          font-size: 14px;
+          font-weight: 700;
+          text-decoration: none;
+        }
+        .main-nav > a:hover { background: var(--bg); color: var(--ink); }
+        .nav-actions { display: flex; align-items: center; }
+        .menu-button {
+          display: none;
+          width: 46px;
+          height: 46px;
+          place-items: center;
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          background: white;
+          color: var(--ink);
+        }
+        .nav-mobile-cta { display: none; }
+        @media (max-width: 900px) {
+          .nav-shell { grid-template-columns: 1fr auto; min-height: 76px; }
+          .brand-link img { width: 132px; }
+          .menu-button { display: grid; }
+          .nav-desktop-cta { display: none; }
+          .main-nav {
+            position: absolute;
+            top: 76px;
+            right: 0;
+            left: 0;
+            display: none;
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            background: white;
+            box-shadow: 0 20px 45px rgba(15,23,42,.08);
           }
-
-          .nav-links {
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-          }
-
-          .nav-actions {
-            justify-content: center !important;
-          }
+          .main-nav-open { display: grid; }
+          .main-nav > a:not(.button) { padding: 13px 16px; }
+          .nav-mobile-cta { display: inline-flex; margin-top: 8px; }
         }
       `}</style>
-    </nav>
+    </header>
   );
 }
-
-const navLinkStyle: React.CSSProperties = {
-  color: "#4a5568",
-  fontSize: "13.5px",
-  fontWeight: 600,
-  padding: "7px 12px",
-  borderRadius: "8px",
-  textDecoration: "none",
-  fontFamily: "var(--font-nunito-sans)",
-};
-
-const langBtnStyle: React.CSSProperties = {
-  background: "#F7FBFF",
-  border: "1.5px solid #DDEAF4",
-  color: "#4a5568",
-  fontSize: "12px",
-  padding: "5px 11px",
-  borderRadius: "100px",
-  cursor: "pointer",
-  fontFamily: "var(--font-nunito-sans)",
-  fontWeight: 600,
-};
-
-const ctaBtnStyle: React.CSSProperties = {
-  background: "#4997E6",
-  color: "#fff",
-  padding: "8px 18px",
-  borderRadius: "100px",
-  fontSize: "13.5px",
-  fontWeight: 700,
-  textDecoration: "none",
-  fontFamily: "var(--font-nunito)",
-};

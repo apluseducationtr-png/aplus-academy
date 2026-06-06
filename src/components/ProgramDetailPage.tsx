@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { PlaceholderSection } from "@/components/MarketingSections";
 
 type ProgramDetailPageProps = {
   badge: string;
@@ -93,6 +94,44 @@ export default function ProgramDetailPage({
           </div>
         </div>
       </section>
+
+      <section className="section">
+        <div className="site-container">
+          <div className="section-heading">
+            <p style={panelEyebrow}>Program seçenekleri</p>
+            <h2 style={sectionTitle}>Öğrencinin ihtiyacına göre farklı çalışma modelleri</h2>
+            <p style={smallText}>
+              Paket süresi, ders sıklığı, grup kapasitesi, materyaller ve ücret bilgileri
+              içerik aşamasında gerçek program yapısına göre doldurulacak.
+            </p>
+          </div>
+          <div className="card-grid card-grid-3">
+            {[
+              ["Birebir program", "Seviye, takvim ve konu ihtiyacına göre kişisel ders planı."],
+              ["Küçük grup programı", "Uygun seviyedeki öğrenciler için ortak takvim ve sınırlı kontenjan."],
+              ["Yoğun dönem desteği", "Sınav öncesi tekrar, soru çözümü ve deneme odaklı kısa program."],
+            ].map(([heading, text]) => (
+              <article className="content-card" key={heading}>
+                <h3>{heading}</h3>
+                <p>{text}</p>
+                <div className="tag-row"><span className="tag">Detaylar eklenecek</span></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <PlaceholderSection
+        eyebrow="Güven ve kanıt"
+        title="Bu programa özel gerçek içerik alanları"
+        text="Genel şablon yerine her sınav sayfasında ilgili eğitmenler, sonuçlar ve materyaller gösterilecek."
+        items={[
+          "İlgili eğitmen profilleri",
+          "Örnek ders veya materyal",
+          "Doğrulanmış öğrenci sonucu",
+          "Program takvimi ve paket kapsamı",
+        ]}
+      />
 
       <section style={{ padding: "86px 24px" }}>
         <div style={faqGrid}>

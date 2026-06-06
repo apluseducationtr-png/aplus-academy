@@ -1,128 +1,56 @@
 import Link from "next/link";
 
+const programLinks = [
+  ["Digital SAT", "/sinavlar/digital-sat"],
+  ["AP Programları", "/sinavlar/ap"],
+  ["IB Diploma", "/sinavlar/ib"],
+  ["IELTS & TOEFL", "/sinavlar/ielts-toefl"],
+];
+
 export default function Footer() {
   return (
-    <footer
-      style={{
-        background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 55%, #DDF6F3 100%)",
-        color: "#0B1238",
-        padding: "70px 24px 30px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1180px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "34px",
-            marginBottom: "46px",
-          }}
-        >
-          <div>
-            <h3
-              style={{
-                fontSize: "28px",
-                fontWeight: 950,
-                letterSpacing: "-0.04em",
-                margin: "0 0 14px",
-              }}
-            >
-              A Plus Academy
-            </h3>
-
-            <p
-              style={{
-                color: "#45546D",
-                fontSize: "15px",
-                lineHeight: "1.75",
-                margin: 0,
-                maxWidth: "320px",
-              }}
-            >
-              SAT, AP, IB, IELTS, TOEFL ve uluslararası okul destek
-              programlarında öğrenciler için kişisel akademik hazırlık sistemi.
-            </p>
-          </div>
-
-          <div>
-            <h4 style={footerTitle}>Programlar</h4>
-            <div style={footerLinks}>
-              <a style={footerLink}>Digital SAT</a>
-              <a style={footerLink}>AP Programları</a>
-              <a style={footerLink}>IB Diploma</a>
-              <a style={footerLink}>IELTS & TOEFL</a>
-            </div>
-          </div>
-
-          <div>
-            <h4 style={footerTitle}>Sayfalar</h4>
-            <div style={footerLinks}>
-              <Link href="/exams" style={footerLink}>Sınavlar</Link>
-              <Link href="/question-bank" style={footerLink}>Soru Bankası</Link>
-              <Link href="/danismanlik-rehberlik" style={footerLink}>Danışmanlık/Rehberlik</Link>
-              <Link href="/contact" style={footerLink}>İletişim</Link>
-              <Link href="/work-with-us" style={footerLink}>Eğitmen Ol</Link>
-            </div>
-          </div>
-
-          <div>
-            <h4 style={footerTitle}>İletişim</h4>
-            <div style={footerLinks}>
-              <a style={footerLink}>info@aplusacademy.com</a>
-              <a style={footerLink}>+90 552 519 55 50</a>
-              <a style={footerLink}>İstanbul, Türkiye</a>
-              <a style={footerLink}>Online & Yüz Yüze Eğitim</a>
-            </div>
-          </div>
+    <footer className="site-footer">
+      <div className="site-container footer-grid">
+        <div>
+          <h2>A Plus Academy</h2>
+          <p>
+            Uluslararası sınav hazırlığı, okul desteği ve akademik takip için
+            öğrenciye özel eğitim planı.
+          </p>
         </div>
-
-        <div
-          style={{
-            borderTop: "1px solid rgba(255,255,255,0.12)",
-            paddingTop: "24px",
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "18px",
-            flexWrap: "wrap",
-            color: "#7E91A9",
-            fontSize: "13px",
-          }}
-        >
-          <p style={{ margin: 0 }}>
-            © 2026 A Plus Academy. Tüm hakları saklıdır.
-          </p>
-
-          <p style={{ margin: 0 }}>
-            Türkçe / English
-          </p>
+        <div>
+          <h3>Programlar</h3>
+          {programLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+        </div>
+        <div>
+          <h3>Kurumsal</h3>
+          <Link href="/danismanlik-rehberlik">Danışmanlık</Link>
+          <Link href="/work-with-us">Eğitmen Ol</Link>
+          <Link href="/contact">İletişim</Link>
+        </div>
+        <div>
+          <h3>İletişim</h3>
+          <a href="tel:+905525195550">+90 552 519 55 50</a>
+          <a href="mailto:info@aplusacademy.com">info@aplusacademy.com</a>
+          <p>İstanbul · Online ve yüz yüze</p>
         </div>
       </div>
+      <div className="site-container footer-bottom">
+        <span>© 2026 A Plus Academy</span>
+        <span>Yasal sayfalar ve sosyal medya bağlantıları eklenecek</span>
+      </div>
+      <style>{`
+        .site-footer { padding: 72px 0 28px; background: #0B1238; color: white; }
+        .footer-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; }
+        .footer-grid h2 { font: 950 30px var(--font-nunito); }
+        .footer-grid h3 { margin-bottom: 16px; color: #9ecbfa; font: 900 13px var(--font-nunito); letter-spacing: .12em; text-transform: uppercase; }
+        .footer-grid p { max-width: 340px; margin-top: 12px; color: #b8c4d7; line-height: 1.75; }
+        .footer-grid > div:not(:first-child) { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+        .footer-grid a { color: #dbe7f6; text-decoration: none; font-size: 14px; }
+        .footer-bottom { display: flex; justify-content: space-between; gap: 20px; margin-top: 52px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); color: #8fa0ba; font-size: 12px; }
+        @media (max-width: 850px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; } }
+      `}</style>
     </footer>
   );
 }
-
-const footerTitle = {
-  color: "#4997E6",
-  fontSize: "13px",
-  fontWeight: 900,
-  letterSpacing: "0.16em",
-  textTransform: "uppercase" as const,
-  margin: "0 0 16px",
-};
-
-const footerLinks = {
-  display: "grid",
-  gap: "10px",
-};
-
-const footerLink = {
-  color: "#45546D",
-  fontSize: "14px",
-  textDecoration: "none",
-  cursor: "pointer",
-};

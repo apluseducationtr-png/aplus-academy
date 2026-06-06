@@ -1,352 +1,97 @@
 import Navbar from "@/components/Navbar";
-import ExamPrograms from "@/components/ExamPrograms";
-import Testimonials from "@/components/Testimonials";
-import WhyAPlus from "@/components/WhyAPlus";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+import {
+  CardGrid,
+  CtaBand,
+  PageHero,
+  PlaceholderSection,
+  ProcessSection,
+  SectionHeading,
+} from "@/components/MarketingSections";
+
+const programs = [
+  { eyebrow: "Üniversite kabul sınavı", title: "Digital SAT", text: "Math ve Reading & Writing hazırlığı; seviye tespit, ders, ödev ve deneme takibi.", href: "/sinavlar/digital-sat", tags: ["Birebir", "Küçük grup", "Deneme"] },
+  { eyebrow: "Advanced Placement", title: "AP Programları", text: "Ders bazlı konu desteği, MCQ ve FRQ pratiği, okul sınavları ve final hazırlığı.", href: "/sinavlar/ap", tags: ["20+ ders", "MCQ", "FRQ"] },
+  { eyebrow: "Uluslararası diploma", title: "IB Diploma", text: "HL/SL ders desteği ile IA, EE, TOK ve predicted grade sürecinin birlikte takibi.", href: "/sinavlar/ib", tags: ["HL / SL", "IA / EE", "TOK"] },
+  { eyebrow: "Uluslararası müfredat", title: "A-Level & IGCSE", text: "Cambridge, Edexcel ve AQA derslerinde okul başarısı ve final sınavı desteği.", href: "/sinavlar/a-level-igcse", tags: ["Past papers", "Okul desteği"] },
+  { eyebrow: "Dil yeterliliği", title: "IELTS & TOEFL", text: "Writing, speaking, reading ve listening alanlarında hedef skor odaklı program.", href: "/sinavlar/ielts-toefl", tags: ["Writing feedback", "Speaking"] },
+  { eyebrow: "Tıp ve hukuk", title: "IMAT, UCAT & LNAT", text: "Reasoning, science, reading ve essay becerileri için sınava özel çalışma planı.", href: "/sinavlar/imat-ucat-lnat", tags: ["UK", "İtalya", "Reasoning"] },
+];
 
 export default function Home() {
   return (
     <main>
       <Navbar />
+      <PageHero
+        eyebrow="Uluslararası akademik hazırlık"
+        title="Sınav, okul ve üniversite hedefi tek bir akademik planda"
+        intro="A Plus Academy; uluslararası sınav hazırlığını, okul desteğini, deneme analizini ve düzenli öğrenci takibini kişisel bir yol haritasında birleştirir."
+        secondary={{ label: "Programları incele", href: "/exams" }}
+        panelTitle="A Plus çalışma modelinin temelleri"
+        panelItems={[
+          "Alanında uzman eğitmenlerle birebir veya küçük grup dersleri",
+          "Seviye ve hedefe göre kişisel ders ve çalışma planı",
+          "Ödev, deneme ve konu eksiklerinin düzenli takibi",
+          "Öğrenci ve veli için görünür gelişim süreci",
+        ]}
+      />
 
-      {/* HERO */}
-      <section style={{
-        background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 50%, #DDF6F3 100%)",
-        padding: "4rem 2rem 3.5rem",
-      }}>
-        <div className="home-hero-grid" style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "3rem",
-          maxWidth: "1100px",
-          margin: "0 auto",
-          alignItems: "center",
-        }}>
-          {/* LEFT — Heading + Description */}
-          <div>
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: "6px",
-              background: "#fff", border: "1.5px solid #DDEAF4",
-              borderRadius: "100px", padding: "5px 14px",
-              fontSize: "12.5px", fontWeight: 700, color: "#4a5568",
-              marginBottom: "1.5rem",
-            }}>
-              <span style={{
-                background: "#44C7BE", color: "#fff",
-                padding: "2px 8px", borderRadius: "20px", fontSize: "11px"
-              }}>YENİ</span>
-              2008&apos;den Beri 10.000+ Başarılı Öğrenci
-            </div>
-
-            <h1 style={{
-              fontFamily: "var(--font-nunito)",
-              fontSize: "2.8rem", fontWeight: 900,
-              color: "#0B1238", lineHeight: 1.15,
-              marginBottom: "1.2rem",
-            }}>
-              Hedef <span style={{ color: "#4997E6" }}>Puana</span> Ulaşmanın{" "}
-              En <span style={{ color: "#EF4A85" }}>Akıllı</span> Yolu
-            </h1>
-
-            <p style={{
-              color: "#4a5568", fontSize: "15.5px",
-              lineHeight: 1.7, fontWeight: 500,
-              marginBottom: "2rem", maxWidth: "440px",
-            }}>
-              SAT, IB, IELTS ve 12+ sınav için kişiselleştirilmiş
-              birebir dersler, küçük grup kursları ve dijital araçlar.
-            </p>
-
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/contact" style={{
-                background: "#4997E6", color: "#fff",
-                padding: "12px 26px", borderRadius: "100px",
-                fontWeight: 800, fontSize: "14px", textDecoration: "none",
-                fontFamily: "var(--font-nunito)",
-              }}>Ücretsiz Görüşme Ayarla</Link>
-              <Link href="/question-bank" style={{
-                background: "transparent", color: "#0B1238",
-                padding: "12px 24px", borderRadius: "100px",
-                fontWeight: 700, fontSize: "14px", textDecoration: "none",
-                border: "2px solid #DDEAF4",
-                fontFamily: "var(--font-nunito)",
-              }}>Ücretsiz Deneme →</Link>
-            </div>
-          </div>
-
-          {/* RIGHT — Search + Tags + Stats */}
-          <div>
-            {/* Search Bar */}
-            <div className="home-search" style={{
-              display: "flex", background: "#fff",
-              borderRadius: "100px", border: "2px solid #DDEAF4",
-              overflow: "hidden", marginBottom: "1rem",
-              boxShadow: "0 4px 20px rgba(74,144,217,0.1)",
-            }}>
-              <input
-                placeholder="Hangi sınava hazırlanmak istiyorsunuz?"
-                style={{
-                  flex: 1, border: "none", padding: "14px 20px",
-                  fontSize: "14px", outline: "none",
-                  fontFamily: "var(--font-nunito-sans)",
-                }}
-              />
-              <Link href="/exams" style={{
-                background: "#4997E6", color: "#fff",
-                border: "none", padding: "0 24px",
-                fontSize: "13.5px", fontWeight: 700,
-                textDecoration: "none", display: "flex",
-                alignItems: "center",
-                fontFamily: "var(--font-nunito)",
-              }}>Ara →</Link>
-            </div>
-
-            {/* Quick Tags */}
-            <div className="home-stat-grid" style={{
-              display: "flex", gap: "8px",
-              flexWrap: "wrap", marginBottom: "2rem",
-            }}>
-              {["📐 SAT", "🎓 IB", "🗣 IELTS", "📝 TOEFL", "📊 GMAT", "🏫 A-Level"].map((tag) => (
-                <Link key={tag} href="/exams" style={{
-                  background: "#fff", border: "1.5px solid #DDEAF4",
-                  color: "#4a5568", fontSize: "12.5px", fontWeight: 700,
-                  padding: "6px 14px", borderRadius: "100px",
-                  textDecoration: "none",
-                  fontFamily: "var(--font-nunito)",
-                }}>{tag}</Link>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "1rem",
-              background: "#fff",
-              borderRadius: "16px",
-              padding: "1.2rem",
-              border: "1.5px solid #DDEAF4",
-            }}>
-              {[
-                { n: "10.000+", l: "Başarılı Öğrenci" },
-                { n: "%94", l: "Hedef Tutturma" },
-                { n: "50+", l: "Ülkeden Öğrenci" },
-                { n: "4.9 ⭐", l: "Google Puanı" },
-              ].map((s) => (
-                <div key={s.l} style={{ textAlign: "center" }}>
-                  <div style={{
-                    fontFamily: "var(--font-nunito)",
-                    fontSize: "1.3rem", fontWeight: 900, color: "#0B1238",
-                  }}>{s.n}</div>
-                  <div style={{
-                    fontSize: "11px", color: "#7B8EA7",
-                    fontWeight: 600, marginTop: "2px",
-                  }}>{s.l}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+      <section className="section">
+        <div className="site-container">
+          <SectionHeading
+            eyebrow="Programlar"
+            title="Öğrencinin hedefi hangi sistemdeyse, hazırlık o sisteme göre kurulur"
+            text="Bu alan program kataloğunun ana girişi olacak. Her program sayfasında kapsam, format, süreç, eğitmen ve paket bilgileri yer alacak."
+            align="center"
+          />
+          <CardGrid items={programs} columns={3} />
         </div>
       </section>
 
-      {/* EXAM CATEGORIES */}
-      <section style={{ padding: "3.5rem 2rem" }}>
-        <div style={{
-          textAlign: "center",
-          margin: "0 auto 2.5rem",
-          maxWidth: "760px",
-        }}>
-          <span style={sectionLabelStyle}>Kategoriler</span>
-          <h2 style={sectionTitleStyle}>Hangi Sınav Grubuna Hazırlanıyorsunuz?</h2>
-        </div>
-        <div className="home-category-grid" style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-          gap: "16px", maxWidth: "900px", margin: "0 auto",
-          justifyContent: "center",
-        }}>
-          {categories.map((cat) => (
-            <Link key={cat.name} href={cat.href} style={{
-              borderRadius: "18px", padding: "1.35rem 1.1rem",
-              textAlign: "center", textDecoration: "none",
-              background: "#fff", border: `1.5px solid ${cat.border}`,
-              display: "flex", transition: "transform 0.15s, box-shadow 0.15s",
-              minHeight: "168px", flexDirection: "column",
-              alignItems: "center", justifyContent: "center",
-              boxShadow: "0 14px 34px rgba(73, 151, 230, 0.08)",
-            }}>
-              <div style={{
-                width: "54px", height: "54px", borderRadius: "18px",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                background: cat.bg, color: cat.accent,
-                fontSize: "1.65rem", marginBottom: "0.85rem",
-              }}>{cat.icon}</div>
-              <div style={{
-                fontFamily: "var(--font-nunito)", fontWeight: 800,
-                fontSize: "14.5px", color: "#0B1238", lineHeight: 1.25,
-              }}>{cat.name}</div>
-              <div style={{
-                fontSize: "12px", color: "#7B8EA7",
-                marginTop: "0.35rem", lineHeight: 1.45,
-              }}>{cat.count}</div>
-            </Link>
-          ))}
+      <ProcessSection
+        title="Ders vermekten önce doğru başlangıç noktasını belirliyoruz"
+        text="Sürecin her adımı öğrencinin hedef skoru, mevcut seviyesi, okul yükü ve sınav tarihine göre şekillenir."
+        steps={[
+          { title: "Tanışma ve ihtiyaç analizi", text: "Hedef sınav, mevcut durum, takvim ve ders ihtiyacı netleştirilir." },
+          { title: "Seviye tespit ve eğitmen eşleşmesi", text: "Öğrencinin ihtiyacına uygun ders alanı ve eğitmen belirlenir." },
+          { title: "Kişisel akademik plan", text: "Ders, ödev, deneme ve tekrar temposu birlikte oluşturulur." },
+          { title: "Takip ve güncelleme", text: "Sonuçlara göre plan düzenli olarak gözden geçirilir." },
+        ]}
+      />
+
+      <PlaceholderSection
+        eyebrow="Neden A Plus?"
+        title="İddia yerine doğrulanabilir deneyim göstereceğiz"
+        text="Bu bölüm, içerik aşamasında gerçek kurum bilgileri ve izinli öğrenci verileriyle doldurulacak."
+        items={[
+          "Kurucular ve A Plus hikâyesi",
+          "Eğitmen profilleri ve uzmanlıkları",
+          "Doğrulanmış öğrenci sonuçları",
+          "Veli ve öğrenci görüşleri",
+        ]}
+      />
+
+      <section className="section section-soft">
+        <div className="site-container">
+          <SectionHeading
+            eyebrow="Tek sistem, farklı ihtiyaçlar"
+            title="Sadece sınav hazırlığı değil"
+            text="A Plus’ın bütün hizmet alanlarını ana sayfada görünür kılan ikinci katman."
+          />
+          <CardGrid columns={4} items={[
+            { title: "Sınav hazırlığı", text: "Uluslararası sınavların formatına ve hedef skora göre hazırlık." },
+            { title: "Okul ve GPA desteği", text: "Ders, quiz, sınav ve dönem planının düzenli takibi." },
+            { title: "Deneme ve analiz", text: "Yanlışların konu, süre ve hata tipi bazında değerlendirilmesi." },
+            { title: "Akademik rehberlik", text: "Sınav, ders ve üniversite hedeflerinin ortak takvimde yönetilmesi." },
+          ]} />
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section style={{ padding: "3.5rem 2rem", background: "#F7FBFF" }}>
-        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-          <span style={sectionLabelStyle}>Süreç</span>
-          <h2 style={sectionTitleStyle}>3 Adımda Hedef Puan</h2>
-        </div>
-        <div className="home-step-grid" style={{
-          display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "14px", maxWidth: "860px", margin: "0 auto",
-        }}>
-          {steps.map((step) => (
-            <div key={step.title} style={{
-              background: "#fff", borderRadius: "16px",
-              border: "2px solid #DDEAF4", padding: "1.6rem",
-              textAlign: "center",
-            }}>
-              <div style={{
-                width: "44px", height: "44px", borderRadius: "50%",
-                background: "#4997E6", color: "#fff",
-                fontFamily: "var(--font-nunito)", fontWeight: 900,
-                fontSize: "1.1rem", display: "flex", alignItems: "center",
-                justifyContent: "center", margin: "0 auto 1rem",
-              }}>{step.num}</div>
-              <h3 style={{
-                fontFamily: "var(--font-nunito)", fontWeight: 800,
-                fontSize: "15px", color: "#0B1238", marginBottom: "0.4rem",
-              }}>{step.title}</h3>
-              <p style={{ fontSize: "13px", color: "#4a5568", lineHeight: 1.65 }}>{step.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA BAND */}
-      <section style={{
-        background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 52%, #DDF6F3 100%)",
-        padding: "4rem 2rem", textAlign: "center",
-      }}>
-        <h2 style={{
-          fontFamily: "var(--font-nunito)", fontSize: "2rem",
-          fontWeight: 900, color: "#0B1238", marginBottom: "0.7rem",
-        }}>İlk Adımı Bugün Atın 🚀</h2>
-        <p style={{
-          color: "#45546D", fontSize: "14.5px",
-          marginBottom: "2rem", fontWeight: 500,
-        }}>Ücretsiz 15 dakikalık görüşme · Taahhüt yok · 24 saat içinde dönüş</p>
-        <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
-          <Link href="/contact" style={{
-            background: "#4997E6", color: "#fff",
-            padding: "12px 26px", borderRadius: "100px",
-            fontWeight: 800, fontSize: "14px", textDecoration: "none",
-            fontFamily: "var(--font-nunito)",
-          }}>Ücretsiz Görüşme Ayarla</Link>
-          <Link href="/question-bank" style={{
-            background: "#fff", color: "#0B1238",
-            padding: "12px 24px", borderRadius: "100px",
-            fontWeight: 700, fontSize: "14px", textDecoration: "none",
-            border: "2px solid #DDEAF4",
-            fontFamily: "var(--font-nunito)",
-          }}>Ücretsiz Deneme Sınavı</Link>
-        </div>
-      </section>
-      <ExamPrograms />
-      <Testimonials />
-      <WhyAPlus />
+      <CtaBand
+        title="Öğrenci için doğru başlangıç planını birlikte çıkaralım"
+        text="İlk görüşmede hedefi, sınav tarihini ve mevcut ihtiyacı netleştirelim."
+      />
       <Footer />
-
-      <style>{`
-        .home-hero-grid,
-        .home-hero-grid > *,
-        .home-search,
-        .home-search input,
-        .home-category-grid,
-        .home-step-grid,
-        .home-stat-grid {
-          min-width: 0;
-        }
-
-        .home-hero-grid h1,
-        .home-category-grid,
-        .home-step-grid {
-          overflow-wrap: anywhere;
-        }
-
-        @media (max-width: 900px) {
-          .home-hero-grid,
-          .home-step-grid {
-            grid-template-columns: 1fr !important;
-          }
-
-          .home-stat-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-          }
-
-          .home-category-grid {
-            grid-template-columns: repeat(2, minmax(0, 220px)) !important;
-            justify-content: center !important;
-          }
-        }
-
-        @media (max-width: 640px) {
-          .home-hero-grid {
-            gap: 2rem !important;
-          }
-
-          .home-hero-grid h1 {
-            font-size: 2.35rem !important;
-            line-height: 1.18 !important;
-          }
-
-          .home-search {
-            border-radius: 22px !important;
-            flex-direction: column !important;
-          }
-
-          .home-search a {
-            justify-content: center !important;
-            padding: 12px 20px !important;
-          }
-
-          .home-category-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </main>
   );
 }
-
-// ── Data ──────────────────────────────────────────────
-const categories = [
-  { name: "AP Sınavları", count: "AP Calculus, Physics, Biology ve daha fazlası", icon: "📘", bg: "#EAF4FF", border: "#CFE7FF", accent: "#4997E6", href: "/sinavlar/ap" },
-  { name: "IB & A-Level", count: "IB, A-Level, IGCSE", icon: "🎓", bg: "#FDE8F1", border: "#F8BFD4", accent: "#EF4A85", href: "/sinavlar/ib" },
-  { name: "Dil Sınavları", count: "IELTS, TOEFL, PTE", icon: "🗣", bg: "#DDF6F3", border: "#9BE4DE", accent: "#44C7BE", href: "/sinavlar/ielts-toefl" },
-  { name: "Standardize Testler", count: "TMUA, LNAT, ESAT ve benzeri sınavlar", icon: "🧭", bg: "#EEE7FF", border: "#CBBBF0", accent: "#8F72D8", href: "/exams" },
-];
-
-const steps = [
-  { num: "1", title: "Ücretsiz Tanı", desc: "15 dakikalık görüşmede seviyenizi, hedefinizi ve zaman planlamanızı değerlendiriyoruz." },
-  { num: "2", title: "Kişisel Plan", desc: "Size özel haftalık ders programı, konu ağırlıkları ve deneme takvimi hazırlanır." },
-  { num: "3", title: "Hedefe Ulaş", desc: "Düzenli denemeler, canlı geri bildirim ve %100 ücret iade garantisi." },
-];
-
-// ── Styles ────────────────────────────────────────────
-const sectionLabelStyle: React.CSSProperties = {
-  fontSize: "12px", fontWeight: 800, letterSpacing: "0.1em",
-  textTransform: "uppercase", color: "#4997E6",
-  marginBottom: "0.5rem", display: "block",
-  fontFamily: "var(--font-nunito)",
-};
-
-const sectionTitleStyle: React.CSSProperties = {
-  fontFamily: "var(--font-nunito)", fontSize: "1.9rem",
-  fontWeight: 900, color: "#0B1238", marginBottom: "0.4rem",
-};

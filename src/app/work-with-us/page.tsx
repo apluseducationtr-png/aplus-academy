@@ -1,111 +1,51 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { CardGrid, CtaBand, PageHero, ProcessSection, SectionHeading } from "@/components/MarketingSections";
 
 export const metadata: Metadata = {
-  title: "Eğitmen Ol | APlus Academy",
-  description:
-    "APlus Academy eğitmen ağına katılın. SAT, AP, IB, IELTS, TOEFL ve uluslararası okul derslerinde uzman eğitmen başvuruları.",
+  title: "A Plus Academy Eğitmen Başvurusu",
+  description: "A Plus Academy eğitmen ağına katılmak için çalışma modeli ve başvuru süreci.",
 };
-
-const expectations = [
-  "Alanında güçlü akademik geçmiş",
-  "Öğrenci takibi ve düzenli raporlama disiplini",
-  "Online veya yüz yüze ders verebilme esnekliği",
-  "Sınav formatlarına hakimiyet",
-];
 
 export default function WorkWithUsPage() {
   return (
     <main>
       <Navbar />
-      <section style={heroSection}>
-        <div style={container}>
-          <p style={eyebrow}>Eğitmen Ol</p>
-          <h1 style={heroTitle}>A Plus öğrencilerine sistemli ve hedef odaklı destek veren ekibe katılın</h1>
-          <p style={heroText}>
-            Öğrenci takibini önemseyen, sınav formatlarını bilen ve güçlü iletişim kuran
-            eğitmenlerle uzun vadeli çalışıyoruz.
-          </p>
-          <Link href="/contact" style={primaryButton}>Başvuru için iletişime geç</Link>
+      <PageHero
+        eyebrow="Eğitmen ağı"
+        title="Alan bilgisi kadar öğrenci takibini de önemseyen eğitmenlerle çalışıyoruz"
+        intro="Kariyer sayfası; aranan uzmanlıkları, çalışma modelini, seçim sürecini ve başvuru beklentilerini açık biçimde gösterecek."
+        primary={{ label: "Başvuru iletişimi", href: "/contact" }}
+        secondary={{ label: "Programları incele", href: "/exams" }}
+        panelItems={[
+          "Uluslararası sınav veya müfredat uzmanlığı",
+          "Online ve/veya yüz yüze ders verebilme",
+          "Ödev, geri bildirim ve raporlama disiplini",
+          "Uzun vadeli öğrenci iletişimi ve ekip çalışması",
+        ]}
+      />
+      <section className="section">
+        <div className="site-container">
+          <SectionHeading eyebrow="Aranan profiller" title="Uzmanlık alanları yapısal olarak ayrıldı" text="Aktif ihtiyaçlar ve pozisyon detayları içerik aşamasında güncellenecek." />
+          <CardGrid columns={3} items={[
+            { title: "SAT & ACT", text: "Math veya Reading & Writing alanında sınav formatına hâkim eğitmenler." },
+            { title: "AP & IB", text: "STEM, Economics, Business, English ve sosyal bilimler ders uzmanları." },
+            { title: "A-Level & IGCSE", text: "Cambridge, Edexcel veya AQA board deneyimine sahip eğitmenler." },
+            { title: "IELTS & TOEFL", text: "Akademik İngilizce ve sınav becerilerinde geri bildirim verebilen eğitmenler." },
+            { title: "Tıp & hukuk sınavları", text: "IMAT, UCAT ve LNAT bileşenlerinde uzman eğitmenler." },
+            { title: "Akademik danışmanlık", text: "Uluslararası eğitim ve üniversite hedefleri konusunda deneyimli danışmanlar." },
+          ]} />
         </div>
       </section>
-
-      <section style={{ padding: "76px 24px" }}>
-        <div style={grid}>
-          {expectations.map((item, index) => (
-            <article key={item} style={{ ...card, background: index % 2 === 0 ? "#EAF4FF" : "#FDE8F1" }}>
-              <span style={number}>{String(index + 1).padStart(2, "0")}</span>
-              <h2 style={cardTitle}>{item}</h2>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ProcessSection title="Başvuru ve değerlendirme akışı" text="Adayın alan bilgisi, öğretim yaklaşımı ve takip disiplini birlikte değerlendirilecek." steps={[
+        { title: "Başvuru", text: "CV, uzmanlık alanı ve uygun çalışma modeli alınır." },
+        { title: "Ön görüşme", text: "Deneyim, iletişim ve sınav bilgisi değerlendirilir." },
+        { title: "Örnek ders", text: "Adayın anlatım, soru çözümü ve öğrenci yaklaşımı gözlemlenir." },
+        { title: "Eşleşme ve başlangıç", text: "Uygun program ve öğrenci profilleriyle çalışma başlatılır." },
+      ]} />
+      <CtaBand title="Uzmanlık alanınızı ve çalışma deneyiminizi paylaşın" text="Başvuru formu hazırlanırken iletişim sayfası üzerinden eğitmen başvurusu bırakabilirsiniz." label="Eğitmen başvurusu" />
       <Footer />
     </main>
   );
 }
-
-const container: React.CSSProperties = { maxWidth: "1080px", margin: "0 auto" };
-const heroSection: React.CSSProperties = {
-  background: "linear-gradient(135deg, #EAF4FF 0%, #FDE8F1 52%, #DDF6F3 100%)",
-  padding: "84px 24px",
-};
-const eyebrow: React.CSSProperties = {
-  color: "#4997E6",
-  fontSize: "13px",
-  fontWeight: 950,
-  letterSpacing: "0.14em",
-  textTransform: "uppercase",
-  margin: "0 0 16px",
-};
-const heroTitle: React.CSSProperties = {
-  color: "#0B1238",
-  fontSize: "clamp(42px, 5vw, 70px)",
-  lineHeight: 1.04,
-  fontWeight: 950,
-  margin: 0,
-  maxWidth: "900px",
-};
-const heroText: React.CSSProperties = {
-  color: "#45546D",
-  fontSize: "18px",
-  lineHeight: 1.8,
-  margin: "24px 0 32px",
-  maxWidth: "720px",
-};
-const primaryButton: React.CSSProperties = {
-  background: "#4997E6",
-  color: "#ffffff",
-  borderRadius: "999px",
-  padding: "14px 22px",
-  fontSize: "14px",
-  fontWeight: 950,
-  textDecoration: "none",
-};
-const grid: React.CSSProperties = {
-  maxWidth: "1080px",
-  margin: "0 auto",
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))",
-  gap: "18px",
-};
-const card: React.CSSProperties = {
-  border: "1px solid #DDEAF4",
-  borderRadius: "24px",
-  padding: "26px",
-  minHeight: "190px",
-};
-const number: React.CSSProperties = {
-  color: "#4997E6",
-  fontSize: "13px",
-  fontWeight: 950,
-};
-const cardTitle: React.CSSProperties = {
-  color: "#0B1238",
-  fontSize: "24px",
-  lineHeight: 1.2,
-  fontWeight: 950,
-  margin: "18px 0 0",
-};
