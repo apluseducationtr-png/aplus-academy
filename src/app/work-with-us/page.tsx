@@ -33,7 +33,7 @@ export default function WorkWithUsPage() {
             { title: "AP & IB", text: "STEM, Economics, Business, English ve sosyal bilimler ders uzmanları." },
             { title: "A-Level & IGCSE", text: "Cambridge, Edexcel veya AQA board deneyimine sahip eğitmenler." },
             { title: "IELTS & TOEFL", text: "Akademik İngilizce ve sınav becerilerinde geri bildirim verebilen eğitmenler." },
-            { title: "Tıp & hukuk sınavları", text: "IMAT, UCAT ve LNAT bileşenlerinde uzman eğitmenler." },
+            { title: "Tıp & hukuk sınavları", text: "IMAT ve LNAT bileşenlerinde uzman eğitmenler." },
             { title: "Akademik danışmanlık", text: "Uluslararası eğitim ve üniversite hedefleri konusunda deneyimli danışmanlar." },
           ]} />
         </div>

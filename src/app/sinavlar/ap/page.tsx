@@ -3,21 +3,39 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const stemSubjects = [
+  "AP Precalculus",
   "AP Calculus AB / BC",
-  "AP Physics 1 / 2 / C",
-  "AP Chemistry",
-  "AP Biology",
   "AP Statistics",
   "AP Computer Science A",
+  "AP Computer Science Principles",
+  "AP Physics 1 / 2",
+  "AP Physics C: Mechanics",
+  "AP Physics C: Electricity and Magnetism",
+  "AP Chemistry",
+  "AP Biology",
+  "AP Environmental Science",
+  "AP Cybersecurity",
+  "AP Business with Personal Finance",
 ];
 
 const humanitiesSubjects = [
+  "AP English Language and Composition",
+  "AP English Literature and Composition",
   "AP Microeconomics",
   "AP Macroeconomics",
   "AP Psychology",
-  "AP English Language",
-  "AP English Literature",
-  "AP World / US / European History",
+  "AP Comparative Government and Politics",
+  "AP United States Government and Politics",
+  "AP Human Geography",
+  "AP European / US / World History",
+  "AP Art History",
+  "AP 2-D / 3-D Art and Design",
+  "AP Drawing",
+  "AP Music Theory",
+  "AP Research / Seminar",
+  "AP Chinese / French / German / Italian / Japanese",
+  "AP Latin",
+  "AP Spanish Language and Literature",
 ];
 
 const labItems = [
@@ -34,8 +52,8 @@ const labItems = [
     text: "College Board tarzı soru dili ve sık tekrar eden soru kalıpları incelenir.",
   },
   {
-    title: "Final tekrar planı",
-    text: "Sınava yakın dönemde konu tekrarları ve deneme çözüm temposu netleştirilir.",
+    title: "Okul ve kamp desteği",
+    text: "Okul içi yazılı, quiz ve projelerin yanında sınav döneminde yoğun AP kampları düzenlenir.",
   },
 ];
 
@@ -72,7 +90,7 @@ const forWho = [
 const faqs = [
   {
     q: "AP dersleri okul desteği olarak da alınabilir mi?",
-    a: "Evet. AP programları yalnızca final sınavına değil, okul derslerine ve dönem içi sınavlara destek olacak şekilde de planlanabilir.",
+    a: "Evet. Öğrencinin kendi okulunda aldığı AP derslerindeki yazılı, quiz ve projelere yönelik nokta atışı destek verilir; final sınav hazırlığı aynı plana dahil edilebilir.",
   },
   {
     q: "FRQ çalışması her AP dersi için yapılıyor mu?",
@@ -80,7 +98,11 @@ const faqs = [
   },
   {
     q: "AP kamp programları açılıyor mu?",
-    a: "Sınav dönemine yakın AP Calculus, Physics, Economics, Statistics ve benzeri derslerde yoğun tekrar ve soru çözüm kampları açılabilir.",
+    a: "Evet. Sınav dönemine yakın ders bazlı yoğun tekrar, soru çözümü, MCQ ve FRQ odaklı AP kamp programları düzenlenir.",
+  },
+  {
+    q: "Laboratuvar desteği veriliyor mu?",
+    a: "AP programlarında MCQ ve FRQ desteği verilir; fiziksel laboratuvar uygulaması hizmet kapsamına dahil değildir.",
   },
 ];
 
@@ -328,9 +350,9 @@ export default function APPage() {
               gap: "24px",
             }}
           >
-            <SubjectPanel title="STEM & quantitative AP" subjects={stemSubjects} dark />
+            <SubjectPanel title="STEM, teknoloji ve işletme AP" subjects={stemSubjects} dark />
             <SubjectPanel
-              title="Social sciences & English AP"
+              title="Sosyal bilimler, sanat ve dil AP"
               subjects={humanitiesSubjects}
             />
           </div>

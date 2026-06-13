@@ -3,28 +3,41 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const subjectGroups = [
-  "Mathematics AA / AI",
-  "Physics",
-  "Chemistry",
-  "Biology",
-  "Economics",
-  "Business Management",
-  "English",
-  "Turkish",
+  "Mathematics AA — HL / SL",
+  "Mathematics AI — HL / SL",
+  "Biology — HL / SL",
+  "Chemistry — HL / SL",
+  "Physics — HL / SL",
+  "Computer Science — HL / SL",
+  "Environmental Systems and Societies — HL / SL",
+  "Sports, Exercise and Health Science — HL / SL",
+  "Business Management — HL / SL",
+  "Economics — HL / SL",
+  "History — HL / SL",
+  "Geography — HL / SL",
+  "Global Politics — HL / SL",
+  "Psychology — HL / SL",
+  "Philosophy — HL / SL",
+  "Digital Society — HL / SL",
+  "Language A: Literature — HL / SL",
+  "Language A: Language and Literature — HL / SL",
+  "Language B — HL / SL",
+  "Language ab initio — SL",
+  "Visual Arts / Music / Theatre / Film / Dance — HL / SL",
 ];
 
 const coreItems = [
   {
     title: "IA desteği",
-    text: "Internal Assessment süreçlerinde konu seçimi, yapı, analiz ve akademik yazım desteği.",
+    text: "Konu ve araştırma sorusu seçimi, metodoloji, veri analizi, yapı, akademik yazım ve kaynak gösterme konusunda rehberlik.",
   },
   {
     title: "EE planlama",
-    text: "Extended Essay için araştırma sorusu, kaynak kullanımı ve yazım süreci takibi.",
+    text: "Araştırma sorusunu rafine etme, kaynak tarama stratejisi, taslak planı, kriter analizi ve RPPF refleksiyon süreci.",
   },
   {
     title: "TOK & Essay",
-    text: "TOK kavramları, örnekler, argüman yapısı ve essay geliştirme desteği.",
+    text: "Prescribed Title ve Exhibition prompt analizi, bilgi soruları, argüman-karşı argüman dengesi ve gerçek hayat örnekleri.",
   },
 ];
 
@@ -65,7 +78,15 @@ const faqs = [
   },
   {
     q: "IA ve EE desteği veriliyor mu?",
-    a: "Evet. Konu seçimi, yapı, akademik yazım ve süreç takibi konusunda destek verilebilir.",
+    a: "Evet. Konu ve araştırma sorusu seçimi, metodoloji, yapı, veri analizi, akademik yazım, kaynak kullanımı ve süreç takibi alanlarında rehberlik verilir.",
+  },
+  {
+    q: "Mathematics AA ve AI arasındaki fark nedir?",
+    a: "AA teorik matematik, cebir, ispat ve analitik düşünmeye; AI ise veri analizi, modelleme, istatistik ve matematiğin gerçek dünya uygulamalarına odaklanır. AA sınavının bir bölümü hesap makinesizken AI tamamen hesap makinesi temellidir.",
+  },
+  {
+    q: "A Plus öğrencinin IA, EE veya TOK çalışmasını yazar mı?",
+    a: "Hayır. Destek akademik dürüstlük sınırları içindedir. Öğrenciye yöntem, yapı, analiz ve düşünme süreci öğretilir; metin yazma, veri üretme veya çalışmayı öğrenci adına tamamlama yapılmaz.",
   },
 ];
 
@@ -708,6 +729,43 @@ export default function IBPage() {
         </div>
       </section>
 
+      <section style={{ background: "#F7FBFF", padding: "90px 24px" }}>
+        <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "780px", marginBottom: "36px" }}>
+            <div style={blueBadge}>Akademik dürüstlük</div>
+            <h2
+              style={{
+                fontSize: "clamp(34px, 4vw, 52px)",
+                lineHeight: "1.05",
+                letterSpacing: "-0.045em",
+                fontWeight: 950,
+                margin: "20px 0 0",
+              }}
+            >
+              IA, EE ve TOK desteğinde sınırlar nettir
+            </h2>
+            <p style={{ color: "#45546D", fontSize: "16px", lineHeight: 1.8, margin: "20px 0 0" }}>
+              A Plus Academy, öğrencinin eleştirel düşünme ve bağımsız araştırma
+              becerisini geliştirir. Çalışmayı öğrenci adına yazmak, veri üretmek
+              veya kaynak gösterilmemiş içerik hazırlamak hizmet kapsamına girmez.
+            </p>
+          </div>
+
+          <div className="ethics-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "16px" }}>
+            {[
+              ["IA", "Uygun analiz yöntemini ve formül mantığını öğretiriz; ham veriyi öğrenci adına analiz edip grafiklerini hazırlamayız."],
+              ["EE", "Araştırma sorusu, kaynak stratejisi ve argüman akışına geri bildirim veririz; metni satır satır yeniden yazmayız."],
+              ["TOK", "Başlığı ve kavramları Sokratik sorularla derinleştiririz; hazır argüman, örnek veya essay şablonu sunmayız."],
+            ].map(([title, text]) => (
+              <article key={title} style={{ background: "#ffffff", border: "1px solid #D7ECFF", borderRadius: "26px", padding: "26px" }}>
+                <h3 style={{ color: "#0B1238", fontSize: "24px", fontWeight: 950, margin: 0 }}>{title}</h3>
+                <p style={{ color: "#45546D", fontSize: "15px", lineHeight: 1.75, margin: "12px 0 0" }}>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section
         style={{
           background: "#ffffff",
@@ -846,6 +904,10 @@ export default function IBPage() {
           .core-mini-grid,
           .focus-card-grid,
           .pathway-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .ethics-grid {
             grid-template-columns: 1fr !important;
           }
         }

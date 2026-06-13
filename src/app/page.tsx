@@ -4,7 +4,6 @@ import {
   CardGrid,
   CtaBand,
   PageHero,
-  PlaceholderSection,
   ProcessSection,
   SectionHeading,
 } from "@/components/MarketingSections";
@@ -15,7 +14,7 @@ const programs = [
   { eyebrow: "Uluslararası diploma", title: "IB Diploma", text: "HL/SL ders desteği ile IA, EE, TOK ve predicted grade sürecinin birlikte takibi.", href: "/sinavlar/ib", tags: ["HL / SL", "IA / EE", "TOK"] },
   { eyebrow: "Uluslararası müfredat", title: "A-Level & IGCSE", text: "Cambridge, Edexcel ve AQA derslerinde okul başarısı ve final sınavı desteği.", href: "/sinavlar/a-level-igcse", tags: ["Past papers", "Okul desteği"] },
   { eyebrow: "Dil yeterliliği", title: "IELTS & TOEFL", text: "Writing, speaking, reading ve listening alanlarında hedef skor odaklı program.", href: "/sinavlar/ielts-toefl", tags: ["Writing feedback", "Speaking"] },
-  { eyebrow: "Tıp ve hukuk", title: "IMAT, UCAT & LNAT", text: "Reasoning, science, reading ve essay becerileri için sınava özel çalışma planı.", href: "/sinavlar/imat-ucat-lnat", tags: ["UK", "İtalya", "Reasoning"] },
+  { eyebrow: "Tıp ve hukuk", title: "IMAT & LNAT", text: "Science, reasoning, reading ve essay becerileri için sınava özel çalışma planı.", href: "/sinavlar/imat-ucat-lnat", tags: ["UK", "İtalya", "Reasoning"] },
 ];
 
 export default function Home() {
@@ -25,14 +24,14 @@ export default function Home() {
       <PageHero
         eyebrow="Uluslararası akademik hazırlık"
         title="Sınav, okul ve üniversite hedefi tek bir akademik planda"
-        intro="A Plus Academy; uluslararası sınav hazırlığını, okul desteğini, deneme analizini ve düzenli öğrenci takibini kişisel bir yol haritasında birleştirir."
+        intro="2024 yılında Halil Toprak tarafından kurulan A Plus Academy; uluslararası sınav hazırlığını, okul desteğini, deneme analizini ve düzenli öğrenci takibini kişisel bir yol haritasında birleştirir."
         secondary={{ label: "Programları incele", href: "/exams" }}
         panelTitle="A Plus çalışma modelinin temelleri"
         panelItems={[
-          "Alanında uzman eğitmenlerle birebir veya küçük grup dersleri",
+          "Yüksek kıdeme ve akademi deneyimine sahip uzman eğitmenler",
           "Seviye ve hedefe göre kişisel ders ve çalışma planı",
           "Ödev, deneme ve konu eksiklerinin düzenli takibi",
-          "Öğrenci ve veli için görünür gelişim süreci",
+          "Maksimum 6 kişilik grup dersleri",
         ]}
       />
 
@@ -41,7 +40,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Programlar"
             title="Öğrencinin hedefi hangi sistemdeyse, hazırlık o sisteme göre kurulur"
-            text="Bu alan program kataloğunun ana girişi olacak. Her program sayfasında kapsam, format, süreç, eğitmen ve paket bilgileri yer alacak."
+            text="SAT, AP, IB, A-Level, IGCSE, dil sınavları, tıp-hukuk sınavları ve lisansüstü testler için hedefe özel hazırlık programları."
             align="center"
           />
           <CardGrid items={programs} columns={3} />
@@ -59,24 +58,49 @@ export default function Home() {
         ]}
       />
 
-      <PlaceholderSection
-        eyebrow="Neden A Plus?"
-        title="İddia yerine doğrulanabilir deneyim göstereceğiz"
-        text="Bu bölüm, içerik aşamasında gerçek kurum bilgileri ve izinli öğrenci verileriyle doldurulacak."
-        items={[
-          "Kurucular ve A Plus hikâyesi",
-          "Eğitmen profilleri ve uzmanlıkları",
-          "Doğrulanmış öğrenci sonuçları",
-          "Veli ve öğrenci görüşleri",
-        ]}
-      />
+      <section className="section">
+        <div className="site-container about-layout">
+          <div>
+            <SectionHeading
+              eyebrow="A Plus Academy"
+              title="Sadece ders anlatmıyor, bütün akademik süreci yönetiyoruz"
+              text="A Plus Academy, öğrencilerin yurt dışı eğitim ve uluslararası akademik hedeflerine giden yolda potansiyellerini en üst seviyeye çıkarmak amacıyla kuruldu."
+            />
+            <p className="about-copy">
+              Klasik öğretmenlik anlayışının ötesine geçerek deneme analizinden
+              ödev performansına, zaman yönetiminden sınav stratejisine kadar
+              her adımı planlanmış bütüncül bir akademik takip ve mentorluk
+              sistemi sunuyoruz. Veli, öğrenci ve kurum arasındaki şeffaf bilgi
+              akışıyla süreci görünür, ölçülebilir ve güvenli hale getiriyoruz.
+            </p>
+            <div className="tag-row">
+              <span className="tag">Kuruluş: 2024</span>
+              <span className="tag">Kurucu: Halil Toprak</span>
+              <span className="tag">İstanbul + Online</span>
+            </div>
+          </div>
+          <div className="fact-grid">
+            {[
+              ["500+", "Bugüne kadar çalışılan öğrenci"],
+              ["6", "Grup derslerinde maksimum öğrenci"],
+              ["2", "İstanbul'da yüz yüze eğitim ofisi"],
+              ["4.6 / 5", "9 Google değerlendirmesinden puan"],
+            ].map(([value, label]) => (
+              <div className="fact-card" key={label}>
+                <strong>{value}</strong>
+                <span>{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="section section-soft">
         <div className="site-container">
           <SectionHeading
             eyebrow="Tek sistem, farklı ihtiyaçlar"
             title="Sadece sınav hazırlığı değil"
-            text="A Plus’ın bütün hizmet alanlarını ana sayfada görünür kılan ikinci katman."
+            text="Ders saatleriyle sınırlı kalmayan; sınav, okul, analiz ve danışmanlığı aynı akademik planda buluşturan yaklaşım."
           />
           <CardGrid columns={4} items={[
             { title: "Sınav hazırlığı", text: "Uluslararası sınavların formatına ve hedef skora göre hazırlık." },
@@ -92,6 +116,53 @@ export default function Home() {
         text="İlk görüşmede hedefi, sınav tarihini ve mevcut ihtiyacı netleştirelim."
       />
       <Footer />
+      <style>{`
+        .about-layout {
+          display: grid;
+          grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+          gap: 48px;
+          align-items: center;
+        }
+        .about-copy {
+          max-width: 720px;
+          color: var(--slate);
+          font-size: 16px;
+          line-height: 1.85;
+        }
+        .fact-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 14px;
+        }
+        .fact-card {
+          min-height: 170px;
+          padding: 24px;
+          border: 1px solid var(--border);
+          border-radius: 24px;
+          background: var(--hero-gradient);
+        }
+        .fact-card strong {
+          display: block;
+          color: var(--ink);
+          font-family: var(--font-nunito);
+          font-size: 38px;
+          font-weight: 950;
+        }
+        .fact-card span {
+          display: block;
+          margin-top: 12px;
+          color: var(--slate);
+          font-size: 14px;
+          line-height: 1.5;
+        }
+        @media (max-width: 850px) {
+          .about-layout { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 520px) {
+          .fact-grid { grid-template-columns: 1fr; }
+          .fact-card { min-height: 0; }
+        }
+      `}</style>
     </main>
   );
 }

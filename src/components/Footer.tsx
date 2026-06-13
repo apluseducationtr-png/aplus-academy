@@ -30,14 +30,19 @@ export default function Footer() {
         </div>
         <div>
           <h3>İletişim</h3>
-          <a href="tel:+905525195550">+90 552 519 55 50</a>
-          <a href="mailto:info@aplusacademy.com">info@aplusacademy.com</a>
-          <p>İstanbul · Online ve yüz yüze</p>
+          <a href="tel:+905421425634">+90 542 142 56 34</a>
+          <a href="mailto:apluseducationtr@gmail.com">apluseducationtr@gmail.com</a>
+          <p>Göztepe ve Altunizade · Online ve yüz yüze</p>
+          <div className="footer-socials">
+            <a href="https://www.instagram.com/aplusacademyedu/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.youtube.com/@aplusacademyonline" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://www.linkedin.com/company/101486827/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
       </div>
       <div className="site-container footer-bottom">
         <span>© 2026 A Plus Academy</span>
-        <span>Yasal sayfalar ve sosyal medya bağlantıları eklenecek</span>
+        <span>2024&apos;ten beri uluslararası akademik hazırlık</span>
       </div>
       <style>{`
         .site-footer { padding: 72px 0 28px; background: #0B1238; color: white; }
@@ -47,6 +52,7 @@ export default function Footer() {
         .footer-grid p { max-width: 340px; margin-top: 12px; color: #b8c4d7; line-height: 1.75; }
         .footer-grid > div:not(:first-child) { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
         .footer-grid a { color: #dbe7f6; text-decoration: none; font-size: 14px; }
+        .footer-socials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
         .footer-bottom { display: flex; justify-content: space-between; gap: 20px; margin-top: 52px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); color: #8fa0ba; font-size: 12px; }
         @media (max-width: 850px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; } }

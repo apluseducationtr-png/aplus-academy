@@ -33,7 +33,7 @@ const programs = [
     href: "/sinavlar/ielts-toefl",
   },
   {
-    title: "IMAT, UCAT, LNAT",
+    title: "IMAT & LNAT",
     category: "Tıp & Hukuk Başvuruları",
     description:
       "Tıp ve hukuk hedefleyen öğrenciler için reasoning, reading, essay ve science odaklı hazırlık.",
