@@ -384,8 +384,8 @@ export default function IBPage() {
                     width: "54px",
                     height: "54px",
                     borderRadius: "18px",
-                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#2F6FC2",
+                    background: "#EEF7FF",
+                    color: "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -475,13 +475,13 @@ export default function IBPage() {
               gap: "16px",
             }}
           >
-            {subjectGroups.map((subject, index) => (
+            {subjectGroups.map((subject) => (
               <div
                 key={subject}
                 style={{
-                  background: index % 4 === 0 ? "#EAF4FF" : "#ffffff",
+                  background: "#ffffff",
                   color: "#0B1238",
-                  border: index % 4 === 0 ? "none" : "1px solid #D7ECFF",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "24px",
                   padding: "22px",
                   minHeight: "110px",
@@ -552,9 +552,9 @@ export default function IBPage() {
               <article
                 key={item.title}
                 style={{
-                  background: index === 0 ? "#EAF4FF" : "#ffffff",
+                  background: "#ffffff",
                   color: "#0B1238",
-                  border: index === 0 ? "none" : "1px solid #D7ECFF",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "30px",
                   padding: "28px",
                   boxShadow: "0 16px 42px rgba(15, 23, 42, 0.06)",
@@ -568,8 +568,8 @@ export default function IBPage() {
                     width: "52px",
                     height: "52px",
                     borderRadius: "18px",
-                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#2F6FC2",
+                    background: "#EEF7FF",
+                    color: "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -595,7 +595,7 @@ export default function IBPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#45546D" : "#45546D",
+                      color: "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -664,13 +664,13 @@ export default function IBPage() {
             }}
             className="pathway-grid"
           >
-            {pathway.map(([number, title, text], index) => (
+            {pathway.map(([number, title, text]) => (
               <article
                 key={title}
                 style={{
-                  background: index === 0 ? "#EAF4FF" : "#ffffff",
+                  background: "#ffffff",
                   color: "#0B1238",
-                  border: index === 0 ? "none" : "1px solid #D7ECFF",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "28px",
                   padding: "24px",
                   boxShadow: "0 14px 36px rgba(15, 23, 42, 0.055)",
@@ -684,8 +684,8 @@ export default function IBPage() {
                     width: "48px",
                     height: "48px",
                     borderRadius: "16px",
-                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#2F6FC2",
+                    background: "#EEF7FF",
+                    color: "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -711,7 +711,7 @@ export default function IBPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#45546D" : "#45546D",
+                      color: "#45546D",
                       fontSize: "14px",
                       lineHeight: "1.7",
                       margin: 0,

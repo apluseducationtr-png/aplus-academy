@@ -350,7 +350,7 @@ export default function APPage() {
               gap: "24px",
             }}
           >
-            <SubjectPanel title="STEM, teknoloji ve işletme AP" subjects={stemSubjects} dark />
+            <SubjectPanel title="STEM, teknoloji ve işletme AP" subjects={stemSubjects} />
             <SubjectPanel
               title="Sosyal bilimler, sanat ve dil AP"
               subjects={humanitiesSubjects}
@@ -599,13 +599,13 @@ export default function APPage() {
               gap: "16px",
             }}
           >
-            {timeline.map((item, index) => (
+            {timeline.map((item) => (
               <article
                 key={item.title}
                 style={{
-                  background: index === 0 ? "#EAF4FF" : "#ffffff",
+                  background: "#ffffff",
                   color: "#0B1238",
-                  border: index === 0 ? "none" : "1px solid #D7ECFF",
+                  border: "1px solid #D7ECFF",
                   borderRadius: "28px",
                   padding: "24px",
                   boxShadow: "0 14px 36px rgba(15, 23, 42, 0.055)",
@@ -613,7 +613,7 @@ export default function APPage() {
               >
                 <p
                   style={{
-                    color: index === 0 ? "#1F5AA6" : "#2F6FC2",
+                    color: "#2F6FC2",
                     fontSize: "13px",
                     fontWeight: 950,
                     margin: "0 0 18px",
@@ -636,7 +636,7 @@ export default function APPage() {
 
                 <p
                   style={{
-                    color: index === 0 ? "#45546D" : "#45546D",
+                    color: "#45546D",
                     fontSize: "14px",
                     lineHeight: "1.7",
                     margin: 0,
@@ -717,8 +717,8 @@ export default function APPage() {
                     width: "46px",
                     height: "46px",
                     borderRadius: "16px",
-                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#2F6FC2",
+                    background: "#EEF7FF",
+                    color: "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -999,18 +999,16 @@ function ProgressRow({ label, value }: { label: string; value: string }) {
 function SubjectPanel({
   title,
   subjects,
-  dark = false,
 }: {
   title: string;
   subjects: string[];
-  dark?: boolean;
 }) {
   return (
     <div
       style={{
-        background: dark ? "#EAF4FF" : "#ffffff",
+        background: "#ffffff",
         color: "#0B1238",
-        border: dark ? "none" : "1px solid #D7ECFF",
+        border: "1px solid #D7ECFF",
         borderRadius: "34px",
         padding: "32px",
         boxShadow: "0 18px 48px rgba(15, 23, 42, 0.06)",
@@ -1033,8 +1031,8 @@ function SubjectPanel({
           <div
             key={subject}
             style={{
-              background: dark ? "rgba(255,255,255,0.72)" : "#F7FAFD",
-              border: dark ? "1px solid #C9DFF3" : "1px solid #D7ECFF",
+              background: "#F7FAFD",
+              border: "1px solid #D7ECFF",
               borderRadius: "18px",
               padding: "16px 18px",
               color: "#0B1238",

@@ -67,7 +67,7 @@ export default function ProgramDetailPage({
 
           <div style={itemGrid}>
             {focusItems.map((item, index) => (
-              <article key={item} style={{ ...itemCard, background: index % 2 === 0 ? "#EAF4FF" : "#FDE8F1" }}>
+              <article key={item} style={itemCard}>
                 <span style={numberStyle}>{String(index + 1).padStart(2, "0")}</span>
                 <h3 style={itemTitle}>{item}</h3>
               </article>
@@ -361,6 +361,7 @@ const itemGrid: CSSProperties = {
 };
 
 const itemCard: CSSProperties = {
+  background: "#ffffff",
   border: "1px solid #DDEAF4",
   borderRadius: "22px",
   padding: "22px",

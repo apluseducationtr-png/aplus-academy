@@ -380,13 +380,13 @@ export default function DigitalSATPage() {
           </div>
 
           <div style={{ display: "grid", gap: "16px" }}>
-            {roadmap.map((item, index) => (
+            {roadmap.map((item) => (
               <article
                 key={item.title}
                 style={{
-                  background: index === 0 ? "#EAF4FF" : "#ffffff",
+                  background: "#ffffff",
                   color: "#0B1238",
-                  border: index === 0 ? "none" : "1px solid #DDEAF4",
+                  border: "1px solid #DDEAF4",
                   borderRadius: "30px",
                   padding: "28px",
                   boxShadow: "0 16px 42px rgba(15, 23, 42, 0.06)",
@@ -401,8 +401,8 @@ export default function DigitalSATPage() {
                     width: "58px",
                     height: "58px",
                     borderRadius: "20px",
-                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#2F6FC2",
+                    background: "#EEF7FF",
+                    color: "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -428,7 +428,7 @@ export default function DigitalSATPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#45546D" : "#45546D",
+                      color: "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -496,7 +496,7 @@ export default function DigitalSATPage() {
               gap: "24px",
             }}
           >
-            <TopicPanel title="Math" topics={mathTopics} dark />
+            <TopicPanel title="Math" topics={mathTopics} />
             <TopicPanel title="Reading & Writing" topics={verbalTopics} />
           </div>
         </div>
@@ -794,18 +794,16 @@ export default function DigitalSATPage() {
 function TopicPanel({
   title,
   topics,
-  dark = false,
 }: {
   title: string;
   topics: string[];
-  dark?: boolean;
 }) {
   return (
     <div
       style={{
-        background: dark ? "#EAF4FF" : "#ffffff",
+        background: "#ffffff",
         color: "#0B1238",
-        border: dark ? "none" : "1px solid #D7ECFF",
+        border: "1px solid #D7ECFF",
         borderRadius: "34px",
         padding: "32px",
         boxShadow: "0 18px 48px rgba(15, 23, 42, 0.06)",
@@ -828,8 +826,8 @@ function TopicPanel({
           <div
             key={topic}
             style={{
-              background: dark ? "rgba(255,255,255,0.72)" : "#F7FAFD",
-              border: dark ? "1px solid #C9DFF3" : "1px solid #D7ECFF",
+              background: "#F7FAFD",
+              border: "1px solid #D7ECFF",
               borderRadius: "18px",
               padding: "16px 18px",
               color: "#0B1238",
