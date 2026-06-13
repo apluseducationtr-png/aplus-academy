@@ -253,15 +253,15 @@ export default function DigitalSATPage() {
                   </div>
 
                   <div
+                    className="score-connector"
                     style={{
-                      width: "48px",
-                      height: "48px",
-                      borderRadius: "999px",
-                      background: "#2F6FC2",
+                      width: "54px",
+                      height: "32px",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      fontSize: "24px",
+                      color: "#1F5AA6",
+                      fontSize: "26px",
                       fontWeight: 950,
                     }}
                   >
@@ -519,10 +519,9 @@ export default function DigitalSATPage() {
                 borderRadius: "36px",
                 padding: "34px",
                 color: "#0B1238",
-                minHeight: "420px",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-between",
+                justifyContent: "flex-start",
               }}
             >
               <div>
@@ -772,6 +771,12 @@ export default function DigitalSATPage() {
           .score-row {
             grid-template-columns: 1fr !important;
           }
+
+          .score-connector {
+            justify-content: flex-start !important;
+            transform: rotate(90deg);
+            transform-origin: 16px center;
+          }
         }
 
         @media (max-width: 600px) {
@@ -823,8 +828,8 @@ function TopicPanel({
           <div
             key={topic}
             style={{
-              background: dark ? "rgba(255,255,255,0.08)" : "#FAFCFF",
-              border: dark ? "1px solid rgba(255,255,255,0.14)" : "1px solid #D7ECFF",
+              background: dark ? "rgba(255,255,255,0.72)" : "#F7FAFD",
+              border: dark ? "1px solid #C9DFF3" : "1px solid #D7ECFF",
               borderRadius: "18px",
               padding: "16px 18px",
               color: "#0B1238",

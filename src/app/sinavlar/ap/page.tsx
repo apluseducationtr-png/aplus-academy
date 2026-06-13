@@ -377,10 +377,9 @@ export default function APPage() {
               color: "#0B1238",
               borderRadius: "38px",
               padding: "36px",
-              minHeight: "520px",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "space-between",
+              justifyContent: "flex-start",
               position: "relative",
               overflow: "hidden",
             }}
@@ -490,7 +489,6 @@ export default function APPage() {
                   borderRadius: "30px",
                   padding: "28px",
                   boxShadow: "0 16px 42px rgba(15, 23, 42, 0.06)",
-                  minHeight: index === 0 || index === 3 ? "260px" : "220px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
@@ -610,7 +608,6 @@ export default function APPage() {
                   border: index === 0 ? "none" : "1px solid #D7ECFF",
                   borderRadius: "28px",
                   padding: "24px",
-                  minHeight: "250px",
                   boxShadow: "0 14px 36px rgba(15, 23, 42, 0.055)",
                 }}
               >
@@ -1036,8 +1033,8 @@ function SubjectPanel({
           <div
             key={subject}
             style={{
-              background: dark ? "rgba(255,255,255,0.08)" : "#FAFCFF",
-              border: dark ? "1px solid rgba(255,255,255,0.14)" : "1px solid #D7ECFF",
+              background: dark ? "rgba(255,255,255,0.72)" : "#F7FAFD",
+              border: dark ? "1px solid #C9DFF3" : "1px solid #D7ECFF",
               borderRadius: "18px",
               padding: "16px 18px",
               color: "#0B1238",

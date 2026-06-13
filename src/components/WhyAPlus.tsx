@@ -110,7 +110,6 @@ export default function WhyAPlus() {
               color: "#0B1238",
               position: "relative",
               overflow: "hidden",
-              minHeight: "560px",
             }}
           >
             <div
@@ -177,11 +176,11 @@ export default function WhyAPlus() {
                         background:
                           index === steps.length - 1
                             ? "#2F6FC2"
-                            : "rgba(255,255,255,0.1)",
+                            : "rgba(255,255,255,0.82)",
                         border:
                           index === steps.length - 1
                             ? "none"
-                            : "1px solid rgba(255,255,255,0.16)",
+                            : "1px solid #C9DFF3",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -196,9 +195,9 @@ export default function WhyAPlus() {
                       style={{
                         background:
                           index === steps.length - 1
-                            ? "rgba(47, 128, 237, 0.18)"
-                            : "rgba(255,255,255,0.06)",
-                        border: "1px solid rgba(255,255,255,0.12)",
+                            ? "rgba(47, 111, 194, 0.14)"
+                            : "rgba(255,255,255,0.82)",
+                        border: "1px solid #C9DFF3",
                         borderRadius: "18px",
                         padding: "15px 18px",
                       }}
@@ -260,10 +259,9 @@ export default function WhyAPlus() {
                   borderRadius: "30px",
                   padding: "28px",
                   boxShadow: "0 16px 42px rgba(15, 23, 42, 0.06)",
-                  minHeight: index === 0 || index === 3 ? "270px" : "230px",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between",
+                  justifyContent: "flex-start",
                 }}
               >
                 <div>
@@ -273,7 +271,7 @@ export default function WhyAPlus() {
                       height: "52px",
                       borderRadius: "18px",
                       background: index % 2 === 0 ? "#2F6FC2" : "#C93670",
-                      color: "#0B1238",
+                      color: "#ffffff",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",

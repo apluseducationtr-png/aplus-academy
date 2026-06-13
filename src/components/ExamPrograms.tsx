@@ -183,7 +183,6 @@ export default function ExamPrograms() {
                 border: "1px solid #DDEAF4",
                 borderRadius: "28px",
                 padding: "26px",
-                minHeight: "270px",
                 display: "flex",
                 flexDirection: "column",
                 boxShadow: "0 12px 35px rgba(15, 23, 42, 0.055)",
