@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -201,7 +201,7 @@ export default function IBPage() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   fontSize: "13px",
                   fontWeight: 950,
                   letterSpacing: "0.16em",
@@ -305,7 +305,7 @@ export default function IBPage() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   fontSize: "13px",
                   fontWeight: 950,
                   letterSpacing: "0.16em",
@@ -385,8 +385,8 @@ export default function IBPage() {
                     width: "54px",
                     height: "54px",
                     borderRadius: "18px",
-                    background: index === 0 ? "#4997E6" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#4997E6",
+                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -570,8 +570,8 @@ export default function IBPage() {
                     width: "52px",
                     height: "52px",
                     borderRadius: "18px",
-                    background: index === 0 ? "#4997E6" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#4997E6",
+                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -597,7 +597,7 @@ export default function IBPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#DCE7F2" : "#45546D",
+                      color: index === 0 ? "#45546D" : "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -687,8 +687,8 @@ export default function IBPage() {
                     width: "48px",
                     height: "48px",
                     borderRadius: "16px",
-                    background: index === 0 ? "#4997E6" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#4997E6",
+                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -714,7 +714,7 @@ export default function IBPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#DCE7F2" : "#45546D",
+                      color: index === 0 ? "#45546D" : "#45546D",
                       fontSize: "14px",
                       lineHeight: "1.7",
                       margin: 0,
@@ -856,7 +856,7 @@ export default function IBPage() {
           <div>
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.16em",
@@ -909,6 +909,14 @@ export default function IBPage() {
 
           .ethics-grid {
             grid-template-columns: 1fr !important;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .ib-hero h1 {
+            font-size: 38px !important;
+            line-height: 1.08 !important;
+            letter-spacing: -0.045em !important;
           }
         }
       `}</style>
@@ -975,7 +983,7 @@ const backButton = {
   display: "inline-flex",
   alignItems: "center",
   gap: "8px",
-  color: "#4997E6",
+  color: "#2F6FC2",
   background: "#ffffff",
   border: "1px solid #D7ECFF",
   borderRadius: "999px",
@@ -989,7 +997,7 @@ const backButton = {
 const blueBadge = {
   display: "inline-flex",
   background: "#EAF4FF",
-  color: "#4997E6",
+  color: "#2F6FC2",
   border: "1px solid #CFE7FF",
   borderRadius: "999px",
   padding: "9px 16px",
@@ -1000,7 +1008,7 @@ const blueBadge = {
 };
 
 const primaryButton = {
-  background: "#4997E6",
+  background: "#2F6FC2",
   color: "#ffffff",
   borderRadius: "999px",
   padding: "14px 22px",

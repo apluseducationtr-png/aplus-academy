@@ -1,4 +1,4 @@
-﻿const features = [
+const features = [
   {
     title: "Kişisel yol haritası",
     text: "Öğrencinin hedefi, başlangıç seviyesi ve sınav tarihine göre haftalık bir çalışma planı oluşturulur.",
@@ -51,7 +51,7 @@ export default function WhyAPlus() {
             style={{
               display: "inline-flex",
               background: "#eef6ff",
-              color: "#4997E6",
+              color: "#2F6FC2",
               border: "1px solid #CFE7FF",
               borderRadius: "999px",
               padding: "8px 14px",
@@ -128,7 +128,7 @@ export default function WhyAPlus() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   fontSize: "13px",
                   fontWeight: 900,
                   letterSpacing: "0.16em",
@@ -176,7 +176,7 @@ export default function WhyAPlus() {
                         borderRadius: "16px",
                         background:
                           index === steps.length - 1
-                            ? "#4997E6"
+                            ? "#2F6FC2"
                             : "rgba(255,255,255,0.1)",
                         border:
                           index === steps.length - 1
@@ -272,7 +272,7 @@ export default function WhyAPlus() {
                       width: "52px",
                       height: "52px",
                       borderRadius: "18px",
-                      background: index % 2 === 0 ? "#4997E6" : "#EF4A85",
+                      background: index % 2 === 0 ? "#2F6FC2" : "#C93670",
                       color: "#0B1238",
                       display: "flex",
                       alignItems: "center",
@@ -324,7 +324,7 @@ export default function WhyAPlus() {
                     style={{
                       width: `${55 + index * 12}%`,
                       height: "100%",
-                      background: index % 2 === 0 ? "#4997E6" : "#EF4A85",
+                      background: index % 2 === 0 ? "#2F6FC2" : "#C93670",
                       borderRadius: "999px",
                     }}
                   />

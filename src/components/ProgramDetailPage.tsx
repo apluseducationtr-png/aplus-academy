@@ -32,11 +32,11 @@ export default function ProgramDetailPage({
       <Navbar />
 
       <section style={heroSection}>
-        <div style={heroGrid}>
+        <div style={heroGrid} className="program-hero-grid">
           <div>
             <Link href="/" style={backButton}>← Ana sayfaya dön</Link>
             <div style={badgeStyle}>{badge}</div>
-            <h1 style={heroTitle}>{title}</h1>
+            <h1 style={heroTitle} className="program-hero-title">{title}</h1>
             <p style={heroText}>{intro}</p>
             <div style={buttonRow}>
               <Link href="/contact" style={primaryButton}>Ücretsiz görüşme planla</Link>
@@ -44,9 +44,9 @@ export default function ProgramDetailPage({
             </div>
           </div>
 
-          <aside style={metricPanel}>
+          <aside style={metricPanel} className="program-metric-panel">
             <p style={panelEyebrow}>Program özeti</p>
-            <div style={metricGrid}>
+            <div style={metricGrid} className="program-metric-grid">
               {metrics.map(([label, value]) => (
                 <div key={label} style={metricBox}>
                   <span style={metricLabel}>{label}</span>
@@ -163,6 +163,35 @@ export default function ProgramDetailPage({
         </div>
       </section>
 
+      <style>{`
+        @media (max-width: 760px) {
+          .program-hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 28px !important;
+          }
+
+          .program-hero-title {
+            font-size: 38px !important;
+            line-height: 1.08 !important;
+          }
+
+          .program-metric-panel {
+            padding: 22px !important;
+            border-radius: 26px !important;
+          }
+        }
+
+        @media (max-width: 420px) {
+          .program-hero-title {
+            font-size: 34px !important;
+          }
+
+          .program-metric-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+
       <Footer />
     </main>
   );
@@ -189,7 +218,7 @@ const heroGrid: CSSProperties = {
 const backButton: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
-  color: "#4997E6",
+  color: "#2F6FC2",
   background: "#ffffff",
   border: "1px solid #DDEAF4",
   borderRadius: "999px",
@@ -203,7 +232,7 @@ const backButton: CSSProperties = {
 
 const badgeStyle: CSSProperties = {
   display: "inline-flex",
-  color: "#4997E6",
+  color: "#2F6FC2",
   background: "#ffffff",
   border: "1px solid #DDEAF4",
   borderRadius: "999px",
@@ -238,7 +267,7 @@ const buttonRow: CSSProperties = {
 };
 
 const primaryButton: CSSProperties = {
-  background: "#4997E6",
+  background: "#2F6FC2",
   color: "#ffffff",
   borderRadius: "999px",
   padding: "14px 22px",
@@ -268,7 +297,7 @@ const metricPanel: CSSProperties = {
 };
 
 const panelEyebrow: CSSProperties = {
-  color: "#4997E6",
+  color: "#1F5AA6",
   fontSize: "13px",
   fontWeight: 950,
   letterSpacing: "0.14em",
@@ -338,7 +367,7 @@ const itemCard: CSSProperties = {
 };
 
 const numberStyle: CSSProperties = {
-  color: "#4997E6",
+  color: "#1F5AA6",
   fontSize: "13px",
   fontWeight: 950,
 };

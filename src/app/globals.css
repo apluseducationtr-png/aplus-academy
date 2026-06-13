@@ -1,11 +1,11 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 :root {
-  --blue: #4997E6;
+  --blue: #2F6FC2;
   --blue-light: #EAF4FF;
   --blue-mid: #CFE7FF;
-  --blue-dark: #2F6FC2;
-  --pink: #EF4A85;
+  --blue-dark: #1F5AA6;
+  --pink: #C93670;
   --pink-light: #FDE8F1;
   --teal: #44C7BE;
   --teal-light: #DDF6F3;
@@ -19,7 +19,7 @@
   --green-light: #E6FBF2;
   --ink: #0B1238;
   --slate: #45546D;
-  --muted: #7B8EA7;
+  --muted: #5F718A;
   --border: #DDEAF4;
   --bg: #F7FBFF;
   --surface: #ffffff;
@@ -99,7 +99,7 @@ button, a {
 .page-hero h1 {
   max-width: 820px;
   font-family: var(--font-nunito);
-  font-size: clamp(42px, 5.5vw, 76px);
+  font-size: clamp(40px, 5vw, 68px);
   font-weight: 950;
   letter-spacing: -.045em;
   line-height: 1.03;
@@ -156,7 +156,7 @@ button, a {
   place-items: center;
   border-radius: 12px;
   background: var(--teal-light);
-  color: #167d75;
+  color: #0F6B64;
   font-weight: 900;
 }
 
@@ -184,6 +184,7 @@ button, a {
 .button-primary {
   background: var(--blue);
   color: white;
+  box-shadow: 0 10px 24px rgba(47, 111, 194, .2);
 }
 
 .button-secondary {
@@ -436,7 +437,8 @@ button, a {
   }
 
   .page-hero h1 {
-    font-size: 42px;
+    font-size: 38px;
+    line-height: 1.08;
   }
 
   .hero-intro {

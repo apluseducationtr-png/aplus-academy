@@ -89,7 +89,7 @@ export default function ExamPrograms() {
                 alignItems: "center",
                 gap: "8px",
                 background: "#EAF4FF",
-                color: "#4997E6",
+                color: "#2F6FC2",
                 border: "1px solid #CFE7FF",
                 borderRadius: "999px",
                 padding: "8px 14px",
@@ -152,7 +152,7 @@ export default function ExamPrograms() {
                 <span
                   key={item}
                   style={{
-                    background: item === "Birebir Ders" ? "#4997E6" : "#F7FBFF",
+                    background: item === "Birebir Ders" ? "#2F6FC2" : "#F7FBFF",
                     color: item === "Birebir Ders" ? "#ffffff" : "#1F2A44",
                     border: item === "Birebir Ders" ? "none" : "1px solid #DDEAF4",
                     borderRadius: "999px",
@@ -209,7 +209,7 @@ export default function ExamPrograms() {
 
               <p
                 style={{
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   fontSize: "12px",
                   fontWeight: 800,
                   margin: "0 0 8px",
@@ -272,7 +272,7 @@ export default function ExamPrograms() {
     href={program.href}
     style={{
       marginTop: "22px",
-      color: "#4997E6",
+      color: "#2F6FC2",
       fontSize: "14px",
       fontWeight: 900,
       textAlign: "left",
@@ -288,7 +288,7 @@ export default function ExamPrograms() {
       background: "transparent",
       border: "none",
       padding: 0,
-      color: "#4997E6",
+      color: "#2F6FC2",
       fontSize: "14px",
       fontWeight: 900,
       textAlign: "left",
@@ -317,7 +317,7 @@ export default function ExamPrograms() {
           <div>
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 900,
                 letterSpacing: "0.16em",

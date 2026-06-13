@@ -1,4 +1,4 @@
-﻿const featuredResult = {
+const featuredResult = {
   exam: "Digital SAT",
   before: "1150",
   after: "1420",
@@ -96,7 +96,7 @@ export default function Testimonials() {
               style={{
                 display: "inline-flex",
                 background: "#EAF4FF",
-                color: "#4997E6",
+                color: "#2F6FC2",
                 border: "1px solid #CFE7FF",
                 borderRadius: "999px",
                 padding: "8px 14px",
@@ -170,7 +170,7 @@ export default function Testimonials() {
               <div>
                 <p
                   style={{
-                    color: "#4997E6",
+                    color: "#2F6FC2",
                     fontSize: "13px",
                     fontWeight: 900,
                     letterSpacing: "0.12em",
@@ -197,7 +197,7 @@ export default function Testimonials() {
               <div
                 style={{
                   background: "#EEF7FF",
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   border: "1px solid #D7ECFF",
                   borderRadius: "999px",
                   padding: "10px 16px",
@@ -230,7 +230,7 @@ export default function Testimonials() {
               >
                 <p
                   style={{
-                    color: "#6E7F97",
+                    color: "#5F718A",
                     fontSize: "13px",
                     fontWeight: 800,
                     margin: "0 0 8px",
@@ -241,7 +241,7 @@ export default function Testimonials() {
 
                 <div
                   style={{
-                    color: "#7E91A9",
+                    color: "#5F718A",
                     fontSize: "54px",
                     lineHeight: 1,
                     fontWeight: 950,
@@ -257,7 +257,7 @@ export default function Testimonials() {
                   width: "56px",
                   height: "56px",
                   borderRadius: "999px",
-                  background: "#4997E6",
+                  background: "#2F6FC2",
                   color: "#0B1238",
                   display: "flex",
                   alignItems: "center",
@@ -278,7 +278,7 @@ export default function Testimonials() {
               >
                 <p
                   style={{
-                    color: "#4997E6",
+                    color: "#2F6FC2",
                     fontSize: "13px",
                     fontWeight: 800,
                     margin: "0 0 8px",
@@ -312,7 +312,7 @@ export default function Testimonials() {
             >
               <div
                 style={{
-                  background: "#4997E6",
+                  background: "#2F6FC2",
                   color: "#0B1238",
                   borderRadius: "26px",
                   padding: "24px",
@@ -422,7 +422,7 @@ export default function Testimonials() {
 
                     <p
                       style={{
-                        color: "#4997E6",
+                        color: "#2F6FC2",
                         fontSize: "13px",
                         fontWeight: 800,
                         margin: 0,
@@ -452,7 +452,7 @@ export default function Testimonials() {
                 >
                   <span
                     style={{
-                      color: "#7E91A9",
+                      color: "#5F718A",
                       fontSize: "28px",
                       fontWeight: 950,
                       letterSpacing: "-0.04em",

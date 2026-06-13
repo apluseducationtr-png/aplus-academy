@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -116,7 +116,7 @@ export default function DigitalSATPage() {
       display: "inline-flex",
       alignItems: "center",
       gap: "8px",
-      color: "#4997E6",
+      color: "#2F6FC2",
       background: "#ffffff",
       border: "1px solid #D7ECFF",
       borderRadius: "999px",
@@ -134,7 +134,7 @@ export default function DigitalSATPage() {
     style={{
       display: "inline-flex",
       background: "#EAF4FF",
-      color: "#4997E6",
+      color: "#2F6FC2",
       border: "1px solid #CFE7FF",
       borderRadius: "999px",
       padding: "9px 16px",
@@ -218,7 +218,7 @@ export default function DigitalSATPage() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   fontSize: "13px",
                   fontWeight: 900,
                   letterSpacing: "0.16em",
@@ -257,7 +257,7 @@ export default function DigitalSATPage() {
                       width: "48px",
                       height: "48px",
                       borderRadius: "999px",
-                      background: "#4997E6",
+                      background: "#2F6FC2",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -343,7 +343,7 @@ export default function DigitalSATPage() {
           >
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 900,
                 letterSpacing: "0.14em",
@@ -401,8 +401,8 @@ export default function DigitalSATPage() {
                     width: "58px",
                     height: "58px",
                     borderRadius: "20px",
-                    background: index === 0 ? "#4997E6" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#4997E6",
+                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -428,7 +428,7 @@ export default function DigitalSATPage() {
 
                   <p
                     style={{
-                      color: index === 0 ? "#DCE7F2" : "#45546D",
+                      color: index === 0 ? "#45546D" : "#45546D",
                       fontSize: "15px",
                       lineHeight: "1.75",
                       margin: 0,
@@ -461,7 +461,7 @@ export default function DigitalSATPage() {
               style={{
                 display: "inline-flex",
                 background: "#EAF4FF",
-                color: "#4997E6",
+                color: "#2F6FC2",
                 border: "1px solid #CFE7FF",
                 borderRadius: "999px",
                 padding: "8px 14px",
@@ -528,7 +528,7 @@ export default function DigitalSATPage() {
               <div>
                 <p
                   style={{
-                    color: "#4997E6",
+                    color: "#2F6FC2",
                     fontSize: "13px",
                     fontWeight: 900,
                     letterSpacing: "0.16em",
@@ -582,8 +582,8 @@ export default function DigitalSATPage() {
                       width: "46px",
                       height: "46px",
                       borderRadius: "16px",
-                      background: index === 1 ? "#4997E6" : "#EF4A85",
-                      color: "#0B1238",
+                      background: index === 1 ? "#2F6FC2" : "#C93670",
+                      color: "#ffffff",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -642,7 +642,7 @@ export default function DigitalSATPage() {
           <div>
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 900,
                 letterSpacing: "0.14em",
@@ -724,7 +724,7 @@ export default function DigitalSATPage() {
           <div>
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 900,
                 letterSpacing: "0.16em",
@@ -771,6 +771,14 @@ export default function DigitalSATPage() {
 
           .score-row {
             grid-template-columns: 1fr !important;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .sat-hero h1 {
+            font-size: 38px !important;
+            line-height: 1.08 !important;
+            letter-spacing: -0.045em !important;
           }
         }
       `}</style>
@@ -833,7 +841,7 @@ function TopicPanel({
 }
 
 const primaryButton = {
-  background: "#4997E6",
+  background: "#2F6FC2",
   color: "#ffffff",
   borderRadius: "999px",
   padding: "14px 22px",
@@ -872,7 +880,7 @@ const scoreLabel = {
 };
 
 const scoreSmall = {
-  color: "#7E91A9",
+  color: "#5F718A",
   fontSize: "46px",
   lineHeight: 1,
   fontWeight: 950,

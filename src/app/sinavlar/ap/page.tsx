@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -228,7 +228,7 @@ export default function APPage() {
               <div>
                 <p
                   style={{
-                    color: "#4997E6",
+                    color: "#2F6FC2",
                     fontSize: "13px",
                     fontWeight: 950,
                     letterSpacing: "0.15em",
@@ -400,7 +400,7 @@ export default function APPage() {
             <div style={{ position: "relative", zIndex: 1 }}>
               <p
                 style={{
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   fontSize: "13px",
                   fontWeight: 950,
                   letterSpacing: "0.16em",
@@ -450,7 +450,7 @@ export default function APPage() {
             >
               <p
                 style={{
-                  color: "#4997E6",
+                  color: "#2F6FC2",
                   fontSize: "13px",
                   fontWeight: 900,
                   margin: "0 0 8px",
@@ -501,8 +501,8 @@ export default function APPage() {
                     width: "50px",
                     height: "50px",
                     borderRadius: "18px",
-                    background: index % 2 === 0 ? "#4997E6" : "#EF4A85",
-                    color: "#0B1238",
+                    background: index % 2 === 0 ? "#2F6FC2" : "#C93670",
+                    color: "#ffffff",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -616,7 +616,7 @@ export default function APPage() {
               >
                 <p
                   style={{
-                    color: index === 0 ? "#A9D3FF" : "#4997E6",
+                    color: index === 0 ? "#1F5AA6" : "#2F6FC2",
                     fontSize: "13px",
                     fontWeight: 950,
                     margin: "0 0 18px",
@@ -639,7 +639,7 @@ export default function APPage() {
 
                 <p
                   style={{
-                    color: index === 0 ? "#DCE7F2" : "#45546D",
+                    color: index === 0 ? "#45546D" : "#45546D",
                     fontSize: "14px",
                     lineHeight: "1.7",
                     margin: 0,
@@ -675,7 +675,7 @@ export default function APPage() {
           >
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.16em",
@@ -720,8 +720,8 @@ export default function APPage() {
                     width: "46px",
                     height: "46px",
                     borderRadius: "16px",
-                    background: index === 0 ? "#4997E6" : "#EEF7FF",
-                    color: index === 0 ? "#ffffff" : "#4997E6",
+                    background: index === 0 ? "#2F6FC2" : "#EEF7FF",
+                    color: index === 0 ? "#ffffff" : "#2F6FC2",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -767,7 +767,7 @@ export default function APPage() {
           <div>
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.14em",
@@ -849,7 +849,7 @@ export default function APPage() {
           <div>
             <p
               style={{
-                color: "#4997E6",
+                color: "#2F6FC2",
                 fontSize: "13px",
                 fontWeight: 950,
                 letterSpacing: "0.16em",
@@ -900,6 +900,14 @@ export default function APPage() {
             grid-template-columns: 1fr !important;
           }
         }
+
+        @media (max-width: 600px) {
+          .ap-hero-unique h1 {
+            font-size: 38px !important;
+            line-height: 1.08 !important;
+            letter-spacing: -0.045em !important;
+          }
+        }
       `}</style>
     </main>
   );
@@ -917,7 +925,7 @@ function MetricBox({ label, value }: { label: string; value: string }) {
     >
       <p
         style={{
-          color: "#6E7F97",
+          color: "#5F718A",
           fontSize: "13px",
           margin: "0 0 8px",
         }}
@@ -961,7 +969,7 @@ function ProgressRow({ label, value }: { label: string; value: string }) {
 
         <span
           style={{
-            color: "#4997E6",
+            color: "#2F6FC2",
             fontSize: "13px",
             fontWeight: 950,
           }}
@@ -982,7 +990,7 @@ function ProgressRow({ label, value }: { label: string; value: string }) {
           style={{
             width: value,
             height: "100%",
-            background: "#4997E6",
+            background: "#2F6FC2",
             borderRadius: "999px",
           }}
         />
@@ -1063,7 +1071,7 @@ const backButtonDark = {
 const blueBadgeDark = {
   display: "inline-flex",
   background: "#EAF4FF",
-  color: "#4997E6",
+  color: "#2F6FC2",
   border: "1px solid #CFE7FF",
   borderRadius: "999px",
   padding: "9px 16px",
@@ -1076,7 +1084,7 @@ const blueBadgeDark = {
 const blueBadgeLight = {
   display: "inline-flex",
   background: "#EAF4FF",
-  color: "#4997E6",
+  color: "#2F6FC2",
   border: "1px solid #CFE7FF",
   borderRadius: "999px",
   padding: "9px 16px",
@@ -1087,7 +1095,7 @@ const blueBadgeLight = {
 };
 
 const primaryButton = {
-  background: "#4997E6",
+  background: "#2F6FC2",
   color: "#ffffff",
   borderRadius: "999px",
   padding: "14px 22px",
