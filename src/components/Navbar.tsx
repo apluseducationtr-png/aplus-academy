@@ -1,20 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const links = [
-  ["Programlar", "/exams"],
   ["Soru Bankası", "/question-bank"],
   ["Danışmanlık", "/danismanlik-rehberlik"],
   ["İletişim", "/contact"],
   ["Eğitmen Ol", "/work-with-us"],
 ];
 
+const programLinks = [
+  { title: "Digital SAT", text: "Math ve Reading & Writing", href: "/sinavlar/digital-sat" },
+  { title: "AP Programları", text: "Ders bazlı MCQ ve FRQ hazırlığı", href: "/sinavlar/ap" },
+  { title: "IB Diploma", text: "HL / SL dersleri ve IB core desteği", href: "/sinavlar/ib" },
+  { title: "A-Level & IGCSE", text: "Uluslararası müfredat ve sınav desteği", href: "/sinavlar/a-level-igcse" },
+  { title: "IELTS & TOEFL", text: "Akademik İngilizce yeterlilik hazırlığı", href: "/sinavlar/ielts-toefl" },
+  { title: "IMAT & LNAT", text: "Tıp ve hukuk kabul sınavları", href: "/sinavlar/imat-ucat-lnat" },
+  { title: "Okul & GPA Desteği", text: "Ders, sınav ve akademik takip", href: "/sinavlar/okul-destek" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [programOpen, setProgramOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function closeDropdown(event: PointerEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setProgramOpen(false);
+      }
+    }
+
+    function closeWithEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setProgramOpen(false);
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", closeDropdown);
+    document.addEventListener("keydown", closeWithEscape);
+
+    return () => {
+      document.removeEventListener("pointerdown", closeDropdown);
+      document.removeEventListener("keydown", closeWithEscape);
+    };
+  }, []);
+
+  function closeNavigation() {
+    setOpen(false);
+    setProgramOpen(false);
+  }
 
   return (
     <header className="site-header">
@@ -24,10 +63,44 @@ export default function Navbar() {
         </Link>
 
         <nav className={`main-nav ${open ? "main-nav-open" : ""}`} aria-label="Ana menü">
+          <div className={`nav-dropdown ${programOpen ? "nav-dropdown-open" : ""}`} ref={dropdownRef}>
+            <button
+              className="nav-dropdown-trigger"
+              type="button"
+              aria-expanded={programOpen}
+              aria-controls="program-menu"
+              onClick={() => setProgramOpen((value) => !value)}
+            >
+              Programlar
+              <ChevronDown size={16} aria-hidden />
+            </button>
+            <div
+              className="nav-dropdown-menu"
+              id="program-menu"
+              aria-label="Programlar alt menüsü"
+              hidden={!programOpen}
+            >
+              <Link className="all-programs-link" href="/exams" onClick={closeNavigation}>
+                <span>
+                  <strong>Tüm programları incele</strong>
+                  <small>Program kataloğunun tamamını görüntüle</small>
+                </span>
+                <span aria-hidden>→</span>
+              </Link>
+              <div className="program-link-grid">
+                {programLinks.map((program) => (
+                  <Link href={program.href} key={program.href} onClick={closeNavigation}>
+                    <strong>{program.title}</strong>
+                    <small>{program.text}</small>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           {links.map(([label, href]) => (
-            <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>
+            <Link key={href} href={href} onClick={closeNavigation}>{label}</Link>
           ))}
-          <Link className="button button-primary nav-mobile-cta" href="/contact" onClick={() => setOpen(false)}>
+          <Link className="button button-primary nav-mobile-cta" href="/contact" onClick={closeNavigation}>
             Görüşme planla
           </Link>
         </nav>
@@ -39,7 +112,10 @@ export default function Navbar() {
             type="button"
             aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={open}
-            onClick={() => setOpen((value) => !value)}
+            onClick={() => {
+              setOpen((value) => !value);
+              setProgramOpen(false);
+            }}
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -77,7 +153,74 @@ export default function Navbar() {
           font-weight: 700;
           text-decoration: none;
         }
-        .main-nav > a:hover { background: var(--bg); color: var(--ink); }
+        .main-nav > a:hover,
+        .nav-dropdown-trigger:hover { background: var(--bg); color: var(--ink); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-trigger {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 10px 12px;
+          border: 0;
+          border-radius: 10px;
+          background: transparent;
+          color: var(--slate);
+          font-size: 14px;
+          font-weight: 700;
+          cursor: pointer;
+        }
+        .nav-dropdown-trigger svg { transition: transform .2s ease; }
+        .nav-dropdown-open .nav-dropdown-trigger svg { transform: rotate(180deg); }
+        .nav-dropdown-menu {
+          position: absolute;
+          top: calc(100% + 14px);
+          left: 50%;
+          width: min(650px, calc(100vw - 40px));
+          padding: 18px;
+          border: 1px solid var(--border);
+          border-radius: 24px;
+          background: white;
+          box-shadow: 0 24px 60px rgba(15,23,42,.14);
+          opacity: 0;
+          pointer-events: none;
+          transform: translate(-50%, -8px);
+          transition: opacity .18s ease, transform .18s ease;
+        }
+        .nav-dropdown-open .nav-dropdown-menu {
+          opacity: 1;
+          pointer-events: auto;
+          transform: translate(-50%, 0);
+        }
+        .all-programs-link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+          padding: 14px 16px;
+          border-radius: 16px;
+          background: var(--blue-light);
+          color: var(--ink);
+          text-decoration: none;
+        }
+        .all-programs-link > span:first-child,
+        .program-link-grid a { display: grid; gap: 3px; }
+        .all-programs-link strong,
+        .program-link-grid strong { font-size: 14px; font-weight: 900; }
+        .all-programs-link small,
+        .program-link-grid small { color: var(--slate); font-size: 12px; line-height: 1.45; }
+        .program-link-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 6px;
+          margin-top: 10px;
+        }
+        .program-link-grid a {
+          padding: 12px 14px;
+          border-radius: 14px;
+          color: var(--ink);
+          text-decoration: none;
+        }
+        .program-link-grid a:hover { background: var(--bg); }
         .nav-actions { display: flex; align-items: center; }
         .menu-button {
           display: none;
@@ -101,13 +244,45 @@ export default function Navbar() {
             right: 0;
             left: 0;
             display: none;
+            max-height: calc(100vh - 76px);
             padding: 16px;
             border-bottom: 1px solid var(--border);
             background: white;
             box-shadow: 0 20px 45px rgba(15,23,42,.08);
+            overflow-y: auto;
+            overscroll-behavior: contain;
           }
           .main-nav-open { display: grid; }
           .main-nav > a:not(.button) { padding: 13px 16px; }
+          .nav-dropdown-trigger {
+            width: 100%;
+            justify-content: space-between;
+            padding: 13px 16px;
+          }
+          .nav-dropdown-menu {
+            position: static;
+            width: auto;
+            max-height: 0;
+            margin: 0 8px;
+            padding: 0 10px;
+            border: 0;
+            border-radius: 18px;
+            box-shadow: none;
+            opacity: 1;
+            overflow: hidden;
+            pointer-events: none;
+            transform: none;
+            transition: max-height .25s ease, padding .25s ease, margin .25s ease;
+          }
+          .nav-dropdown-open .nav-dropdown-menu {
+            max-height: 720px;
+            margin: 4px 8px 10px;
+            padding: 10px;
+            border: 1px solid var(--border);
+            pointer-events: auto;
+            transform: none;
+          }
+          .program-link-grid { grid-template-columns: 1fr; }
           .nav-mobile-cta { display: inline-flex; margin-top: 8px; }
         }
       `}</style>
