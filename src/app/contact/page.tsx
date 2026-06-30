@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { PageHero, SectionHeading } from "@/components/MarketingSections";
 
 export const metadata: Metadata = {
-  title: "İletişim ve Ücretsiz Görüşme | A Plus Academy",
+  title: "İletişim ve Görüşme | A Plus Academy",
   description: "A Plus Academy ile program ve akademik ihtiyaç görüşmesi planlayın.",
 };
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
         panelItems={[
           "Hedef sınav veya akademik ihtiyaç",
           "Mevcut seviye ve okul bilgisi",
-          "Sınav tarihi ve uygun çalışma takvimi",
+          "Hedef sınav ve çalışma öncelikleri",
           "Birebir, grup veya danışmanlık yönlendirmesi",
         ]}
       />
@@ -51,7 +51,7 @@ export default function ContactPage() {
                 <option>Okul desteği</option><option>Danışmanlık</option><option>Diğer</option>
               </select>
             </label>
-            <label>Hedef ve ihtiyaç<textarea name="message" placeholder="Sınav tarihi, mevcut seviye ve ihtiyaç..." /></label>
+            <label>Hedef ve ihtiyaç<textarea name="message" placeholder="Hedef sınav, mevcut seviye ve ihtiyaç..." /></label>
             <label className="consent-row"><input type="checkbox" /> KVKK aydınlatma metnini okudum ve iletişim kurulmasını kabul ediyorum.</label>
             <button className="button button-primary" type="button">Görüşme talebi gönder</button>
             <small>Yapısal önizleme: form henüz gönderim sistemine bağlı değildir.</small>

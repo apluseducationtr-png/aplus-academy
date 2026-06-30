@@ -28,12 +28,12 @@ export default function Navbar() {
             <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>
           ))}
           <Link className="button button-primary nav-mobile-cta" href="/contact" onClick={() => setOpen(false)}>
-            Ücretsiz görüşme
+            Görüşme planla
           </Link>
         </nav>
 
         <div className="nav-actions">
-          <Link className="button button-primary nav-desktop-cta" href="/contact">Ücretsiz görüşme</Link>
+          <Link className="button button-primary nav-desktop-cta" href="/contact">Görüşme planla</Link>
           <button
             className="menu-button"
             type="button"

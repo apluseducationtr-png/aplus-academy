@@ -12,7 +12,7 @@ export default function IELTSAndTOEFLPage() {
     <ProgramDetailPage
       badge="IELTS & TOEFL Hazırlık"
       title="İngilizce yeterlilik sınavlarında hedef skora götüren beceri odaklı hazırlık"
-      intro="IELTS ve TOEFL programı; writing, speaking, reading ve listening becerilerini ayrı ayrı ölçer, öğrencinin hedef skoruna göre haftalık çalışma planı oluşturur."
+      intro="IELTS ve TOEFL programı; writing, speaking, reading ve listening becerilerini ayrı ayrı ölçer, öğrencinin hedef skoruna göre düzenli çalışma planı oluşturur."
       metrics={[
         ["Hedef", "IELTS 7.5+ / TOEFL 100+"],
         ["Beceri", "4 alan"],

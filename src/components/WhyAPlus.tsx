@@ -1,7 +1,7 @@
 const features = [
   {
     title: "Kişisel yol haritası",
-    text: "Öğrencinin hedefi, başlangıç seviyesi ve sınav tarihine göre haftalık bir çalışma planı oluşturulur.",
+    text: "Öğrencinin hedefi, başlangıç seviyesi ve öncelikli ihtiyaçlarına göre kişisel bir çalışma planı oluşturulur.",
   },
   {
     title: "Deneme ve analiz sistemi",

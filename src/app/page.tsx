@@ -24,7 +24,7 @@ export default function Home() {
       <PageHero
         eyebrow="Uluslararası akademik hazırlık"
         title="Sınav, okul ve üniversite hedefi tek bir akademik planda"
-        intro="2024 yılında Halil Toprak tarafından kurulan A Plus Academy; uluslararası sınav hazırlığını, okul desteğini, deneme analizini ve düzenli öğrenci takibini kişisel bir yol haritasında birleştirir."
+        intro="A Plus Academy; uluslararası sınav hazırlığını, okul desteğini, deneme analizini ve düzenli öğrenci takibini kişisel bir akademik yol haritasında birleştirir."
         secondary={{ label: "Programları incele", href: "/exams" }}
         panelTitle="A Plus çalışma modelinin temelleri"
         panelItems={[
@@ -49,9 +49,9 @@ export default function Home() {
 
       <ProcessSection
         title="Ders vermekten önce doğru başlangıç noktasını belirliyoruz"
-        text="Sürecin her adımı öğrencinin hedef skoru, mevcut seviyesi, okul yükü ve sınav tarihine göre şekillenir."
+        text="Sürecin her adımı öğrencinin hedef skoru, mevcut seviyesi, okul yükü ve öncelikli ihtiyaçlarına göre şekillenir."
         steps={[
-          { title: "Tanışma ve ihtiyaç analizi", text: "Hedef sınav, mevcut durum, takvim ve ders ihtiyacı netleştirilir." },
+          { title: "Tanışma ve ihtiyaç analizi", text: "Hedef sınav, mevcut durum ve ders ihtiyacı netleştirilir." },
           { title: "Seviye tespit ve eğitmen eşleşmesi", text: "Öğrencinin ihtiyacına uygun ders alanı ve eğitmen belirlenir." },
           { title: "Kişisel akademik plan", text: "Ders, ödev, deneme ve tekrar temposu birlikte oluşturulur." },
           { title: "Takip ve güncelleme", text: "Sonuçlara göre plan düzenli olarak gözden geçirilir." },
@@ -74,9 +74,9 @@ export default function Home() {
               akışıyla süreci görünür, ölçülebilir ve güvenli hale getiriyoruz.
             </p>
             <div className="tag-row">
-              <span className="tag">Kuruluş: 2024</span>
               <span className="tag">Kurucu: Halil Toprak</span>
               <span className="tag">İstanbul + Online</span>
+              <span className="tag">Birebir + Küçük grup</span>
             </div>
           </div>
           <div className="fact-grid">
@@ -95,6 +95,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="site-container">
+          <SectionHeading
+            eyebrow="Online eğitim deneyimi"
+            title="Dersin içeriğini dijital ortamın imkânlarıyla güçlendiriyoruz"
+            text="Online ders modeli; canlı etkileşim, dijital araçlar, derse özel kaynaklar ve ders sonrası takip bileşenlerini bir araya getirir."
+          />
+          <CardGrid columns={4} items={[
+            { title: "Canlı ve etkileşimli ders", text: "Öğrenci, eğitmenle gerçek zamanlı iletişim kurar; soru çözümü ve konu anlatımı birlikte ilerler." },
+            { title: "Ekran paylaşımı ve dijital tahta", text: "Grafik, denklem, metin ve soru çözümleri ekranda adım adım görünür hale getirilir." },
+            { title: "Derse özel kaynaklar", text: "Sınav formatına ve konu ihtiyacına uygun dijital materyal ve çalışma soruları kullanılır." },
+            { title: "Ders sonrası takip", text: "Ödev, yanlış sorular ve eksik konular sonraki çalışmanın önceliklerine dönüştürülür." },
+          ]} />
+        </div>
+      </section>
+
       <section className="section section-soft">
         <div className="site-container">
           <SectionHeading
@@ -106,14 +122,14 @@ export default function Home() {
             { title: "Sınav hazırlığı", text: "Uluslararası sınavların formatına ve hedef skora göre hazırlık." },
             { title: "Okul ve GPA desteği", text: "Ders, quiz, sınav ve dönem planının düzenli takibi." },
             { title: "Deneme ve analiz", text: "Yanlışların konu, süre ve hata tipi bazında değerlendirilmesi." },
-            { title: "Akademik rehberlik", text: "Sınav, ders ve üniversite hedeflerinin ortak takvimde yönetilmesi." },
+            { title: "Akademik rehberlik", text: "Sınav, ders ve üniversite hedeflerinin ortak bir akademik planda yönetilmesi." },
           ]} />
         </div>
       </section>
 
       <CtaBand
         title="Öğrenci için doğru başlangıç planını birlikte çıkaralım"
-        text="İlk görüşmede hedefi, sınav tarihini ve mevcut ihtiyacı netleştirelim."
+        text="İlk görüşmede hedefi, mevcut seviyeyi ve öncelikli ihtiyacı netleştirelim."
       />
       <Footer />
       <style>{`

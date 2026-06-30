@@ -15,7 +15,7 @@ export default function WorkWithUsPage() {
       <PageHero
         eyebrow="Eğitmen ağı"
         title="Alan bilgisi kadar öğrenci takibini de önemseyen eğitmenlerle çalışıyoruz"
-        intro="Kariyer sayfası; aranan uzmanlıkları, çalışma modelini, seçim sürecini ve başvuru beklentilerini açık biçimde gösterecek."
+        intro="Eğitmen seçiminde alan bilgisi, sınav deneyimi, öğrenci iletişimi ve düzenli takip disiplini birlikte değerlendirilir."
         primary={{ label: "Başvuru iletişimi", href: "/contact" }}
         secondary={{ label: "Programları incele", href: "/exams" }}
         panelItems={[
@@ -27,7 +27,7 @@ export default function WorkWithUsPage() {
       />
       <section className="section">
         <div className="site-container">
-          <SectionHeading eyebrow="Aranan profiller" title="Uzmanlık alanları yapısal olarak ayrıldı" text="Aktif ihtiyaçlar ve pozisyon detayları içerik aşamasında güncellenecek." />
+          <SectionHeading eyebrow="Aranan profiller" title="Farklı sınav ve müfredatlar için alan uzmanları" text="Her eğitmenin kendi ders alanında güncel sınav yapısına, soru tiplerine ve öğrenci ihtiyaçlarına hâkim olması beklenir." />
           <CardGrid columns={3} items={[
             { title: "SAT & ACT", text: "Math veya Reading & Writing alanında sınav formatına hâkim eğitmenler." },
             { title: "AP & IB", text: "STEM, Economics, Business, English ve sosyal bilimler ders uzmanları." },
@@ -44,7 +44,7 @@ export default function WorkWithUsPage() {
         { title: "Örnek ders", text: "Adayın anlatım, soru çözümü ve öğrenci yaklaşımı gözlemlenir." },
         { title: "Eşleşme ve başlangıç", text: "Uygun program ve öğrenci profilleriyle çalışma başlatılır." },
       ]} />
-      <CtaBand title="Uzmanlık alanınızı ve çalışma deneyiminizi paylaşın" text="Başvuru formu hazırlanırken iletişim sayfası üzerinden eğitmen başvurusu bırakabilirsiniz." label="Eğitmen başvurusu" />
+      <CtaBand title="Uzmanlık alanınızı ve çalışma deneyiminizi paylaşın" text="İletişim sayfası üzerinden uzmanlık alanınızı, eğitim geçmişinizi ve çalışma deneyiminizi iletebilirsiniz." label="Eğitmen başvurusu" />
       <Footer />
     </main>
   );

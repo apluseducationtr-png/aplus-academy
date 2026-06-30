@@ -12,7 +12,7 @@ export function PageHero({
   eyebrow,
   title,
   intro,
-  primary = { label: "Ücretsiz görüşme planla", href: "/contact" },
+  primary = { label: "Görüşme planla", href: "/contact" },
   secondary,
   panelTitle = "Bu sayfada ne bulacaksınız?",
   panelItems = [],
@@ -141,7 +141,7 @@ export function ProcessSection({
   );
 }
 
-export function PlaceholderSection({
+export function FeaturePanelSection({
   eyebrow,
   title,
   text,
@@ -150,7 +150,7 @@ export function PlaceholderSection({
   eyebrow: string;
   title: string;
   text: string;
-  items: string[];
+  items: Array<{ title: string; text: string }>;
 }) {
   return (
     <section className="section">
@@ -158,12 +158,12 @@ export function PlaceholderSection({
         <div>
           <SectionHeading eyebrow={eyebrow} title={title} text={text} />
         </div>
-        <div className="placeholder-grid">
+        <div className="proof-grid">
           {items.map((item) => (
-            <div className="placeholder-card" key={item}>
-              <span>İçerik alanı</span>
-              <strong>{item}</strong>
-            </div>
+            <article className="proof-card" key={item.title}>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </article>
           ))}
         </div>
       </div>
@@ -182,7 +182,7 @@ export function FaqSection({
         <SectionHeading
           eyebrow="Sık sorulan sorular"
           title="Karar vermeden önce merak edilenler"
-          text="Bu alan daha sonra gerçek öğrenci ve veli sorularına göre genişletilecek."
+          text="Programın kapsamı, çalışma biçimi ve takip yaklaşımıyla ilgili temel sorular."
         />
         <div className="faq-list">
           {items.map((item) => (
@@ -201,7 +201,7 @@ export function CtaBand({
   eyebrow = "Birlikte planlayalım",
   title,
   text,
-  label = "Ücretsiz görüşme planla",
+  label = "Görüşme planla",
   href = "/contact",
 }: {
   eyebrow?: string;

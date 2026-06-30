@@ -198,7 +198,7 @@ export default function APPage() {
               }}
             >
               <Link href="/contact" style={primaryButton}>
-                Ücretsiz Görüşme Planla
+                Görüşme Planla
               </Link>
 
               <Link href="/question-bank" style={darkSecondaryButton}>
@@ -867,7 +867,7 @@ export default function APPage() {
                 maxWidth: "760px",
               }}
             >
-              Öğrencinin AP dersine, hedef skoruna ve sınav tarihine göre en
+              Öğrencinin AP dersine, hedef skoruna ve mevcut seviyesine göre en
               doğru başlangıç planını birlikte belirleyelim.
             </h2>
           </div>

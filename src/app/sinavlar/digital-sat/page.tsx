@@ -18,7 +18,7 @@ const roadmap = [
   {
     step: "02",
     title: "Kişisel plan",
-    text: "Hedef skor, okul yoğunluğu ve sınav tarihine göre haftalık çalışma planı hazırlanır.",
+    text: "Hedef skor, okul yoğunluğu ve öncelikli eksiklere göre düzenli çalışma planı hazırlanır.",
   },
   {
     step: "03",
@@ -183,7 +183,7 @@ export default function DigitalSATPage() {
               }}
             >
               <Link href="/contact" style={primaryButton}>
-                Ücretsiz Seviye Analizi Al
+                Seviye Analizi Planla
               </Link>
 
               <Link href="/question-bank" style={secondaryButton}>
@@ -744,7 +744,7 @@ export default function DigitalSATPage() {
                 maxWidth: "760px",
               }}
             >
-              Öğrencinin hedef skoruna ve sınav tarihine göre en doğru
+              Öğrencinin hedef skoruna ve mevcut seviyesine göre en doğru
               başlangıç planını birlikte belirleyelim.
             </h2>
           </div>

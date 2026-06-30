@@ -41,8 +41,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="site-container footer-bottom">
-        <span>© 2026 A Plus Academy</span>
-        <span>2024&apos;ten beri uluslararası akademik hazırlık</span>
+        <span>© A Plus Academy</span>
+        <span>Uluslararası sınav hazırlığı ve akademik destek</span>
       </div>
       <style>{`
         .site-footer { padding: 72px 0 28px; background: #0B1238; color: white; }

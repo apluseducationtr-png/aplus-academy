@@ -350,13 +350,13 @@ button, a {
   background: var(--hero-gradient);
 }
 
-.placeholder-grid {
+.proof-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
-.placeholder-card {
+.proof-card {
   min-height: 140px;
   padding: 20px;
   border: 1px dashed #9bb8d6;
@@ -364,20 +364,19 @@ button, a {
   background: rgba(255,255,255,.78);
 }
 
-.placeholder-card span {
+.proof-card strong {
   display: block;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  font-family: var(--font-nunito);
+  font-size: 18px;
+  font-weight: 950;
+  line-height: 1.35;
 }
 
-.placeholder-card strong {
-  display: block;
-  margin-top: 24px;
-  font-size: 17px;
-  line-height: 1.35;
+.proof-card p {
+  margin-top: 10px;
+  color: var(--slate);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .faq-layout {
@@ -448,7 +447,7 @@ button, a {
   .card-grid-2,
   .card-grid-3,
   .card-grid-4,
-  .placeholder-grid,
+  .proof-grid,
   .cta-band {
     grid-template-columns: 1fr;
   }

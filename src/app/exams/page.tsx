@@ -33,7 +33,7 @@ export default function ExamsPage() {
           "Her program için ayrı kapsam ve konu haritası",
           "Birebir ve uygun programlarda küçük grup seçeneği",
           "Ders, materyal, ödev ve deneme bileşenleri",
-          "Program süresi ve paket detayları için ayrılmış alanlar",
+          "Düzenli geri bildirim ve gelişim takibi",
         ]}
       />
       <section className="section">
@@ -41,12 +41,12 @@ export default function ExamsPage() {
           <SectionHeading
             eyebrow="Tüm programlar"
             title="Önce doğru program grubunu seçin"
-            text="Detay sayfaları, öğrencinin ve velinin karar vermek için ihtiyaç duyduğu bilgileri aynı sırada sunacak."
+            text="Her detay sayfası programın kapsamını, çalışma biçimini, takip yaklaşımını ve öğrenciden beklenenleri açıkça sunar."
           />
           <CardGrid items={groups} columns={3} />
         </div>
       </section>
-      <CtaBand title="Hangi programın uygun olduğundan emin değil misiniz?" text="Hedef ülke, bölüm, sınav tarihi ve mevcut seviyeye göre başlangıç yolunu birlikte belirleyelim." />
+      <CtaBand title="Hangi programın uygun olduğundan emin değil misiniz?" text="Hedef ülke, bölüm, mevcut seviye ve akademik ihtiyaca göre başlangıç yolunu birlikte belirleyelim." />
       <Footer />
     </main>
   );

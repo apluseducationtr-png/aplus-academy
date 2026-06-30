@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { PlaceholderSection } from "@/components/MarketingSections";
+import { FeaturePanelSection } from "@/components/MarketingSections";
 
 type ProgramDetailPageProps = {
   badge: string;
@@ -39,7 +39,7 @@ export default function ProgramDetailPage({
             <h1 style={heroTitle} className="program-hero-title">{title}</h1>
             <p style={heroText}>{intro}</p>
             <div style={buttonRow}>
-              <Link href="/contact" style={primaryButton}>Ücretsiz görüşme planla</Link>
+              <Link href="/contact" style={primaryButton}>Görüşme planla</Link>
               <Link href="/question-bank" style={secondaryButton}>Deneme sistemini incele</Link>
             </div>
           </div>
@@ -101,35 +101,37 @@ export default function ProgramDetailPage({
             <p style={panelEyebrow}>Program seçenekleri</p>
             <h2 style={sectionTitle}>Öğrencinin ihtiyacına göre farklı çalışma modelleri</h2>
             <p style={smallText}>
-              Paket süresi, ders sıklığı, grup kapasitesi, materyaller ve ücret bilgileri
-              içerik aşamasında gerçek program yapısına göre doldurulacak.
+              Başlangıç seviyesi, ders ihtiyacı ve hedefe göre birebir, küçük grup
+              veya interaktif online çalışma modeli belirlenir.
             </p>
           </div>
           <div className="card-grid card-grid-3">
             {[
-              ["Birebir program", "Seviye, takvim ve konu ihtiyacına göre kişisel ders planı."],
-              ["Küçük grup programı", "Uygun seviyedeki öğrenciler için ortak takvim ve sınırlı kontenjan."],
-              ["Yoğun dönem desteği", "Sınav öncesi tekrar, soru çözümü ve deneme odaklı kısa program."],
-            ].map(([heading, text]) => (
+              ["Birebir akademik destek", "Seviye tespiti ve konu ihtiyaçlarına göre öğrenciye özel ders akışı."],
+              ["Küçük grup dersleri", "Benzer seviyedeki öğrenciler için etkileşimli ve sınırlı katılımlı çalışma ortamı."],
+              ["İnteraktif online ders", "Canlı anlatım, ekran paylaşımı, dijital tahta ve derse özel materyallerle çalışma."],
+            ].map(([heading, text], index) => (
               <article className="content-card" key={heading}>
                 <h3>{heading}</h3>
                 <p>{text}</p>
-                <div className="tag-row"><span className="tag">Detaylar eklenecek</span></div>
+                <div className="tag-row">
+                  <span className="tag">{["Kişisel plan", "Maksimum 6 öğrenci", "Canlı ve etkileşimli"][index]}</span>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <PlaceholderSection
-        eyebrow="Güven ve kanıt"
-        title="Bu programa özel gerçek içerik alanları"
-        text="Genel şablon yerine her sınav sayfasında ilgili eğitmenler, sonuçlar ve materyaller gösterilecek."
+      <FeaturePanelSection
+        eyebrow="Ders dışı akademik destek"
+        title="Ders saati dışında da devam eden takip sistemi"
+        text="Ders anlatımı; düzenli pratik, ölçme, geri bildirim ve gelişim paylaşımıyla tamamlanır."
         items={[
-          "İlgili eğitmen profilleri",
-          "Örnek ders veya materyal",
-          "Doğrulanmış öğrenci sonucu",
-          "Program takvimi ve paket kapsamı",
+          { title: "Güncel kaynaklar", text: "Programın sınav veya müfredat yapısına uygun dijital kaynaklar ve soru setleri kullanılır." },
+          { title: "Ödev ve geri bildirim", text: "Ders sonrasında verilen çalışmalar takip edilir, anlaşılmayan noktalar sonraki çalışmaya taşınır." },
+          { title: "Deneme ve eksik analizi", text: "Uygun programlarda sınav formatındaki çalışmalar değerlendirilerek öncelikli eksikler belirlenir." },
+          { title: "Öğrenci ve veli bilgilendirmesi", text: "Gelişim, tamamlanan çalışmalar ve sıradaki akademik hedefler düzenli biçimde paylaşılır." },
         ]}
       />
 
@@ -156,7 +158,7 @@ export default function ProgramDetailPage({
           <div>
             <p style={panelEyebrow}>Başlangıç planı</p>
             <h2 style={{ ...sectionTitle, marginBottom: 0 }}>
-              Öğrencinin hedefi ve takvimine göre en doğru programı birlikte belirleyelim.
+              Öğrencinin hedefi ve mevcut seviyesine göre en doğru programı birlikte belirleyelim.
             </h2>
           </div>
           <Link href="/contact" style={primaryButton}>Görüşme planla</Link>

@@ -355,7 +355,7 @@ export default function ExamPrograms() {
                 cursor: "pointer",
               }}
             >
-              Ücretsiz Görüşme Planla
+              Görüşme Planla
             </button>
           </div>
         </div>

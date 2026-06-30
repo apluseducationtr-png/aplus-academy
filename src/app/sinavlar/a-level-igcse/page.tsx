@@ -12,7 +12,7 @@ export default function ALevelAndIGCSEPage() {
     <ProgramDetailPage
       badge="A-Level & IGCSE"
       title="Uluslararası müfredatlarda okul başarısını ve sınav performansını birlikte yükseltelim"
-      intro="A-Level ve IGCSE desteği; öğrencinin okul müfredatı, sınav takvimi, konu eksikleri ve hedef notu dikkate alınarak planlanır."
+      intro="A-Level ve IGCSE desteği; öğrencinin okul müfredatı, konu eksikleri, değerlendirme yapısı ve hedef notu dikkate alınarak planlanır."
       metrics={[
         ["Müfredat", "Cambridge / Edexcel / AQA"],
         ["Seviye", "IGCSE / A-Level"],

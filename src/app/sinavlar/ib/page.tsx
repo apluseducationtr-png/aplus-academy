@@ -43,7 +43,7 @@ const coreItems = [
 
 const pathway = [
   ["01", "Seviye ve hedef analizi", "Öğrencinin HL/SL dersleri, okul temposu ve hedef üniversite planı değerlendirilir."],
-  ["02", "Ders bazlı çalışma planı", "Her ders için konu eksikleri, sınav takvimi ve haftalık çalışma düzeni oluşturulur."],
+  ["02", "Ders bazlı çalışma planı", "Her ders için konu eksikleri, değerlendirme alanları ve düzenli çalışma sırası oluşturulur."],
   ["03", "IA / EE / TOK takibi", "IB core süreçleri sadece son döneme bırakılmaz; düzenli ara hedeflerle takip edilir."],
   ["04", "Sınav ve GPA dengesi", "Okul sınavları, predicted grade hedefi ve final sınav hazırlığı birlikte planlanır."],
 ];
@@ -166,7 +166,7 @@ export default function IBPage() {
               }}
             >
               <Link href="/contact" style={primaryButton}>
-                Ücretsiz Görüşme Planla
+                Görüşme Planla
               </Link>
 
               <Link href="/question-bank" style={secondaryButton}>
@@ -652,7 +652,7 @@ export default function IBPage() {
               }}
             >
               IB’de başarı için yalnızca sınav haftasına odaklanmak yeterli değildir.
-              Süreç; ders, core ve okul takvimiyle birlikte planlanmalıdır.
+              Süreç; ders, core ve okul öncelikleriyle birlikte planlanmalıdır.
             </p>
           </div>
 

@@ -5,7 +5,7 @@ const featuredResult = {
   increase: "+270",
   period: "3 ay",
   quote:
-    "Deneme analizleri ve haftalık takip sayesinde hangi konulara çalışmam gerektiğini net şekilde gördüm.",
+    "Deneme analizleri ve düzenli takip sayesinde hangi konulara çalışmam gerektiğini net şekilde gördüm.",
   focus: ["Bluebook denemeleri", "Konu analizi", "Haftalık takip"],
 };
 
@@ -42,7 +42,7 @@ const trackingItems = [
   {
     number: "02",
     title: "Kişisel yol haritası",
-    text: "Öğrencinin hedef skoruna göre haftalık plan oluşturulur.",
+    text: "Öğrencinin hedef skoruna göre düzenli plan oluşturulur.",
   },
   {
     number: "03",

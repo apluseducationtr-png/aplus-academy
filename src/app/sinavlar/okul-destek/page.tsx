@@ -12,7 +12,7 @@ export default function SchoolSupportPage() {
     <ProgramDetailPage
       badge="Okul Destek"
       title="Uluslararası okul öğrencileri için düzenli ders takibi ve akademik destek"
-      intro="Okul destek programı; öğrencinin ders yükünü, sınav takvimini ve hedef GPA planını düzenli takip ederek sürdürülebilir bir çalışma sistemi kurar."
+      intro="Okul destek programı; öğrencinin ders yükünü, sınav önceliklerini ve hedef GPA planını düzenli takip ederek sürdürülebilir bir çalışma sistemi kurar."
       metrics={[
         ["Odak", "GPA + sınav"],
         ["Dersler", "STEM + sosyal"],
@@ -28,7 +28,7 @@ export default function SchoolSupportPage() {
         "Veli bilgilendirme",
       ]}
       pathway={[
-        ["01", "Okul takvimi", "Öğrencinin dersleri, sınav tarihleri ve yoğun dönemleri çıkarılır."],
+        ["01", "Ders yükü analizi", "Öğrencinin dersleri, değerlendirme alanları ve yoğunlaştığı konular belirlenir."],
         ["02", "Haftalık plan", "Konu tekrarları, ödevler ve sınav hazırlığı birlikte planlanır."],
         ["03", "Ders desteği", "Zorlanılan konular birebir veya küçük grup dersleriyle desteklenir."],
         ["04", "Gelişim takibi", "Öğrenci ve veli düzenli olarak süreç hakkında bilgilendirilir."],

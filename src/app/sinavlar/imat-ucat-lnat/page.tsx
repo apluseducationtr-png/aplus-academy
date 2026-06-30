@@ -27,7 +27,7 @@ export default function MedicineAndLawPage() {
         "Essay planlama ve argüman",
       ]}
       pathway={[
-        ["01", "Sınav seçimi", "Öğrencinin hedef ülke, bölüm ve sınav takvimi netleştirilir."],
+        ["01", "Sınav seçimi", "Öğrencinin hedef ülke, bölüm ve ihtiyaç duyduğu sınav netleştirilir."],
         ["02", "Konu ve beceri haritası", "Science, reasoning, reading veya essay ağırlığına göre plan hazırlanır."],
         ["03", "Soru pratiği", "Sınav formatına uygun zamanlı soru çözümü yapılır."],
         ["04", "Deneme analizi", "Yanlışlar konu, hız ve strateji açısından değerlendirilir."],
@@ -35,7 +35,7 @@ export default function MedicineAndLawPage() {
       faqs={[
         ["IMAT ve LNAT aynı şekilde mi çalışılır?", "Hayır. IMAT science bilgisi ve problem çözmeyi, LNAT ise critical thinking, reading ve essay becerilerini öne çıkarır."],
         ["LNAT essay desteği var mı?", "Evet. Essay planı, argüman yapısı, örnek kullanımı ve akademik ifade üzerine çalışılır."],
-        ["Program ne zaman başlamalı?", "Sınav tarihine ve öğrencinin başlangıç seviyesine göre değişir; düzenli pratiğe erken başlamak avantaj sağlar."],
+        ["Program nasıl planlanır?", "Başlangıç seviyesi, hedef bölüm ve öğrencinin geliştirmesi gereken becerilere göre kişisel çalışma planı hazırlanır."],
       ]}
     />
   );
