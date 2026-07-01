@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StudentTestimonials from "@/components/StudentTestimonials";
 
 const subjectGroups = [
   "Mathematics AA — HL / SL",
@@ -832,6 +833,15 @@ export default function IBPage() {
           </div>
         </div>
       </section>
+
+      <StudentTestimonials
+        soft={false}
+        title="IB öğrencimizin deneyimi"
+        intro="IB müfredat bilgisi, doğru soru formatı ve akademik desteğin öğrenci gözünden karşılığı."
+        testimonials={[
+          { name: "Serhat", program: "IB Öğrencisi", quote: "IB özel derslerinde konu hakimiyetinin yanında IB deneyimi çok önemli. Halil Hoca her türlü sorunumu çözmeme yardım etti; olumlu ve sabırlı yaklaşımıyla beni motive edip sınavlara en iyi şekilde hazırlanmamı sağladı." },
+        ]}
+      />
 
       <section style={{ padding: "0 24px 90px" }}>
         <div

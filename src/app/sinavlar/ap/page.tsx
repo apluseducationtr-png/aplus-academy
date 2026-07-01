@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StudentTestimonials from "@/components/StudentTestimonials";
 
 const stemSubjects = [
   "AP Precalculus",
@@ -825,6 +826,17 @@ export default function APPage() {
           </div>
         </div>
       </section>
+
+      <StudentTestimonials
+        soft={false}
+        title="AP öğrencilerimizin deneyimleri"
+        intro="Sınav formatı, FRQ geri bildirimi ve ders bazlı hazırlığın öğrencilerimizin sonuçlarına nasıl yansıdığı."
+        testimonials={[
+          { name: "Burak", program: "AP Öğrencisi", quote: "Halil Hoca sadece matematik kısmına değil, sınavın yapısına da son derece hakimdi. Çözdüğüm FRQ sorularını tek tek değerlendirdi ve nasıl yazmam gerektiği konusunda ciddi geri bildirimler verdi. Böylece AB'den 2 olan notumu BC'de 5'e çıkardım." },
+          { name: "Defne", program: "AP Öğrencisi", quote: "Halil Hoca karmaşık ekonomi kavramlarını günlük olaylarla ilişkilendirmeme yardımcı oldu. AP Macro ve Micro'dan, ardından AP Calculus BC'den 5 aldım. Bu başarılar Duke'a kabulümde önemli rol oynadı." },
+          { name: "Merve", program: "AP Öğrencisi", quote: "Halil Hoca ile AP Macroeconomics, Microeconomics ve AP Calculus BC çalıştık ve hepsinden 5 aldım. Stanford'a girdim. Tüm yardım ve desteği için kendisine çok teşekkür ederim." },
+        ]}
+      />
 
       <section style={{ padding: "86px 24px" }}>
         <div

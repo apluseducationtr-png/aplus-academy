@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StudentTestimonials from "@/components/StudentTestimonials";
 
 const programStats = [
   ["Hedef Skor", "1400+"],
@@ -702,6 +703,16 @@ export default function DigitalSATPage() {
           </div>
         </div>
       </section>
+
+      <StudentTestimonials
+        soft={false}
+        title="SAT öğrencilerimizin deneyimleri"
+        intro="Konu eksiğinin belirlenmesinden sınav taktiklerine kadar Digital SAT hazırlık sürecini öğrencilerimizin anlatımıyla görün."
+        testimonials={[
+          { name: "Ela", program: "SAT Öğrencisi", quote: "Zayıf yönlerimi kolayca tespit etti ve özellikle problem çözme becerilerimi geliştirmek için birlikte çalıştık. Halil hocam ile çalıştığım için çok mutluyum ve onu şiddetle tavsiye ediyorum." },
+          { name: "Ceren", program: "AP & SAT Öğrencisi", quote: "Halil Hoca hem matematik kısmını hem de test taktiklerini çok iyi öğretiyor. Girdiğim ilk SAT'den 790 puan aldım; sonrasında AP Calculus AB çalıştık ve bu sınavdan da 5 aldım." },
+        ]}
+      />
 
       <section style={{ padding: "86px 24px" }}>
         <div

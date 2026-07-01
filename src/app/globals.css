@@ -70,6 +70,99 @@ button, a {
   background: var(--bg);
 }
 
+.student-testimonials {
+  padding: 88px 0;
+  background: white;
+}
+
+.student-testimonials-soft { background: var(--bg); }
+
+.student-testimonials-heading {
+  max-width: 760px;
+  margin-bottom: 38px;
+}
+
+.student-testimonials-heading h2 {
+  font-family: var(--font-nunito);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 950;
+  letter-spacing: -.035em;
+  line-height: 1.08;
+}
+
+.student-testimonials-heading p {
+  margin-top: 16px;
+  color: var(--slate);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.student-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.student-testimonial-card {
+  display: flex;
+  min-height: 330px;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: white;
+  box-shadow: 0 14px 38px rgba(15,23,42,.055);
+}
+
+.student-testimonial-mark {
+  height: 42px;
+  color: var(--blue);
+  font-family: Georgia, serif;
+  font-size: 62px;
+  line-height: 1;
+}
+
+.student-testimonial-card blockquote {
+  flex: 1;
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.student-testimonial-card footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.student-testimonial-card strong,
+.student-testimonial-card footer span { display: block; }
+
+.student-testimonial-card strong {
+  font-family: var(--font-nunito);
+  font-size: 17px;
+  font-weight: 950;
+}
+
+.student-testimonial-card footer span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.student-testimonial-card footer a {
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 .eyebrow {
   display: inline-flex;
   margin-bottom: 14px;
@@ -420,7 +513,8 @@ button, a {
   }
 
   .card-grid-4,
-  .card-grid-3 {
+  .card-grid-3,
+  .student-testimonials-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -431,7 +525,8 @@ button, a {
   }
 
   .section,
-  .page-hero {
+  .page-hero,
+  .student-testimonials {
     padding: 64px 0;
   }
 
@@ -448,12 +543,20 @@ button, a {
   .card-grid-3,
   .card-grid-4,
   .proof-grid,
-  .cta-band {
+  .cta-band,
+  .student-testimonials-grid {
     grid-template-columns: 1fr;
   }
 
   .content-card {
     min-height: 0;
+  }
+
+  .student-testimonial-card { min-height: 0; }
+
+  .student-testimonial-card footer {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .proof-panel,

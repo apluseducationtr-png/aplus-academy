@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StudentTestimonials from "@/components/StudentTestimonials";
 import {
   CardGrid,
   CtaBand,
@@ -126,6 +127,14 @@ export default function Home() {
           ]} />
         </div>
       </section>
+
+      <StudentTestimonials
+        testimonials={[
+          { name: "Ela", program: "SAT Öğrencisi", quote: "Zayıf yönlerimi kolayca tespit etti ve özellikle problem çözme becerilerimi geliştirmek için birlikte çalıştık. Halil hocam ile çalıştığım için çok mutluyum ve onu şiddetle tavsiye ediyorum.", href: "/sinavlar/digital-sat" },
+          { name: "Serhat", program: "IB Öğrencisi", quote: "IB özel derslerinde konu hakimiyetinin yanında IB deneyimi çok önemli. Halil Hoca her türlü sorunumu çözmeme yardım etti; olumlu ve sabırlı yaklaşımıyla sınavlara en iyi şekilde hazırlanmamı sağladı.", href: "/sinavlar/ib" },
+          { name: "Emre", program: "AP Öğrencisi", quote: "Hazırlık süreci zor ve göz korkutucu görünse de Halil Hoca sayesinde iyi bir başarı elde edeceğime güvenim tamdı. Beklediğim gibi 5 aldım ve hedeflerime yönelik önemli bir adımı tamamladım.", href: "/sinavlar/ap" },
+        ]}
+      />
 
       <CtaBand
         title="Öğrenci için doğru başlangıç planını birlikte çıkaralım"
