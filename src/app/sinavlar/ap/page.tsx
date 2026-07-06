@@ -3,58 +3,117 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StudentTestimonials from "@/components/StudentTestimonials";
 
-const stemSubjects = [
-  "AP Precalculus",
-  "AP Calculus AB / BC",
-  "AP Statistics",
-  "AP Computer Science A",
-  "AP Computer Science Principles",
-  "AP Physics 1 / 2",
-  "AP Physics C: Mechanics",
-  "AP Physics C: Electricity and Magnetism",
-  "AP Chemistry",
-  "AP Biology",
-  "AP Environmental Science",
-  "AP Cybersecurity",
-  "AP Business with Personal Finance",
-];
-
-const humanitiesSubjects = [
-  "AP English Language and Composition",
-  "AP English Literature and Composition",
-  "AP Microeconomics",
-  "AP Macroeconomics",
-  "AP Psychology",
-  "AP Comparative Government and Politics",
-  "AP United States Government and Politics",
-  "AP Human Geography",
-  "AP European / US / World History",
-  "AP Art History",
-  "AP 2-D / 3-D Art and Design",
-  "AP Drawing",
-  "AP Music Theory",
-  "AP Research / Seminar",
-  "AP Chinese / French / German / Italian / Japanese",
-  "AP Latin",
-  "AP Spanish Language and Literature",
+const apCourseCategories = [
+  {
+    title: "Sanat",
+    officialTitle: "Arts",
+    description: "Görsel üretim, sanat tarihi ve müzik teorisi odaklı AP dersleri.",
+    courses: [
+      "AP 2-D Art and Design",
+      "AP 3-D Art and Design",
+      "AP Drawing",
+      "AP Art History",
+      "AP Music Theory",
+    ],
+  },
+  {
+    title: "İngilizce",
+    officialTitle: "English",
+    description: "Akademik okuma, retorik analiz, yazma ve edebiyat incelemesi.",
+    courses: [
+      "AP English Language and Composition",
+      "AP English Literature and Composition",
+    ],
+  },
+  {
+    title: "Tarih ve Sosyal Bilimler",
+    officialTitle: "History and Social Sciences",
+    description: "Tarih, ekonomi, psikoloji, coğrafya ve siyaset alanlarını kapsayan dersler.",
+    courses: [
+      "AP African American Studies",
+      "AP Comparative Government and Politics",
+      "AP European History",
+      "AP Human Geography",
+      "AP Macroeconomics",
+      "AP Microeconomics",
+      "AP Psychology",
+      "AP United States Government and Politics",
+      "AP United States History",
+      "AP World History: Modern",
+    ],
+  },
+  {
+    title: "Matematik ve Bilgisayar Bilimleri",
+    officialTitle: "Math and Computer Science",
+    description: "Matematiksel modelleme, analiz, istatistik ve bilgisayar bilimi dersleri.",
+    courses: [
+      "AP Calculus AB",
+      "AP Calculus BC",
+      "AP Computer Science A",
+      "AP Computer Science Principles",
+      "AP Precalculus",
+      "AP Statistics",
+    ],
+  },
+  {
+    title: "Fen Bilimleri",
+    officialTitle: "Sciences",
+    description: "Biyoloji, kimya, çevre bilimi ve farklı fizik yaklaşımlarını içeren dersler.",
+    courses: [
+      "AP Biology",
+      "AP Chemistry",
+      "AP Environmental Science",
+      "AP Physics 1: Algebra-Based",
+      "AP Physics 2: Algebra-Based",
+      "AP Physics C: Electricity and Magnetism",
+      "AP Physics C: Mechanics",
+    ],
+  },
+  {
+    title: "Dünya Dilleri ve Kültürleri",
+    officialTitle: "AP World Languages and Cultures",
+    description: "Dil yeterliliğini kültürel bağlam, iletişim ve metin analiziyle birleştiren dersler.",
+    courses: [
+      "AP Chinese Language and Culture",
+      "AP French Language and Culture",
+      "AP German Language and Culture",
+      "AP Italian Language and Culture",
+      "AP Japanese Language and Culture",
+      "AP Latin",
+      "AP Spanish Language and Culture",
+      "AP Spanish Literature and Culture",
+    ],
+  },
+  {
+    title: "AP Capstone Diploma Programı",
+    officialTitle: "AP Capstone Diploma Program",
+    description: "Araştırma, akademik argüman, kaynak değerlendirme ve sunum becerilerine odaklanır.",
+    courses: ["AP Research", "AP Seminar"],
+  },
+  {
+    title: "AP Career Kickstart",
+    officialTitle: "AP Career Kickstart",
+    description: "İşletme, kişisel finans ve siber güvenlik alanlarında kariyer bağlantılı dersler.",
+    courses: ["AP Business with Personal Finance", "AP Cybersecurity"],
+  },
 ];
 
 const labItems = [
   {
-    title: "MCQ pratiği",
-    text: "Konu bilgisi, hız ve seçenek eleme stratejileri birlikte çalışılır.",
+    title: "MCQ ve FRQ",
+    text: "Yazılı sınavlarda çoktan seçmeli ve açık uçlu bölümler dersin resmî yapısına göre çalışılır.",
   },
   {
-    title: "FRQ cevap dili",
-    text: "Puan kazandıran açıklama formatı ve rubric mantığı öğretilir.",
+    title: "Portfolyo",
+    text: "Art and Design derslerinde eser seçimi, süreç dokümantasyonu ve portfolyo beklentileri takip edilir.",
   },
   {
-    title: "Çıkmış soru analizi",
-    text: "College Board tarzı soru dili ve sık tekrar eden soru kalıpları incelenir.",
+    title: "Performans görevi",
+    text: "Capstone ve ilgili derslerde araştırma, sunum ve performans görevleri akademik dürüstlük içinde desteklenir.",
   },
   {
-    title: "Okul ve kamp desteği",
-    text: "Okul içi yazılı, quiz ve projelerin yanında sınav döneminde yoğun AP kampları düzenlenir.",
+    title: "Resmî soru ve ölçütler",
+    text: "Yayımlanmış sorular, puanlama ölçütleri ve dersin değerlendirme dili birlikte analiz edilir.",
   },
 ];
 
@@ -71,8 +130,8 @@ const timeline = [
   },
   {
     phase: "03",
-    title: "MCQ + FRQ",
-    text: "Konu öğrenimi sınav formatına uygun soru çözümüyle desteklenir.",
+    title: "Derse özel değerlendirme",
+    text: "Konu öğrenimi; sınav, FRQ, portfolyo veya performans görevi formatıyla desteklenir.",
   },
   {
     phase: "04",
@@ -84,7 +143,7 @@ const timeline = [
 const forWho = [
   "AP sınavında 4 veya 5 hedefleyen öğrenciler",
   "Okul AP derslerinde GPA desteğine ihtiyaç duyan öğrenciler",
-  "FRQ cevap formatında zorlanan öğrenciler",
+  "Dersin sınav, FRQ, portfolyo veya görev formatında zorlanan öğrenciler",
   "Sınava kısa süre kala yoğun tekrar kampı arayan öğrenciler",
 ];
 
@@ -95,7 +154,7 @@ const faqs = [
   },
   {
     q: "FRQ çalışması her AP dersi için yapılıyor mu?",
-    a: "FRQ ağırlığı derse göre değişir; ancak cevap formatı, açıklama kalitesi ve rubric mantığı AP hazırlığının önemli bir parçasıdır.",
+    a: "Hayır. College Board değerlendirme yapısı derse göre değişir. Bazı derslerde MCQ ve FRQ, Art and Design derslerinde portfolyo, Capstone derslerinde ise araştırma ve performans görevleri öne çıkar.",
   },
   {
     q: "AP kamp programları açılıyor mu?",
@@ -173,7 +232,7 @@ export default function APPage() {
                 maxWidth: "780px",
               }}
             >
-              AP’de 4-5 hedefi için ders bazlı hazırlık ve FRQ stratejisi
+              AP’de 4-5 hedefi için ders bazlı hazırlık ve değerlendirme stratejisi
             </h1>
 
             <p
@@ -186,8 +245,8 @@ export default function APPage() {
               }}
             >
               A Plus Academy AP programları, öğrencinin aldığı derse göre
-              kişiselleştirilir. Konu anlatımı, okul desteği, MCQ pratiği, FRQ
-              cevap formatı ve final tekrar süreci birlikte planlanır.
+              kişiselleştirilir. Konu anlatımı ve okul desteği; dersin sınav,
+              FRQ, portfolyo veya performans görevi yapısına göre planlanır.
             </p>
 
             <div
@@ -237,7 +296,7 @@ export default function APPage() {
                     margin: "0 0 10px",
                   }}
                 >
-                  AP command center
+                  AP program özeti
                 </p>
 
                 <h2
@@ -280,8 +339,8 @@ export default function APPage() {
               }}
             >
               <MetricBox label="Hedef skor" value="4-5" />
-              <MetricBox label="Format" value="MCQ + FRQ" />
-              <MetricBox label="Ders alanı" value="20+ AP" />
+              <MetricBox label="Resmî katalog" value="42 AP dersi" />
+              <MetricBox label="Ders alanı" value="8 kategori" />
               <MetricBox label="Destek" value="Okul + sınav" />
             </div>
 
@@ -292,9 +351,9 @@ export default function APPage() {
                 gap: "12px",
               }}
             >
-              <ProgressRow label="Konu takibi" value="92%" />
-              <ProgressRow label="FRQ pratiği" value="84%" />
-              <ProgressRow label="Deneme analizi" value="76%" />
+              <ProgramFocus label="Ünite bazlı konu ve beceri takibi" />
+              <ProgramFocus label="Derse özgü değerlendirme formatı" />
+              <ProgramFocus label="Resmî sorular ve puanlama ölçütleri" />
             </div>
           </div>
         </div>
@@ -314,7 +373,7 @@ export default function APPage() {
               margin: "0 auto 46px",
             }}
           >
-            <div style={blueBadgeLight}>AP ders alanları</div>
+            <div style={blueBadgeLight}>College Board AP ders kataloğu</div>
 
             <h2
               style={{
@@ -326,7 +385,7 @@ export default function APPage() {
                 margin: "18px 0 0",
               }}
             >
-              Her AP dersi aynı şekilde çalışılmaz
+              42 AP dersi, sekiz resmî kategori
             </h2>
 
             <p
@@ -338,25 +397,44 @@ export default function APPage() {
                 maxWidth: "680px",
               }}
             >
-              Calculus, Physics, Economics veya English gibi farklı AP dersleri
-              için soru tipi, FRQ dili ve tekrar stratejisi farklı planlanır.
+              Aşağıdaki ders adları ve sınıflandırma College Board’un güncel AP
+              Courses and Exams kataloğunu temel alır. A Plus Academy’de destek
+              kapsamı, öğrencinin dersi ve eğitmen uygunluğuna göre netleştirilir.
             </p>
           </div>
 
           <div
-            className="subject-grid"
+            className="ap-category-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
               gap: "24px",
             }}
           >
-            <SubjectPanel title="STEM, teknoloji ve işletme AP" subjects={stemSubjects} />
-            <SubjectPanel
-              title="Sosyal bilimler, sanat ve dil AP"
-              subjects={humanitiesSubjects}
-            />
+            {apCourseCategories.map((category) => (
+              <CourseCategoryCard key={category.officialTitle} {...category} />
+            ))}
           </div>
+
+          <p
+            style={{
+              color: "#5F718A",
+              fontSize: "13px",
+              lineHeight: "1.7",
+              margin: "24px 0 0",
+              textAlign: "center",
+            }}
+          >
+            Kaynak: {" "}
+            <a
+              href="https://apstudents.collegeboard.org/courses"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#1F5AA6", fontWeight: 900 }}
+            >
+              College Board AP Courses and Exams
+            </a>
+          </p>
         </div>
       </section>
 
@@ -420,7 +498,7 @@ export default function APPage() {
                   margin: 0,
                 }}
               >
-                AP başarısı sadece konu bilmekle gelmez
+                Her AP dersi kendi değerlendirme yapısıyla çalışılır
               </h2>
 
               <p
@@ -431,9 +509,9 @@ export default function APPage() {
                   margin: "24px 0 0",
                 }}
               >
-                AP sınavlarında öğrencinin bilgiyi doğru formatta, doğru
-                açıklama diliyle ve süre içinde kullanabilmesi gerekir. Bu
-                nedenle MCQ ve FRQ çalışmaları birlikte yürütülür.
+                AP değerlendirmesi her derste aynı değildir. Yazılı sınavlar,
+                FRQ bölümleri, portfolyolar ve performans görevleri için gereken
+                beceriler dersin resmî yapısına göre ayrı ayrı ele alınır.
               </p>
             </div>
 
@@ -468,7 +546,7 @@ export default function APPage() {
                   margin: 0,
                 }}
               >
-                Konu bilgisi + sınav formatı + puanlama mantığı
+                Konu bilgisi + derse özel format + puanlama ölçütleri
               </p>
             </div>
           </div>
@@ -895,7 +973,7 @@ export default function APPage() {
       <style>{`
         @media (max-width: 950px) {
           .ap-hero-unique,
-          .subject-grid,
+          .ap-category-grid,
           .frq-lab,
           .timeline-head,
           .forwho-grid,
@@ -955,68 +1033,57 @@ function MetricBox({ label, value }: { label: string; value: string }) {
   );
 }
 
-function ProgressRow({ label, value }: { label: string; value: string }) {
+function ProgramFocus({ label }: { label: string }) {
   return (
-    <div>
-      <div
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "34px 1fr",
+        gap: "12px",
+        alignItems: "center",
+        padding: "12px 14px",
+        border: "1px solid #D7ECFF",
+        borderRadius: "16px",
+        background: "#FAFCFF",
+      }}
+    >
+      <span
+        aria-hidden
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "16px",
-          marginBottom: "8px",
+          display: "grid",
+          width: "34px",
+          height: "34px",
+          placeItems: "center",
+          borderRadius: "11px",
+          background: "#EAF4FF",
+          color: "#1F5AA6",
+          fontSize: "15px",
+          fontWeight: 950,
         }}
       >
-        <span
-          style={{
-            color: "#1F2A44",
-            fontSize: "13px",
-            fontWeight: 850,
-          }}
-        >
-          {label}
-        </span>
-
-        <span
-          style={{
-            color: "#2F6FC2",
-            fontSize: "13px",
-            fontWeight: 950,
-          }}
-        >
-          {value}
-        </span>
-      </div>
-
-      <div
-        style={{
-          height: "8px",
-          background: "#EEF7FF",
-          borderRadius: "999px",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            width: value,
-            height: "100%",
-            background: "#2F6FC2",
-            borderRadius: "999px",
-          }}
-        />
-      </div>
+        ✓
+      </span>
+      <span style={{ color: "#1F2A44", fontSize: "13px", fontWeight: 850 }}>
+        {label}
+      </span>
     </div>
   );
 }
 
-function SubjectPanel({
+function CourseCategoryCard({
   title,
-  subjects,
+  officialTitle,
+  description,
+  courses,
 }: {
   title: string;
-  subjects: string[];
+  officialTitle: string;
+  description: string;
+  courses: string[];
 }) {
   return (
-    <div
+    <article
+      className="ap-category-card"
       style={{
         background: "#ffffff",
         color: "#0B1238",
@@ -1026,24 +1093,74 @@ function SubjectPanel({
         boxShadow: "0 18px 48px rgba(15, 23, 42, 0.06)",
       }}
     >
-      <h3
+      <div
         style={{
-          fontSize: "30px",
-          lineHeight: "1.1",
-          fontWeight: 950,
-          letterSpacing: "-0.04em",
-          margin: "0 0 24px",
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "20px",
+          alignItems: "flex-start",
+          marginBottom: "22px",
         }}
       >
-        {title}
-      </h3>
+        <div>
+          <p
+            style={{
+              color: "#2F6FC2",
+              fontSize: "12px",
+              fontWeight: 900,
+              letterSpacing: ".1em",
+              margin: "0 0 8px",
+              textTransform: "uppercase",
+            }}
+          >
+            {officialTitle}
+          </p>
+          <h3
+            style={{
+              fontSize: "28px",
+              lineHeight: "1.1",
+              fontWeight: 950,
+              letterSpacing: "-0.04em",
+              margin: 0,
+            }}
+          >
+            {title}
+          </h3>
+        </div>
+        <span
+          style={{
+            flexShrink: 0,
+            padding: "8px 11px",
+            border: "1px solid #CFE7FF",
+            borderRadius: "999px",
+            background: "#EAF4FF",
+            color: "#1F5AA6",
+            fontSize: "12px",
+            fontWeight: 950,
+          }}
+        >
+          {courses.length} ders
+        </span>
+      </div>
+
+      <p
+        style={{
+          color: "#45546D",
+          fontSize: "14px",
+          lineHeight: "1.7",
+          margin: "0 0 22px",
+        }}
+      >
+        {description}
+      </p>
 
       <div style={{ display: "grid", gap: "12px" }}>
-        {subjects.map((subject) => (
+        {courses.map((course) => (
           <div
-            key={subject}
+            key={course}
+            className="ap-course-item"
             style={{
-              background: "#F7FAFD",
+              background: "#ffffff",
               border: "1px solid #D7ECFF",
               borderRadius: "18px",
               padding: "16px 18px",
@@ -1052,11 +1169,11 @@ function SubjectPanel({
               fontWeight: 900,
             }}
           >
-            {subject}
+            {course}
           </div>
         ))}
       </div>
-    </div>
+    </article>
   );
 }
 
