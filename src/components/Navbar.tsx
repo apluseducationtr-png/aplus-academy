@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { programCatalog } from "@/data/programCatalog";
 
 const links = [
   ["Soru Bankası", "/question-bank"],
@@ -12,15 +13,7 @@ const links = [
   ["Eğitmen Ol", "/work-with-us"],
 ];
 
-const programLinks = [
-  { title: "Digital SAT", text: "Math ve Reading & Writing", href: "/sinavlar/digital-sat" },
-  { title: "AP Programları", text: "Ders bazlı MCQ ve FRQ hazırlığı", href: "/sinavlar/ap" },
-  { title: "IB Diploma", text: "HL / SL dersleri ve IB core desteği", href: "/sinavlar/ib" },
-  { title: "A-Level & IGCSE", text: "Uluslararası müfredat ve sınav desteği", href: "/sinavlar/a-level-igcse" },
-  { title: "IELTS & TOEFL", text: "Akademik İngilizce yeterlilik hazırlığı", href: "/sinavlar/ielts-toefl" },
-  { title: "IMAT & LNAT", text: "Tıp ve hukuk kabul sınavları", href: "/sinavlar/imat-ucat-lnat" },
-  { title: "Okul & GPA Desteği", text: "Ders, sınav ve akademik takip", href: "/sinavlar/okul-destek" },
-];
+const programLinks = programCatalog;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -89,9 +82,9 @@ export default function Navbar() {
               </Link>
               <div className="program-link-grid">
                 {programLinks.map((program) => (
-                  <Link href={program.href} key={program.href} onClick={closeNavigation}>
+                  <Link href={program.href} key={program.title} onClick={closeNavigation}>
                     <strong>{program.title}</strong>
-                    <small>{program.text}</small>
+                    <small>{program.menuText}</small>
                   </Link>
                 ))}
               </div>
@@ -175,12 +168,14 @@ export default function Navbar() {
           position: absolute;
           top: calc(100% + 14px);
           left: 50%;
-          width: min(650px, calc(100vw - 40px));
+          width: min(760px, calc(100vw - 40px));
           padding: 18px;
           border: 1px solid var(--border);
           border-radius: 24px;
           background: white;
           box-shadow: 0 24px 60px rgba(15,23,42,.14);
+          max-height: calc(100vh - 120px);
+          overflow-y: auto;
           opacity: 0;
           pointer-events: none;
           transform: translate(-50%, -8px);
@@ -275,7 +270,7 @@ export default function Navbar() {
             transition: max-height .25s ease, padding .25s ease, margin .25s ease;
           }
           .nav-dropdown-open .nav-dropdown-menu {
-            max-height: 720px;
+            max-height: 1200px;
             margin: 4px 8px 10px;
             padding: 10px;
             border: 1px solid var(--border);

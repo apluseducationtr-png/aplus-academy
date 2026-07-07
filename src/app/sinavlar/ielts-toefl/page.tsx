@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import ProgramDetailPage from "@/components/ProgramDetailPage";
 
 export const metadata: Metadata = {
-  title: "IELTS & TOEFL Hazırlık | APlus Academy",
+  title: "IELTS, TOEFL, Duolingo ve PTE Hazırlık | APlus Academy",
   description:
-    "IELTS ve TOEFL için hedef skor odaklı speaking, writing, reading ve listening hazırlık programı.",
+    "IELTS, TOEFL, Duolingo English Test ve PTE için hedef skor odaklı İngilizce yeterlilik hazırlığı.",
 };
 
 export default function IELTSAndTOEFLPage() {
   return (
     <ProgramDetailPage
-      badge="IELTS & TOEFL Hazırlık"
+      badge="IELTS, TOEFL, Duolingo & PTE"
       title="İngilizce yeterlilik sınavlarında hedef skora götüren beceri odaklı hazırlık"
-      intro="IELTS ve TOEFL programı; writing, speaking, reading ve listening becerilerini ayrı ayrı ölçer, öğrencinin hedef skoruna göre düzenli çalışma planı oluşturur."
+      intro="IELTS, TOEFL, Duolingo English Test ve PTE programları; öğrencinin hedef sınavına göre writing, speaking, reading ve listening becerilerini ayrı ayrı geliştirir."
       metrics={[
-        ["Hedef", "IELTS 7.5+ / TOEFL 100+"],
+        ["Sınavlar", "IELTS / TOEFL / DET / PTE"],
         ["Beceri", "4 alan"],
         ["Takip", "Writing feedback"],
         ["Format", "Akademik İngilizce"],
@@ -34,7 +34,7 @@ export default function IELTSAndTOEFLPage() {
         ["04", "Sınav provası", "Süre yönetimi ve sınav günü stratejisi oturtulur."],
       ]}
       faqs={[
-        ["IELTS mi TOEFL mı seçmeliyim?", "Hedef üniversite, ülke ve başvuru koşullarına göre birlikte karar verilebilir."],
+        ["Hangi İngilizce yeterlilik sınavını seçmeliyim?", "IELTS, TOEFL, Duolingo veya PTE seçimi hedef üniversite, ülke ve başvuru koşullarına göre birlikte yapılabilir."],
         ["Writing geri bildirimi veriliyor mu?", "Evet. Essay yapısı, kelime seçimi, gramer ve task response ayrı ayrı değerlendirilir."],
         ["Speaking dersleri birebir mi?", "Speaking çalışmaları genellikle birebir yürütülür; öğrencinin akıcılığı ve cevap kalitesi geliştirilir."],
       ]}

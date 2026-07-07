@@ -29,12 +29,12 @@ export default function WorkWithUsPage() {
         <div className="site-container">
           <SectionHeading eyebrow="Aranan profiller" title="Farklı sınav ve müfredatlar için alan uzmanları" text="Her eğitmenin kendi ders alanında güncel sınav yapısına, soru tiplerine ve öğrenci ihtiyaçlarına hâkim olması beklenir." />
           <CardGrid columns={3} items={[
-            { title: "SAT & ACT", text: "Math veya Reading & Writing alanında sınav formatına hâkim eğitmenler." },
-            { title: "AP & IB", text: "STEM, Economics, Business, English ve sosyal bilimler ders uzmanları." },
-            { title: "A-Level & IGCSE", text: "Cambridge, Edexcel veya AQA board deneyimine sahip eğitmenler." },
-            { title: "IELTS & TOEFL", text: "Akademik İngilizce ve sınav becerilerinde geri bildirim verebilen eğitmenler." },
-            { title: "Tıp & hukuk sınavları", text: "IMAT ve LNAT bileşenlerinde uzman eğitmenler." },
-            { title: "Akademik danışmanlık", text: "Uluslararası eğitim ve üniversite hedefleri konusunda deneyimli danışmanlar." },
+            { title: "AP", text: "STEM, Economics, English, sosyal bilimler, sanat ve diğer AP derslerinde uzman eğitmenler." },
+            { title: "IB", text: "HL/SL dersleri ile IB core ve okul değerlendirme süreçlerine hâkim eğitmenler." },
+            { title: "Digital SAT & ACT", text: "Math, Reading, Writing ve English alanlarında sınav formatına hâkim eğitmenler." },
+            { title: "İngilizce yeterlilik", text: "IELTS, TOEFL, Duolingo ve PTE sınavlarında beceri bazlı geri bildirim verebilen eğitmenler." },
+            { title: "A-Level, IGCSE & GCSE", text: "Cambridge, Edexcel veya AQA board deneyimine sahip ders uzmanları." },
+            { title: "Seçici kabul sınavları", text: "TMUA, ESAT, TARA, LNAT, IMAT ve UCAT bileşenlerinde uzman eğitmenler." },
           ]} />
         </div>
       </section>

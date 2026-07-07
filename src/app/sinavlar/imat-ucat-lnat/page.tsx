@@ -2,26 +2,26 @@ import type { Metadata } from "next";
 import ProgramDetailPage from "@/components/ProgramDetailPage";
 
 export const metadata: Metadata = {
-  title: "IMAT ve LNAT Hazırlık | A Plus Academy",
-  description: "Tıp ve hukuk başvuruları için IMAT ve LNAT hazırlık programları.",
+  title: "LNAT, IMAT ve UCAT Hazırlık | A Plus Academy",
+  description: "Hukuk ve tıp başvuruları için LNAT, IMAT ve UCAT hazırlık programları.",
 };
 
 export default function MedicineAndLawPage() {
   return (
     <ProgramDetailPage
       badge="Tıp & Hukuk Başvuruları"
-      title="IMAT ve LNAT için analitik düşünme ve sınav stratejisi"
-      intro="Tıp ve hukuk hedefleyen öğrenciler için science, reasoning, critical thinking, reading ve essay alanları sınav formatına uygun şekilde çalışılır."
+      title="LNAT, IMAT ve UCAT için sınava özel düşünme ve çözüm stratejisi"
+      intro="Hukuk ve tıp hedefleyen öğrenciler için LNAT, IMAT ve UCAT sınavlarının critical thinking, science, reasoning, reading, decision making ve essay alanları ayrı planlanır."
       metrics={[
         ["Alan", "Medicine / Law"],
-        ["Sınavlar", "IMAT / LNAT"],
+        ["Sınavlar", "LNAT / IMAT / UCAT"],
         ["Destek", "Essay + science"],
         ["Format", "UK / Italy"],
       ]}
       focusTitle="Hazırlık odağı"
       focusText="Bu sınavlarda bilgi kadar hızlı düşünme, eleme stratejisi ve doğru cevap dili önemlidir."
       focusItems={[
-        "Critical thinking ve reasoning",
+        "Critical thinking, reasoning ve decision making",
         "Science konu tekrarı",
         "Reading ve çıkarım becerisi",
         "Essay planlama ve argüman",
@@ -33,7 +33,7 @@ export default function MedicineAndLawPage() {
         ["04", "Deneme analizi", "Yanlışlar konu, hız ve strateji açısından değerlendirilir."],
       ]}
       faqs={[
-        ["IMAT ve LNAT aynı şekilde mi çalışılır?", "Hayır. IMAT science bilgisi ve problem çözmeyi, LNAT ise critical thinking, reading ve essay becerilerini öne çıkarır."],
+        ["LNAT, IMAT ve UCAT aynı şekilde mi çalışılır?", "Hayır. LNAT critical thinking, reading ve essay; IMAT science ve problem çözme; UCAT ise hız, muhakeme ve decision making becerilerini öne çıkarır."],
         ["LNAT essay desteği var mı?", "Evet. Essay planı, argüman yapısı, örnek kullanımı ve akademik ifade üzerine çalışılır."],
         ["Program nasıl planlanır?", "Başlangıç seviyesi, hedef bölüm ve öğrencinin geliştirmesi gereken becerilere göre kişisel çalışma planı hazırlanır."],
       ]}

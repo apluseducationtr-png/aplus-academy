@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-const programLinks = [
-  ["Digital SAT", "/sinavlar/digital-sat"],
-  ["AP Programları", "/sinavlar/ap"],
-  ["IB Diploma", "/sinavlar/ib"],
-  ["IELTS & TOEFL", "/sinavlar/ielts-toefl"],
-];
+import { footerPrograms } from "@/data/programCatalog";
 
 export default function Footer() {
   return (
@@ -20,7 +14,10 @@ export default function Footer() {
         </div>
         <div>
           <h3>Programlar</h3>
-          {programLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+          {footerPrograms.map((program) => (
+            <Link href={program.href} key={program.title}>{program.title}</Link>
+          ))}
+          <Link href="/exams">Diğer programları görüntüle</Link>
         </div>
         <div>
           <h3>Kurumsal</h3>

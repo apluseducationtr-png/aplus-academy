@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageHero, SectionHeading } from "@/components/MarketingSections";
+import { programCatalog } from "@/data/programCatalog";
 
 export const metadata: Metadata = {
   title: "İletişim ve Görüşme | A Plus Academy",
@@ -46,9 +47,10 @@ export default function ContactPage() {
             <label>İlgilenilen alan
               <select name="program" defaultValue="">
                 <option value="" disabled>Program seçin</option>
-                <option>Digital SAT</option><option>AP</option><option>IB</option>
-                <option>A-Level / IGCSE</option><option>IELTS / TOEFL</option>
-                <option>Okul desteği</option><option>Danışmanlık</option><option>Diğer</option>
+                {programCatalog.map((program) => (
+                  <option key={program.title}>{program.title}</option>
+                ))}
+                <option>Danışmanlık</option><option>Diğer</option>
               </select>
             </label>
             <label>Hedef ve ihtiyaç<textarea name="message" placeholder="Hedef sınav, mevcut seviye ve ihtiyaç..." /></label>

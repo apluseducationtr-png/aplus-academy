@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import ProgramDetailPage from "@/components/ProgramDetailPage";
 
 export const metadata: Metadata = {
-  title: "Okul Destek Programı | APlus Academy",
+  title: "Okul, GPA ve Üniversite Ders Desteği | APlus Academy",
   description:
-    "Uluslararası okul öğrencileri için ders takibi, sınav hazırlığı ve GPA destek programı.",
+    "Okul ve üniversite öğrencileri için ders takibi, sınav hazırlığı, GPA ve akademik destek programı.",
 };
 
 export default function SchoolSupportPage() {
   return (
     <ProgramDetailPage
-      badge="Okul Destek"
-      title="Uluslararası okul öğrencileri için düzenli ders takibi ve akademik destek"
-      intro="Okul destek programı; öğrencinin ders yükünü, sınav önceliklerini ve hedef GPA planını düzenli takip ederek sürdürülebilir bir çalışma sistemi kurar."
+      badge="Okul, GPA & Üniversite Desteği"
+      title="Okul ve üniversite öğrencileri için düzenli ders takibi ve akademik destek"
+      intro="Destek programı; öğrencinin ders yükünü, konu ihtiyaçlarını, sınav önceliklerini ve hedef GPA planını düzenli takip ederek sürdürülebilir bir çalışma sistemi kurar."
       metrics={[
         ["Odak", "GPA + sınav"],
-        ["Dersler", "STEM + sosyal"],
+        ["Dersler", "Okul + üniversite"],
         ["Takip", "Haftalık plan"],
         ["Format", "Online / yüz yüze"],
       ]}
@@ -23,7 +23,7 @@ export default function SchoolSupportPage() {
       focusText="Okul başarısı yalnızca sınav haftasında değil, dönem boyunca düzenli takip edildiğinde güçlenir."
       focusItems={[
         "Haftalık ders ve ödev takibi",
-        "Quiz ve sınav hazırlığı",
+        "Quiz, vize, final ve sınav hazırlığı",
         "GPA hedef planı",
         "Veli bilgilendirme",
       ]}
@@ -34,7 +34,7 @@ export default function SchoolSupportPage() {
         ["04", "Gelişim takibi", "Öğrenci ve veli düzenli olarak süreç hakkında bilgilendirilir."],
       ]}
       faqs={[
-        ["Hangi okullara destek veriliyor?", "Uluslararası müfredat uygulayan lise öğrencileri için ders ve sınav desteği planlanabilir."],
+        ["Kimler destek alabilir?", "Uluslararası müfredat uygulayan lise öğrencileri ile ders bazlı desteğe ihtiyaç duyan üniversite öğrencileri için program planlanabilir."],
         ["Sadece sınav haftası destek alınabilir mi?", "Evet, fakat en iyi sonuç için dönem boyunca düzenli takip önerilir."],
         ["Veliye raporlama yapılıyor mu?", "Süreç, öğrencinin gelişimi ve bir sonraki hedefleri düzenli olarak aileyle paylaşılabilir."],
       ]}

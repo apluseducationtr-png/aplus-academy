@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StudentTestimonials from "@/components/StudentTestimonials";
+
+export const metadata: Metadata = {
+  title: "Digital SAT & ACT Hazırlık | A Plus Academy",
+  description: "Digital SAT ve ACT için hedef skor odaklı ders, deneme ve sınav stratejisi programları.",
+};
 
 const programStats = [
   ["Hedef Skor", "1400+"],
@@ -66,6 +72,10 @@ const faqs = [
   {
     q: "Digital SAT hazırlığına ne zaman başlanmalı?",
     a: "Öğrencinin mevcut seviyesine göre değişir. 10. ve 11. sınıfta başlayan öğrenciler için süreç daha rahat ve ölçülebilir ilerler.",
+  },
+  {
+    q: "ACT hazırlığı da veriliyor mu?",
+    a: "Evet. ACT programı öğrencinin seviyesine göre English, Math, Reading ve Science bölümleri için ayrı beceri ve zaman yönetimi planıyla yürütülür.",
   },
   {
     q: "Dersler online mı yüz yüze mi?",
@@ -145,7 +155,7 @@ export default function DigitalSATPage() {
       textTransform: "uppercase",
     }}
   >
-    <span lang="en">Digital SAT</span> Hazırlık Programı
+    <span lang="en">Digital SAT &amp; ACT</span> Hazırlık Programları
   </div>
 </div>
             <h1
@@ -158,7 +168,7 @@ export default function DigitalSATPage() {
                 maxWidth: "760px",
               }}
             >
-              SAT skorunu hedefe taşıyan kişisel hazırlık sistemi
+              SAT ve ACT skorunu hedefe taşıyan kişisel hazırlık sistemi
             </h1>
 
             <p
@@ -170,9 +180,9 @@ export default function DigitalSATPage() {
                 maxWidth: "680px",
               }}
             >
-              A Plus Academy Digital SAT programı; Bluebook uyumlu denemeler,
-              konu bazlı analizler, haftalık takip ve hedef skora göre
-              kişiselleştirilmiş ders planından oluşur.
+              Digital SAT programı Bluebook uyumlu deneme ve analizlerle;
+              ACT programı ise English, Math, Reading ve Science bölümlerine
+              özgü çalışma ve zaman yönetimi planıyla yürütülür.
             </p>
 
             <div
@@ -742,7 +752,7 @@ export default function DigitalSATPage() {
                 margin: "0 0 12px",
               }}
             >
-              <span lang="en">Digital SAT</span> yol haritanızı oluşturalım
+              <span lang="en">Digital SAT &amp; ACT</span> yol haritanızı oluşturalım
             </p>
 
             <h2

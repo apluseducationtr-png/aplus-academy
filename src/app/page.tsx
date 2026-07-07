@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StudentTestimonials from "@/components/StudentTestimonials";
+import { featuredPrograms } from "@/data/programCatalog";
 import {
   CardGrid,
   CtaBand,
@@ -8,15 +9,6 @@ import {
   ProcessSection,
   SectionHeading,
 } from "@/components/MarketingSections";
-
-const programs = [
-  { eyebrow: "Üniversite kabul sınavı", title: "Digital SAT", text: "Math ve Reading & Writing hazırlığı; seviye tespit, ders, ödev ve deneme takibi.", href: "/sinavlar/digital-sat", tags: ["Birebir", "Küçük grup", "Deneme"] },
-  { eyebrow: "Advanced Placement", eyebrowLang: "en" as const, title: "AP Programları", text: "Ders bazlı konu desteği, MCQ ve FRQ pratiği, okul sınavları ve final hazırlığı.", href: "/sinavlar/ap", tags: ["20+ ders", "MCQ", "FRQ"] },
-  { eyebrow: "Uluslararası diploma", title: "IB Diploma", text: "HL/SL ders desteği ile IA, EE, TOK ve predicted grade sürecinin birlikte takibi.", href: "/sinavlar/ib", tags: ["HL / SL", "IA / EE", "TOK"] },
-  { eyebrow: "Uluslararası müfredat", title: "A-Level & IGCSE", text: "Cambridge, Edexcel ve AQA derslerinde okul başarısı ve final sınavı desteği.", href: "/sinavlar/a-level-igcse", tags: ["Past papers", "Okul desteği"] },
-  { eyebrow: "Dil yeterliliği", title: "IELTS & TOEFL", text: "Writing, speaking, reading ve listening alanlarında hedef skor odaklı program.", href: "/sinavlar/ielts-toefl", tags: ["Writing feedback", "Speaking"] },
-  { eyebrow: "Tıp ve hukuk", title: "IMAT & LNAT", text: "Science, reasoning, reading ve essay becerileri için sınava özel çalışma planı.", href: "/sinavlar/imat-ucat-lnat", tags: ["UK", "İtalya", "Reasoning"] },
-];
 
 export default function Home() {
   return (
@@ -41,10 +33,10 @@ export default function Home() {
           <SectionHeading
             eyebrow="Programlar"
             title="Öğrencinin hedefi hangi sistemdeyse, hazırlık o sisteme göre kurulur"
-            text="SAT, AP, IB, A-Level, IGCSE, dil sınavları, tıp-hukuk sınavları ve lisansüstü testler için hedefe özel hazırlık programları."
+            text="AP, IB, SAT/ACT, İngilizce yeterlilik, uluslararası müfredat ve seçici üniversite kabul sınavları için hedefe özel hazırlık programları."
             align="center"
           />
-          <CardGrid items={programs} columns={3} />
+          <CardGrid items={featuredPrograms} columns={3} />
         </div>
       </section>
 
@@ -130,9 +122,9 @@ export default function Home() {
 
       <StudentTestimonials
         testimonials={[
-          { name: "Ela", program: "SAT Öğrencisi", quote: "Zayıf yönlerimi kolayca tespit etti ve özellikle problem çözme becerilerimi geliştirmek için birlikte çalıştık. Halil hocam ile çalıştığım için çok mutluyum ve onu şiddetle tavsiye ediyorum.", href: "/sinavlar/digital-sat" },
-          { name: "Serhat", program: "IB Öğrencisi", quote: "IB özel derslerinde konu hakimiyetinin yanında IB deneyimi çok önemli. Halil Hoca her türlü sorunumu çözmeme yardım etti; olumlu ve sabırlı yaklaşımıyla sınavlara en iyi şekilde hazırlanmamı sağladı.", href: "/sinavlar/ib" },
           { name: "Emre", program: "AP Öğrencisi", quote: "Hazırlık süreci zor ve göz korkutucu görünse de Halil Hoca sayesinde iyi bir başarı elde edeceğime güvenim tamdı. Beklediğim gibi 5 aldım ve hedeflerime yönelik önemli bir adımı tamamladım.", href: "/sinavlar/ap" },
+          { name: "Serhat", program: "IB Öğrencisi", quote: "IB özel derslerinde konu hakimiyetinin yanında IB deneyimi çok önemli. Halil Hoca her türlü sorunumu çözmeme yardım etti; olumlu ve sabırlı yaklaşımıyla sınavlara en iyi şekilde hazırlanmamı sağladı.", href: "/sinavlar/ib" },
+          { name: "Ela", program: "SAT Öğrencisi", quote: "Zayıf yönlerimi kolayca tespit etti ve özellikle problem çözme becerilerimi geliştirmek için birlikte çalıştık. Halil hocam ile çalıştığım için çok mutluyum ve onu şiddetle tavsiye ediyorum.", href: "/sinavlar/digital-sat" },
         ]}
       />
 

@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import ProgramDetailPage from "@/components/ProgramDetailPage";
 
 export const metadata: Metadata = {
-  title: "A-Level & IGCSE Hazırlık | APlus Academy",
+  title: "A-Level, IGCSE & GCSE Hazırlık | APlus Academy",
   description:
-    "Cambridge, Edexcel ve AQA müfredatlarına yönelik A-Level ve IGCSE okul destek ve sınav hazırlık programı.",
+    "Cambridge, Edexcel ve AQA müfredatlarına yönelik A-Level, IGCSE ve GCSE okul destek ve sınav hazırlık programı.",
 };
 
 export default function ALevelAndIGCSEPage() {
   return (
     <ProgramDetailPage
-      badge="A-Level & IGCSE"
+      badge="A-Level, IGCSE & GCSE"
       title="Uluslararası müfredatlarda okul başarısını ve sınav performansını birlikte yükseltelim"
-      intro="A-Level ve IGCSE desteği; öğrencinin okul müfredatı, konu eksikleri, değerlendirme yapısı ve hedef notu dikkate alınarak planlanır."
+      intro="A-Level, IGCSE ve GCSE desteği; öğrencinin exam board'u, okul müfredatı, konu eksikleri, değerlendirme yapısı ve hedef notu dikkate alınarak planlanır."
       metrics={[
         ["Müfredat", "Cambridge / Edexcel / AQA"],
-        ["Seviye", "IGCSE / A-Level"],
+        ["Seviye", "A-Level / IGCSE / GCSE"],
         ["Dersler", "STEM + sosyal"],
         ["Takip", "Okul + sınav"],
       ]}
