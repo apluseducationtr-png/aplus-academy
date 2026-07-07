@@ -56,6 +56,7 @@ export default function Navbar() {
         </Link>
 
         <nav className={`main-nav ${open ? "main-nav-open" : ""}`} aria-label="Ana menü">
+          <Link href="/" onClick={closeNavigation}>Ana Sayfa</Link>
           <div className={`nav-dropdown ${programOpen ? "nav-dropdown-open" : ""}`} ref={dropdownRef}>
             <button
               className="nav-dropdown-trigger"
