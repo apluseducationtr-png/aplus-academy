@@ -1104,6 +1104,7 @@ function CourseCategoryCard({
       >
         <div>
           <p
+            lang="en"
             style={{
               color: "#2F6FC2",
               fontSize: "12px",

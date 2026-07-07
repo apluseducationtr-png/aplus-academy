@@ -11,7 +11,7 @@ import {
 
 const programs = [
   { eyebrow: "Üniversite kabul sınavı", title: "Digital SAT", text: "Math ve Reading & Writing hazırlığı; seviye tespit, ders, ödev ve deneme takibi.", href: "/sinavlar/digital-sat", tags: ["Birebir", "Küçük grup", "Deneme"] },
-  { eyebrow: "Advanced Placement", title: "AP Programları", text: "Ders bazlı konu desteği, MCQ ve FRQ pratiği, okul sınavları ve final hazırlığı.", href: "/sinavlar/ap", tags: ["20+ ders", "MCQ", "FRQ"] },
+  { eyebrow: "Advanced Placement", eyebrowLang: "en" as const, title: "AP Programları", text: "Ders bazlı konu desteği, MCQ ve FRQ pratiği, okul sınavları ve final hazırlığı.", href: "/sinavlar/ap", tags: ["20+ ders", "MCQ", "FRQ"] },
   { eyebrow: "Uluslararası diploma", title: "IB Diploma", text: "HL/SL ders desteği ile IA, EE, TOK ve predicted grade sürecinin birlikte takibi.", href: "/sinavlar/ib", tags: ["HL / SL", "IA / EE", "TOK"] },
   { eyebrow: "Uluslararası müfredat", title: "A-Level & IGCSE", text: "Cambridge, Edexcel ve AQA derslerinde okul başarısı ve final sınavı desteği.", href: "/sinavlar/a-level-igcse", tags: ["Past papers", "Okul desteği"] },
   { eyebrow: "Dil yeterliliği", title: "IELTS & TOEFL", text: "Writing, speaking, reading ve listening alanlarında hedef skor odaklı program.", href: "/sinavlar/ielts-toefl", tags: ["Writing feedback", "Speaking"] },
@@ -99,7 +99,7 @@ export default function Home() {
       <section className="section">
         <div className="site-container">
           <SectionHeading
-            eyebrow="Online eğitim deneyimi"
+            eyebrow="Çevrim içi eğitim deneyimi"
             title="Dersin içeriğini dijital ortamın imkânlarıyla güçlendiriyoruz"
             text="Online ders modeli; canlı etkileşim, dijital araçlar, derse özel kaynaklar ve ders sonrası takip bileşenlerini bir araya getirir."
           />

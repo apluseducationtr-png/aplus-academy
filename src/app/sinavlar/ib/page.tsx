@@ -128,7 +128,9 @@ export default function IBPage() {
                 ← Ana sayfaya dön
               </Link>
 
-              <div style={blueBadge}>IB Diploma & Okul Destek</div>
+              <div style={blueBadge}>
+                <span lang="en">IB Diploma</span>&nbsp;&amp; Okul Destek
+              </div>
             </div>
 
             <h1

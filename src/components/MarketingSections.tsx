@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export type CardItem = {
   eyebrow?: string;
+  eyebrowLang?: "tr" | "en";
   title: string;
   text: string;
   href?: string;
@@ -95,7 +96,11 @@ export function CardGrid({
       {items.map((item, index) => (
         <article className="content-card" key={item.title}>
           <div className="card-number">{String(index + 1).padStart(2, "0")}</div>
-          {item.eyebrow ? <span className="card-eyebrow">{item.eyebrow}</span> : null}
+          {item.eyebrow ? (
+            <span className="card-eyebrow" lang={item.eyebrowLang}>
+              {item.eyebrow}
+            </span>
+          ) : null}
           <h3>{item.title}</h3>
           <p>{item.text}</p>
           {item.tags?.length ? (

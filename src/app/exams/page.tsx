@@ -17,7 +17,7 @@ const groups = [
   { eyebrow: "Tıp ve hukuk", title: "IMAT & LNAT", text: "Science, reasoning, reading ve essay bileşenlerinde sınava özel program.", href: "/sinavlar/imat-ucat-lnat", tags: ["Medicine", "Law"] },
   { eyebrow: "Okul başarısı", title: "Okul & GPA Desteği", text: "Uluslararası okul öğrencileri için haftalık ders, sınav ve ödev takibi.", href: "/sinavlar/okul-destek", tags: ["GPA", "School support"] },
   { eyebrow: "Lisansüstü", title: "GMAT & GRE", text: "Quantitative, verbal ve analytical writing alanlarında hedef programa göre hazırlık.", tags: ["GMAT", "GRE"] },
-  { eyebrow: "Oxbridge ve UK", title: "TMUA & ESAT", text: "Matematik, mühendislik ve fen alanlarında seçici üniversite kabul sınavlarına hazırlık.", tags: ["TMUA", "ESAT"] },
+  { eyebrow: "Oxbridge ve UK", eyebrowLang: "en" as const, title: "TMUA & ESAT", text: "Matematik, mühendislik ve fen alanlarında seçici üniversite kabul sınavlarına hazırlık.", tags: ["TMUA", "ESAT"] },
 ];
 
 export default function ExamsPage() {

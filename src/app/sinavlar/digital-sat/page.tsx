@@ -145,7 +145,7 @@ export default function DigitalSATPage() {
       textTransform: "uppercase",
     }}
   >
-    Digital SAT Hazırlık Programı
+    <span lang="en">Digital SAT</span> Hazırlık Programı
   </div>
 </div>
             <h1
@@ -742,7 +742,7 @@ export default function DigitalSATPage() {
                 margin: "0 0 12px",
               }}
             >
-              Digital SAT yol haritanızı oluşturalım
+              <span lang="en">Digital SAT</span> yol haritanızı oluşturalım
             </p>
 
             <h2
