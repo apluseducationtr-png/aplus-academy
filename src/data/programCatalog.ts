@@ -15,7 +15,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     eyebrow: "Advanced Placement",
     eyebrowLang: "en",
     text: "College Board kataloğundaki AP dersleri için okul desteği, konu takibi ve derse özgü değerlendirme hazırlığı.",
-    href: "/sinavlar/ap",
+    href: "/programlar/ap",
     tags: ["42 AP dersi", "MCQ / FRQ", "Portfolyo"],
   },
   {
@@ -23,7 +23,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "HL/SL dersleri ile IA, EE ve TOK desteği",
     eyebrow: "Uluslararası diploma",
     text: "HL/SL ders desteği, okul sınavları, IA, EE, TOK ve predicted grade sürecinin birlikte takibi.",
-    href: "/sinavlar/ib",
+    href: "/programlar/ib-diploma",
     tags: ["HL / SL", "IA / EE", "TOK"],
   },
   {
@@ -31,7 +31,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Math, Reading, English ve sınav stratejisi",
     eyebrow: "ABD üniversite başvuruları",
     text: "Digital SAT ve ACT için seviye analizi, konu çalışması, sınav stratejisi ve düzenli deneme takibi.",
-    href: "/sinavlar/digital-sat",
+    href: "/programlar/digital-sat-act",
     tags: ["Digital SAT", "ACT", "Deneme"],
   },
   {
@@ -39,7 +39,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "İngilizce yeterlilik ve hedef skor hazırlığı",
     eyebrow: "İngilizce yeterlilik",
     text: "IELTS, TOEFL ve Duolingo English Test için beceri bazlı çalışma, geri bildirim ve sınav pratiği.",
-    href: "/sinavlar/ielts-toefl",
+    href: "/programlar/ielts-toefl-duolingo",
     tags: ["IELTS", "TOEFL", "Duolingo"],
   },
   {
@@ -47,7 +47,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Ders ve final sınavı hazırlığı",
     eyebrow: "Uluslararası müfredat",
     text: "Cambridge, Edexcel ve AQA A-Level derslerinde okul başarısı, konu desteği ve final sınavı hazırlığı.",
-    href: "/sinavlar/a-level-igcse",
+    href: "/programlar/a-level",
     tags: ["Cambridge", "Edexcel", "AQA"],
   },
   {
@@ -55,7 +55,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Okul dersleri, past paper ve final desteği",
     eyebrow: "Ortaöğretim programları",
     text: "IGCSE ve GCSE derslerinde müfredata uygun konu takibi, past paper pratiği ve okul sınavı desteği.",
-    href: "/sinavlar/a-level-igcse",
+    href: "/programlar/igcse-gcse",
     tags: ["IGCSE", "GCSE", "Past papers"],
   },
   {
@@ -63,7 +63,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Seçici üniversite kabul sınavları",
     eyebrow: "Birleşik Krallık başvuruları",
     text: "Matematik, mühendislik ve akademik muhakeme odaklı TMUA, ESAT ve TARA sınavlarına hazırlık.",
-    href: "/contact",
+    href: "/programlar/tmua-esat-tara",
     tags: ["TMUA", "ESAT", "TARA"],
   },
   {
@@ -71,7 +71,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Critical thinking, reading ve essay",
     eyebrow: "Hukuk başvuruları",
     text: "LNAT için critical thinking, metin analizi, zaman yönetimi ve essay planlama desteği.",
-    href: "/sinavlar/imat-ucat-lnat",
+    href: "/programlar/lnat",
     tags: ["Reading", "Reasoning", "Essay"],
   },
   {
@@ -79,7 +79,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "İtalya tıp başvuruları ve science hazırlığı",
     eyebrow: "Tıp başvuruları",
     text: "IMAT için science konu tekrarı, problem çözme, reasoning ve zamanlı soru pratiği.",
-    href: "/sinavlar/imat-ucat-lnat",
+    href: "/programlar/imat",
     tags: ["Science", "Reasoning", "İtalya"],
   },
   {
@@ -87,7 +87,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Birleşik Krallık tıp kabul sınavı",
     eyebrow: "Tıp başvuruları",
     text: "UCAT için hız, karar verme, muhakeme ve sınavın bölüm bazlı soru formatlarına yönelik hazırlık.",
-    href: "/sinavlar/imat-ucat-lnat",
+    href: "/programlar/ucat",
     tags: ["UCAT", "Decision making", "UK"],
   },
   {
@@ -95,7 +95,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Bilgisayar tabanlı İngilizce yeterlilik sınavı",
     eyebrow: "İngilizce yeterlilik",
     text: "PTE Academic için speaking, writing, reading ve listening alanlarında sınav formatına uygun hazırlık.",
-    href: "/sinavlar/ielts-toefl",
+    href: "/programlar/pte-academic",
     tags: ["PTE", "4 beceri", "Deneme"],
   },
   {
@@ -103,7 +103,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Lisansüstü başvurular için test hazırlığı",
     eyebrow: "Lisansüstü başvurular",
     text: "GMAT ve GRE için quantitative, verbal ve analytical writing alanlarında hedefe özel hazırlık.",
-    href: "/contact",
+    href: "/programlar/gmat-gre",
     tags: ["GMAT", "GRE", "Graduate"],
   },
   {
@@ -111,7 +111,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Ders, sınav, ödev ve akademik takip",
     eyebrow: "Okul başarısı",
     text: "Uluslararası okul öğrencileri için ders yükü, ödevler, sınavlar ve hedef GPA planının düzenli takibi.",
-    href: "/sinavlar/okul-destek",
+    href: "/programlar/okul-gpa-destegi",
     tags: ["GPA", "Okul sınavları", "Takip"],
   },
   {
@@ -119,7 +119,7 @@ export const programCatalog: ProgramCatalogItem[] = [
     menuText: "Üniversite dersleri için akademik destek",
     eyebrow: "Üniversite akademik destek",
     text: "Üniversite öğrencilerine ders bazlı konu, ödev planlama ve sınav hazırlığı desteği.",
-    href: "/sinavlar/okul-destek",
+    href: "/programlar/universite-destek-dersleri",
     tags: ["Ders desteği", "Sınav", "Akademik plan"],
   },
 ];
