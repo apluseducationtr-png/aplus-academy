@@ -345,6 +345,313 @@ button, a {
 .guide-source-links p { margin: 0; padding: 18px; border: 1px solid var(--border); border-radius: 16px; background: white; }
 .guide-cta-section { padding: 0 0 88px; }
 
+.form-gate-section {
+  background: white;
+}
+
+.form-open-panel,
+.form-locked-panel {
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  background: var(--bg);
+  box-shadow: 0 24px 70px rgba(73,151,230,.1);
+}
+
+.form-open-panel {
+  padding: 26px;
+}
+
+.form-open-note {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 22px;
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: white;
+}
+
+.form-open-note svg,
+.form-locked-copy svg {
+  color: var(--blue);
+}
+
+.form-open-note h2,
+.form-locked-copy h2,
+.student-form-header h2 {
+  font-family: var(--font-nunito);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 950;
+  letter-spacing: -.035em;
+  line-height: 1.08;
+}
+
+.form-open-note p,
+.form-locked-copy p,
+.student-form-header p,
+.student-form-section-heading p {
+  margin-top: 12px;
+  color: var(--slate);
+  line-height: 1.75;
+}
+
+.form-locked-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr);
+  gap: 28px;
+  padding: 30px;
+}
+
+.form-locked-copy,
+.access-request-form,
+.student-form {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: white;
+}
+
+.form-locked-copy {
+  padding: 30px;
+}
+
+.form-locked-copy .eyebrow {
+  display: flex;
+  margin-top: 22px;
+}
+
+.form-link-example {
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px dashed #9bb8d6;
+  border-radius: 20px;
+  background: var(--blue-light);
+}
+
+.form-link-example strong,
+.form-link-example code {
+  display: block;
+}
+
+.form-link-example strong {
+  font-size: 13px;
+  font-weight: 950;
+  color: var(--blue-dark);
+}
+
+.form-link-example code {
+  margin-top: 10px;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 12px;
+  background: white;
+  color: var(--ink);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.access-request-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 24px;
+}
+
+.access-request-form label,
+.student-form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.access-request-form span,
+.student-form-field > span,
+.student-form-choice-group legend {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.access-request-form input,
+.access-request-form select,
+.access-request-form textarea,
+.student-form input,
+.student-form select,
+.student-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+  color: var(--ink);
+  outline: none;
+}
+
+.access-request-form input,
+.access-request-form select,
+.student-form input,
+.student-form select {
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.access-request-form textarea,
+.student-form textarea {
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.access-request-form input:focus,
+.access-request-form select:focus,
+.access-request-form textarea:focus,
+.student-form input:focus,
+.student-form select:focus,
+.student-form textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(47,111,194,.1);
+}
+
+.access-request-full {
+  grid-column: 1 / -1;
+}
+
+.access-request-consent,
+.student-form-consent {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  align-items: start;
+  color: var(--slate);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.access-request-consent input,
+.student-form-consent input {
+  width: 18px;
+  height: 18px;
+  min-height: auto;
+  margin-top: 3px;
+}
+
+.access-request-submit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.access-request-submit .button {
+  gap: 8px;
+}
+
+.student-form {
+  padding: 26px;
+}
+
+.student-form-header {
+  padding: 10px 6px 28px;
+}
+
+.student-form-section {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+}
+
+.student-form-section-heading {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 16px;
+  margin-bottom: 22px;
+  align-items: start;
+}
+
+.student-form-section-heading > span {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  font-weight: 950;
+}
+
+.student-form-section-heading h3 {
+  font-family: var(--font-nunito);
+  font-size: 24px;
+  font-weight: 950;
+  line-height: 1.18;
+}
+
+.student-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.student-form-choice-group {
+  padding: 0;
+  border: 0;
+}
+
+.student-form-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.student-form-options label {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg);
+  color: var(--slate);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.student-form-options input {
+  width: 16px;
+  height: 16px;
+  min-height: auto;
+  margin-top: 1px;
+}
+
+.student-form-field small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.student-form-consent {
+  margin-top: 4px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg);
+}
+
+.student-form-submit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.student-form-submit-row p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 .hero-panel {
   padding: 30px;
 }
@@ -414,6 +721,23 @@ button, a {
   border-color: var(--border);
   background: white;
   color: var(--ink);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+  box-shadow: none;
+}
+
+.form-disabled-note {
+  margin: -2px 0 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--yellow-light);
+  color: var(--slate);
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .section-heading {
@@ -650,7 +974,8 @@ button, a {
 
   .guide-hero-layout,
   .guide-faq-layout,
-  .guide-sources-panel { grid-template-columns: 1fr; }
+  .guide-sources-panel,
+  .form-locked-panel { grid-template-columns: 1fr; }
 
   .guide-fact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-faq-intro { position: static; }
@@ -697,6 +1022,16 @@ button, a {
   .guide-coverage-grid { grid-template-columns: 1fr; }
   .guide-coverage-card { min-height: 0; }
   .guide-sources-panel { padding: 24px; }
+  .form-open-panel,
+  .form-locked-panel,
+  .form-locked-copy,
+  .access-request-form,
+  .student-form { padding: 20px; }
+  .form-open-note,
+  .student-form-section-heading { grid-template-columns: 1fr; }
+  .access-request-form,
+  .student-form-grid,
+  .student-form-options { grid-template-columns: 1fr; }
 
   .student-testimonial-card footer {
     align-items: flex-start;

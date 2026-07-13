@@ -2,9 +2,18 @@ import Link from "next/link";
 import { ArrowUpRight, BookOpen, Clock3, Gauge, Users } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import StudentFormGate from "@/components/StudentFormGate";
 import type { ProgramGuide } from "@/data/programGuides";
+import type { StudentFormDefinition } from "@/data/studentForms";
 
-export default function ProgramGuidePage({ program }: { program: ProgramGuide }) {
+type ProgramGuidePageProps = {
+  program: ProgramGuide;
+  registrationForm?: StudentFormDefinition;
+  formToken?: string;
+  formsEnabled?: boolean;
+};
+
+export default function ProgramGuidePage({ program, registrationForm, formToken = "", formsEnabled = false }: ProgramGuidePageProps) {
   return (
     <main>
       <Navbar />
@@ -120,6 +129,15 @@ export default function ProgramGuidePage({ program }: { program: ProgramGuide })
           </div>
         </div>
       </section>
+
+      {registrationForm && (
+        <StudentFormGate
+          form={registrationForm}
+          formToken={formToken}
+          formsEnabled={formsEnabled}
+          sourcePath={`/programlar/${program.slug}`}
+        />
+      )}
 
       <section className="guide-cta-section">
         <div className="site-container cta-band">

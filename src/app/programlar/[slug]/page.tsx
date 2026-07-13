@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProgramGuidePage from "@/components/ProgramGuidePage";
 import { programGuideBySlug, programGuides } from "@/data/programGuides";
+import { normalizeFormToken, programRegistrationForms } from "@/data/studentForms";
 
 type ProgramPageProps = {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export const dynamicParams = false;
@@ -25,11 +27,19 @@ export async function generateMetadata({ params }: ProgramPageProps): Promise<Me
   };
 }
 
-export default async function ProgramPage({ params }: ProgramPageProps) {
+export default async function ProgramPage({ params, searchParams }: ProgramPageProps) {
   const { slug } = await params;
+  const query = await searchParams;
   const program = programGuideBySlug[slug];
 
   if (!program) notFound();
 
-  return <ProgramGuidePage program={program} />;
+  return (
+    <ProgramGuidePage
+      formToken={normalizeFormToken(query.formToken)}
+      formsEnabled={Boolean(process.env.APLUS_FORMS_WEBHOOK_URL)}
+      program={program}
+      registrationForm={programRegistrationForms[slug]}
+    />
+  );
 }
