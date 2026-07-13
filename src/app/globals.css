@@ -421,36 +421,6 @@ button, a {
   margin-top: 22px;
 }
 
-.form-link-example {
-  margin-top: 28px;
-  padding: 18px;
-  border: 1px dashed #9bb8d6;
-  border-radius: 20px;
-  background: var(--blue-light);
-}
-
-.form-link-example strong,
-.form-link-example code {
-  display: block;
-}
-
-.form-link-example strong {
-  font-size: 13px;
-  font-weight: 950;
-  color: var(--blue-dark);
-}
-
-.form-link-example code {
-  margin-top: 10px;
-  padding: 12px;
-  overflow-x: auto;
-  border-radius: 12px;
-  background: white;
-  color: var(--ink);
-  font-size: 13px;
-  white-space: nowrap;
-}
-
 .access-request-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -111,7 +111,7 @@ export default function StudentFormRenderer({ form, formToken, formsEnabled, sou
         <p>
           {formsEnabled
             ? "Gönderim sonrası bilgiler ilgili kayıt listesine aktarılır ve A Plus ekibi tarafından takip edilir."
-            : "Google Sheets bağlantısı aktifleştiğinde bu form gönderime açılacak. Şimdilik form yapısı kontrol amaçlı gösterilir."}
+            : "Form gönderimi A Plus ekibi tarafından açıldığında bu alan üzerinden bilgilerinizi iletebilirsiniz."}
         </p>
       </div>
     </form>

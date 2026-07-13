@@ -40,10 +40,6 @@ export default function StudentFormGate({ form, formToken, formsEnabled, sourceP
                 Bu form, A Plus Academy ile görüşmesi yapılmış veya kayıt süreci başlatılmış öğrenciler için açılır.
                 Daha önce görüştüyseniz form erişimi isteyebilirsiniz.
               </p>
-              <div className="form-link-example">
-                <strong>Öğrenciye gönderilecek link formatı</strong>
-                <code>{`${sourcePath}?formToken=${form.tokenPrefix}-XXXXXX#kayit-formu`}</code>
-              </div>
             </div>
 
             <form className="access-request-form" method="post" action="/api/form-access-request">
@@ -107,8 +103,8 @@ export default function StudentFormGate({ form, formToken, formsEnabled, sourceP
               </div>
               {!formsEnabled && (
                 <p className="form-disabled-note access-request-full">
-                  Google Sheets bağlantısı aktifleştiğinde erişim talepleri otomatik listeye düşecek. Şimdilik bu alan
-                  tasarım ve akış kontrolü için hazırlandı.
+                  Form erişimi A Plus ekibi tarafından paylaşılır. Bu süreçte görüşme planlayabilir veya bizimle
+                  iletişime geçebilirsiniz.
                 </p>
               )}
             </form>
